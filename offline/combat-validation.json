@@ -1,0 +1,123 @@
+{
+  "environment": "Linux; Chromium 156; software WebGL; 2026-11-11",
+  "combat": {
+    "checks": [
+      {
+        "name": "startup",
+        "data": {
+          "entities": 182,
+          "config": "CombatConfig",
+          "player": "sdCharacter",
+          "bounds": {
+            "x1": -960,
+            "y1": -256,
+            "x2": 960,
+            "y2": 256
+          }
+        }
+      },
+      {
+        "name": "movement"
+      },
+      {
+        "name": "jump"
+      },
+      {
+        "name": "crouch"
+      },
+      {
+        "name": "weapon pistol",
+        "data": {
+          "before": 12,
+          "after": 11
+        }
+      },
+      {
+        "name": "weapon rifle",
+        "data": {
+          "before": 30,
+          "after": 28
+        }
+      },
+      {
+        "name": "weapon shotgun",
+        "data": {
+          "before": 8,
+          "after": 7
+        }
+      },
+      {
+        "name": "weapon railgun",
+        "data": {
+          "before": -1,
+          "after": -1
+        }
+      },
+      {
+        "name": "reload"
+      },
+      {
+        "name": "door",
+        "data": {
+          "open": 32,
+          "malfunction": false
+        }
+      },
+      {
+        "name": "destruction and fixed geometry"
+      },
+      {
+        "name": "restore objects"
+      },
+      {
+        "name": "three passive enemy presets"
+      },
+      {
+        "name": "enemy AI, bullets and damage",
+        "data": {
+          "health": 1859.75,
+          "targets": [
+            false,
+            false,
+            true
+          ]
+        }
+      },
+      {
+        "name": "enemy death and ragdoll"
+      },
+      {
+        "name": "respawn"
+      },
+      {
+        "name": "original build menu"
+      },
+      {
+        "name": "original construction placement",
+        "data": {
+          "type": "sdBlock",
+          "x": -528,
+          "y": 128,
+          "matterSpent": 55
+        }
+      },
+      {
+        "name": "three encounter resets",
+        "data": {
+          "entities": 197,
+          "enemies": 1
+        }
+      }
+    ],
+    "errors": [],
+    "external": [],
+    "passed": true
+  },
+  "original_sandbox_regression": {
+    "passed": true,
+    "checks": 15,
+    "errors": [],
+    "externalRequests": []
+  },
+  "storage_and_repeated_combat": "PASS storage isolation {\n  namespace: 'sd-combat-experimental',\n  original: { sentinel: 'original-world' },\n  legacy: '{\"legacy\":\"untouched\"}',\n  loadedLegacy: undefined\n}\nPASS aiming and native railgun projectile creation\nPASS repeated combat encounter 1 {\n  entities: 207,\n  health: 1982,\n  error: 'Your character has died. Press Space to restart with a new character'\n}\nPASS repeated combat encounter 2 {\n  entities: 206,\n  health: 1982,\n  error: 'Your character has died. Press Space to restart with a new character'\n}\nPASS repeated combat encounter 3 {\n  entities: 208,\n  health: 1982,\n  error: 'Your character has died. Press Space to restart with a new character'\n}\nPASS original saves preserved after quit\n"
+}

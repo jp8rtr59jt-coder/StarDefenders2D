@@ -1,5 +1,8 @@
 # Standalone offline engine — milestone 1
 
+For the optional experimental arena, see [Milestone 2 combat sandbox](COMBAT_SANDBOX.md).
+It is separate from the original world and opens at `/?mode=combat`.
+
 Uses the original Star Defenders 2D offline sandbox. No Node game server,
 multiplayer account, npm installation, internet connection, new level or new
 weapon is required. Requires Python 3 and a WebGL-capable Chromium/Chrome browser.

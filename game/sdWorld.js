@@ -5709,9 +5709,13 @@ class sdWorld
 
 		}, 32 );
 		
-		sdWorld.server_config = sdServerConfigFull;
-		sdWorld.server_config.enable_bounds_move = true;
-		sdWorld.server_config.aggressive_hibernation = true;
+		const offline_config = globalThis.sdCombatSandbox?.config || sdServerConfigFull;
+		sdWorld.server_config = offline_config;
+		if ( !globalThis.sdCombatSandbox )
+		{
+			sdWorld.server_config.enable_bounds_move = true;
+			sdWorld.server_config.aggressive_hibernation = true;
+		}
 		//sdWorld.server_config.ModifyTerrainEntity = ( v )=>v;
 		
 		globalThis.players_playing = 1;
@@ -5793,7 +5797,7 @@ class sdWorld
 		if ( sdWeather.only_instance === null )
 		sdWeather.only_instance = new sdWeather({});
 	
-		sdWorld.server_config = sdServerConfigFull;
+		sdWorld.server_config = offline_config;
 		
 		// Stop all events
 		//sdWorld.server_config.GetAllowedWorldEvents = ()=>[];

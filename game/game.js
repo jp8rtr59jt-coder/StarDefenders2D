@@ -48,7 +48,7 @@ globalThis.sdOfflineStorageReady = new Promise( resolve =>
 		{
 			if ( value === null )
 			{
-				let str = localStorage.getItem( 'temporary_file_system' );
+				let str = globalThis.SD_COMBAT ? null : localStorage.getItem( 'temporary_file_system' );
 
 				if ( str !== null )
 				{
@@ -114,6 +114,7 @@ globalThis.fs = {
 				{
 					console.warn( 'Save complete' );
 					
+					if ( !globalThis.SD_COMBAT )
 					localStorage.removeItem( 'temporary_file_system' );
 				}
 			} );
