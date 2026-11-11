@@ -29,32 +29,41 @@ globalThis.isWin = true; // For singleplayer shop
 globalThis.GetFrame = ()=>{ return sdWorld.frame; }; // Call like this: GetFrame()
 
 globalThis.os = {
-	totalmem:()=>{ return performance.memory.jsHeapSizeLimit; },
-	freemem:()=>{ return performance.memory.jsHeapSizeLimit - performance.memory.usedJSHeapSize; }
+	totalmem:()=>{ return performance.memory?.jsHeapSizeLimit || 2 ** 31; },
+	freemem:()=>{ return performance.memory ? performance.memory.jsHeapSizeLimit - performance.memory.usedJSHeapSize : 2 ** 30; }
 };
 
 globalThis.temporary_file_system = {};
-//try
+globalThis.sdOfflineStorageReady = new Promise( resolve =>
 {
 	localforage.getItem( 'temporary_file_system', ( err, value )=>
 	{
 		if ( err )
 		{
-			debugger;
 			alert( 'Error: Local file system could not be loaded...' );
+			resolve( false );
+			return;
 		}
-		
-		if ( value === null )
+		try
 		{
-			let str = localStorage.getItem( 'temporary_file_system' );
-
-			if ( str !== null )
+			if ( value === null )
 			{
-				globalThis.temporary_file_system = JSON.parse( str );
+				let str = localStorage.getItem( 'temporary_file_system' );
+
+				if ( str !== null )
+				{
+					globalThis.temporary_file_system = JSON.parse( str );
+				}
 			}
+			else
+			globalThis.temporary_file_system = value;
+			resolve( true );
 		}
-		else
-		globalThis.temporary_file_system = value;
+		catch ( error )
+		{
+			console.error( 'Could not read local save', error );
+			resolve( false );
+		}
 	});
 	/*
 	let str = localStorage.getItem( 'temporary_file_system' );
@@ -63,7 +72,7 @@ globalThis.temporary_file_system = {};
 	{
 		globalThis.temporary_file_system = JSON.parse( str );
 	}*/
-}
+});
 //catch(e)
 //{
 //	sdWorld.sockets[ 0 ].SDServiceMessage( 'Warning! Snapshot load error: ' + e.toString() );
@@ -431,7 +440,7 @@ sdTranslationManager.TranslateHTMLPage();
 
 // This is to automatically load what is needed
 //let class_names = ( await ( await fetch( '/get_entity_classes.txt' ) ).text() ).split(','); // Almost same as entity_files on server-side but without .js
-let class_names = ( await ( await fetch( '/get_classes.txt' ) ).text() ).split(','); // Almost same as entity_files on server-side but without .js
+let class_names = ( await ( await fetch( globalThis.SD_OFFLINE ? './get_classes.txt' : '/get_classes.txt' ) ).text() ).trim().split(','); // Static manifest in standalone export
 
 /*fetch( '/get_entity_classes.txt' ).then( ( result )=>{
 	result.text().then( ( result )=>
@@ -832,6 +841,9 @@ let enf_once = true;
 
 	function SpawnConnection()
 	{
+		if ( globalThis.SD_OFFLINE )
+		return;
+
 		if ( sdWorld.is_singleplayer )
 		return;
 		
@@ -2457,4 +2469,5 @@ let enf_once = true;
 	if( userAgent[0] === "Gecko" && userAgent[1] === BROWSER_GECKO )
 	window.onwheel = window.onmousewheel;
 
+	if ( !globalThis.SD_OFFLINE )
 	socket.open(); // Same as socket.connect() it seems

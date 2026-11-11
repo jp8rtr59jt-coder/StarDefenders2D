@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-11T16:26:59.925Z",
+  "browser": "156.0.8078.79",
+  "platform": "linux",
+  "passed": true,
+  "checks": [
+    {
+      "name": "static startup",
+      "evidence": {
+        "ready": "Offline — ready",
+        "connected": false,
+        "music": false
+      }
+    },
+    {
+      "name": "original offline sandbox launched",
+      "evidence": {
+        "entities": 4413,
+        "health": 250,
+        "server": true,
+        "singleplayer": true
+      }
+    },
+    {
+      "name": "gravity and floor collision",
+      "evidence": {
+        "x": -32,
+        "y": -528.00001,
+        "sx": 0,
+        "sy": 0,
+        "stands": true,
+        "health": 250,
+        "ammo": 12,
+        "capacity": 12,
+        "reload": 0,
+        "look_x": -390.65863280634244,
+        "look_y": -790.8776587008813,
+        "crouch": 0,
+        "ragdoll": true,
+        "service": "Leaving vehicle",
+        "frame": 60
+      }
+    },
+    {
+      "name": "keyboard movement",
+      "evidence": {
+        "from": -32,
+        "to": 67.03823037615172
+      }
+    },
+    {
+      "name": "jump",
+      "evidence": {
+        "beforeY": -528.00001,
+        "afterY": -546.56390104,
+        "sy": -2.2309950400000007
+      }
+    },
+    {
+      "name": "crouch and animation state",
+      "evidence": {
+        "crouch": 1,
+        "ragdoll": true
+      }
+    },
+    {
+      "name": "wall collision",
+      "evidence": {
+        "playerX": 154.99999,
+        "wallX": 160
+      }
+    },
+    {
+      "name": "mouse aiming",
+      "evidence": {
+        "x": -32,
+        "y": -528.00001,
+        "lookX": -0.4210526315789309,
+        "lookY": -622.7368421052631
+      }
+    },
+    {
+      "name": "shooting and projectile creation",
+      "evidence": {
+        "before": 12,
+        "after": 11,
+        "projectiles": 1
+      }
+    },
+    {
+      "name": "reload",
+      "evidence": {
+        "animation": 12,
+        "ammo": 12,
+        "capacity": 12
+      }
+    },
+    {
+      "name": "enemy AI targeting and firing",
+      "evidence": {
+        "target": 21,
+        "player": 21,
+        "bullets": 1,
+        "x": 208.19910932432146,
+        "health": 250,
+        "armor": 100
+      }
+    },
+    {
+      "name": "enemy projectile hits player",
+      "evidence": {
+        "health": 235.6,
+        "armor": 96.4
+      }
+    },
+    {
+      "name": "player projectiles damage enemy",
+      "evidence": {
+        "before": 250,
+        "health": -11.899999999999984,
+        "ragdoll": true
+      }
+    },
+    {
+      "name": "save to IndexedDB",
+      "evidence": {
+        "files": [
+          "fake_local_directory/presets",
+          "fake_local_directory/presets_users",
+          "fake_local_directory/star_defenders_snapshot.v"
+        ]
+      }
+    },
+    {
+      "name": "save reload",
+      "evidence": {
+        "player": 21,
+        "health": 1799.1199999999992,
+        "entities": 2950,
+        "marker": {
+          "id": 5681,
+          "x": -128,
+          "y": -544,
+          "hue": 17
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "failedRequests": [],
+  "badResponses": [
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    }
+  ]
+}

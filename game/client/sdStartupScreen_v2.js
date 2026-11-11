@@ -1177,7 +1177,7 @@
 			let s = '';
 			let insertion_point = document.getElementById( 'music_credits_here' );
 			
-			if ( sdMusic.situational_songs.length === 0 )
+			if ( sdMusic.situational_songs.length === 0 && !globalThis.SD_OFFLINE )
 			{
 				debugger;
 			}
@@ -1589,7 +1589,7 @@
 	    const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
 	    const SpeechGrammarList = window.webkitSpeechGrammarList || window.SpeechGrammarList;
 	    
-	    if ( SpeechRecognition )
+	    if ( SpeechRecognition && !globalThis.SD_OFFLINE )
 	    {
 			const recognition = new SpeechRecognition();
 

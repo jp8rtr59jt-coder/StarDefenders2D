@@ -116,3 +116,7 @@ typings/
 .tern-port
 *.v
 game/index_pb2.html
+dist/offline/
+dist/StarDefenders2D-offline.zip
+__pycache__/
+offline/test-output/
