@@ -3538,6 +3538,9 @@ class sdCharacter extends sdEntity
 	{
 		if ( !sdWorld.is_server )
 		return;
+		const policy = sdWorld.server_config.humanoid_ai;
+		const combat_ai = policy && policy.has( this ) ? policy : null;
+		if ( combat_ai ) combat_ai.before( this, GSPEED );
 	
 		let ai_will_fire = false;
 	
@@ -3567,7 +3570,7 @@ class sdCharacter extends sdEntity
 			{
 				this._ai.target = null;
 				
-				this._ai.target = sdCharacter.GetRandomEntityNearby( this );
+				this._ai.target = combat_ai ? combat_ai.acquire( this ) : sdCharacter.GetRandomEntityNearby( this );
 				if ( this._ai.target )
 				this.PlayAIAlertedSound( this._ai.target );
 			}
@@ -4155,7 +4158,9 @@ class sdCharacter extends sdEntity
 				this.AIVehicleLogic();
 			}
 
-			if ( this._ai.target && this._ai.target.IsVisible( this ) )
+			if ( combat_ai )
+			combat_ai.aim( this, GSPEED );
+			else if ( this._ai.target && this._ai.target.IsVisible( this ) )
 			{
 				let look_speed = Math.max( 0.8, ( 0.9 - 0.05 * this._ai_level ) );
 
@@ -4205,6 +4210,7 @@ class sdCharacter extends sdEntity
 		this._key_states.SetKey( 'Mouse1', 1 );
 		else
 		this._key_states.SetKey( 'Mouse1', 0 );
+		if ( combat_ai ) combat_ai.finish( this, GSPEED );
 	}
 	AIVehicleLogic() // For piloting some vehicles
 	{

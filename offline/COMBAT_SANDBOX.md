@@ -1,5 +1,9 @@
 # Milestone 2: experimental combat sandbox
 
+On the `intelligent-combat` branch, [Milestone 3A](INTELLIGENT_COMBAT.md) adds
+opt-in perception/aim tuning and replaces the tier health bonuses with equal
+250 health. Its configuration table supersedes the preset stats below.
+
 Start on macOS with Python 3 and Chrome/Chromium:
 
 ```sh

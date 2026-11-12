@@ -161,7 +161,9 @@ fs.mkdirSync(output, { recursive: true });
   // Aim at the moving enemy through the original mouse-input path.
   const enemyHealth=await page.evaluate(()=>fixture.enemy.hea);
   await page.mouse.down();
-  for(let i=0;i<30;i++) {
+  // Native random movement can dodge the scripted cursor for several magazines.
+  // Preserve the kill/ragdoll assertion, with a bounded longer engagement budget.
+  for(let i=0;i<90;i++) {
    const pos=await page.evaluate(()=>{
     const e=fixture.enemy;
     return {x:((e.x-sdWorld.camera.x)*sdWorld.camera.scale+sdRenderer.screen_width/2)/sdRenderer.resolution_quality,

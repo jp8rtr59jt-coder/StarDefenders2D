@@ -1,6 +1,7 @@
 // Experimental map/configuration only. Movement, weapons, AI and rendering are
 // the original engine. This module is imported only by ?mode=combat.
 import {sdServerConfigFull} from '../server/sdServerConfig.js';
+import {humanoidAI} from './humanoid-ai.js';
 
 const arena = {
  enemies: [], objects: [], fixed: [], hostile: true,
@@ -72,11 +73,12 @@ const arena = {
   sdContextMenu.open=false;
  },
  spawn(kind='basic') {
-  const presets={basic:[sdCharacter.AI_MODEL_FALKOK,0,'pistol',250],intermediate:[sdCharacter.AI_MODEL_AGGRESSIVE,2,'rifle',300],advanced:[sdCharacter.AI_MODEL_DISTANT,4,'railgun',400]};
+  const presets={basic:[sdCharacter.AI_MODEL_FALKOK,0,'pistol',250],intermediate:[sdCharacter.AI_MODEL_AGGRESSIVE,2,'rifle',250],advanced:[sdCharacter.AI_MODEL_DISTANT,4,'railgun',250]};
   const [model,level,weapon,health]=presets[kind];
   const e=this.add(new sdCharacter({x:80+(this.enemies.filter(e=>!e._is_being_removed&&e.hea>0).length%3)*64,y:128,_ai_enabled:this.hostile?model:sdCharacter.AI_MODEL_NONE,_ai_level:level}));
   e.title=kind+' test soldier';e._ai_team=1;e.hmax=health;e.hea=health;e.matter_max=10000;e.matter=10000;
   e._combatModel=model;e._init_ai_model=model;
+  humanoidAI.attach(e,kind);
   const gun=this.equip(e,weapon);e._ai_gun_slot=gun.GetSlot();
   this.enemies.push(e);
   return e;
@@ -86,6 +88,7 @@ const arena = {
   for(const e of this.enemies) if(!e._is_being_removed) {
    e._ai_enabled=this.hostile?e._combatModel:sdCharacter.AI_MODEL_NONE;
    e._ai=null;e._key_states.Reset();e.sx=0;
+   humanoidAI.reset(e);
   }
   document.getElementById('combat-hostility').textContent='Hostility: '+(this.hostile?'on':'off');
  },
@@ -105,12 +108,22 @@ const arena = {
   button('Restore objects',()=>this.restoreObjects(),'combat-restore');
   for(const kind of ['pistol','rifle','shotgun','railgun','build']) button(kind,()=>{if(sdWorld.my_entity?.hea>0)this.equip(sdWorld.my_entity,kind);},'combat-'+kind);
   button('Original sandbox',()=>{location.href=location.pathname;});
+  const debug=document.createElement('pre');debug.hidden=true;debug.style.cssText='position:fixed;top:60px;right:8px;background:#111d;color:white;font:12px monospace;pointer-events:none;z-index:10001';
+  document.body.append(debug);
+  button('AI diagnostics',()=>{debug.hidden=!debug.hidden;});
+  setInterval(()=>{
+   if(debug.hidden)return;
+   debug.textContent=this.enemies.filter(e=>!e._is_being_removed&&e.hea>0).map(e=>{
+    const s=humanoidAI.state(e);return `${s.tier} #${e._net_id}: ${s.phase} target ${s.target?._net_id??'-'}\n reaction ${Math.max(0,s.readyAt-s.time).toFixed(0)}ms; error ${s.error.toFixed(1)}°`;
+   }).join('\n');
+  },200);
   document.body.append(bar);
   // Overlay is deliberately outside the canvas so engine input is not captured.
  },
 };
 
 class CombatConfig extends sdServerConfigFull {
+ static humanoid_ai=humanoidAI;
  static enable_bounds_move=false;
  static aggressive_hibernation=false;
  static GetAllowedWorldEvents(){return [];}
