@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    "Previously dormant soldier wakes, runs original AI and inflicts native damage"
+  ],
+  "errors": [],
+  "before": {
+    "hiber": 1,
+    "model": 0,
+    "time": 0
+  },
+  "afterToggle": {
+    "hiber": 0,
+    "model": 1,
+    "time": 100
+  },
+  "engagement": {
+    "health": 220.3,
+    "phase": "engaged",
+    "aiTime": 2066.6666666666647
+  }
+}

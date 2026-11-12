@@ -2009,6 +2009,7 @@ class sdGun extends sdEntity
 	Draw( ctx, attached )
 	{
 		this.UpdateHolderClientSide();
+		if(globalThis.sdArtLab?.weapon(ctx,this,attached)) return;
 		
 		let has_class = sdGun.classes[ this.class ];
 		

@@ -1663,6 +1663,7 @@ class sdRenderer
 			ctx.z_depth = ( sdRenderer.draw_in_3d ? 16 : 0 ) * sdWorld.camera.scale;
 			
 			const void_draw = sdEntity.prototype.DrawBG;
+			globalThis.sdArtLab?.background(ctx);
 			
 			//let double_draw_catcher = new WeakMap();
 			
@@ -1981,6 +1982,7 @@ class sdRenderer
 			ctx.volumetric_mode = FakeCanvasContext.DRAW_IN_3D_FLAT;
 			
 			const void_draw_fg = sdEntity.prototype.DrawFG;
+			globalThis.sdArtLab?.foreground(ctx);
 			
 			//ctx.z_offset = 0 * sdWorld.camera.scale;
 			//ctx.z_depth = 16 * sdWorld.camera.scale;

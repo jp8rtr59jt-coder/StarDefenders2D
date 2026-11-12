@@ -35,3 +35,9 @@ Keep corresponding source and notices with any distributed modified game.
 The Milestone 3B movement prototype adds no third-party dependencies or artwork.
 Its source changes are provided under GPL-3.0 with the existing engine. Recorded
 prototype screenshots depict the retained upstream assets and are not final art.
+
+Milestone 3C's code-authored artwork, material patterns and presentation adapters
+are original prototype work distributed under GPL-3.0 with the engine. No external
+artwork, image-generation service, font or runtime dependency is added. Engine
+captures retain the upstream art, interface and attribution alongside these
+clearly labeled experiments. They do not establish a final artistic identity.

@@ -2209,6 +2209,7 @@ class sdBlock extends sdEntity
     //DrawFG( ctx, attached )
 	Draw( ctx, attached )
 	{
+		if(globalThis.sdArtLab?.block(ctx,this)) return;
 		var w = this.width;
 		var h = this.height;
 		

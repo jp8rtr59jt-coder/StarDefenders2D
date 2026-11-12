@@ -1172,6 +1172,7 @@ class sdEffect extends sdEntity
 		return;
 	
 		ctx.apply_shading = ( sdEffect.types[ this._type ].apply_shading === undefined ) ? true : sdEffect.types[ this._type ].apply_shading;
+		if(globalThis.sdArtLab?.effect(ctx,this)) return;
 	
 		var y = 0;
 	

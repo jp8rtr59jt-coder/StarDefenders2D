@@ -1,0 +1,556 @@
+{
+  "date": "2026-11-12T12:03:52.920Z",
+  "browser": "156.0.8078.79",
+  "passed": true,
+  "checks": [
+    {
+      "name": "optional lab, separate storage, native stage, one enemy",
+      "data": {
+        "storage": "sd-art-direction-lab",
+        "enemies": 1,
+        "art": {
+          "generationMs": 63.29999999701977,
+          "canvases": 75,
+          "rgbaCanvasBytes": 19120128,
+          "maxWidth": 512
+        },
+        "contract": {
+          "logicalSize": 32,
+          "pivot": [
+            16,
+            16
+          ],
+          "sourceScale": 8,
+          "parts": [
+            "pelvis",
+            "torso",
+            "upper arm",
+            "forearm",
+            "thigh",
+            "calf",
+            "foot",
+            "head"
+          ],
+          "note": "Native spring transforms and logical sizes; artwork never sets bone positions or collision bounds."
+        }
+      }
+    },
+    {
+      "name": "native shot and impact form identical combat comparison",
+      "data": {
+        "impacts": 1,
+        "ammo": 11,
+        "before": 12
+      }
+    },
+    {
+      "name": "original head produces visible framebuffer pixels",
+      "data": {
+        "changedPixels": 2226
+      }
+    },
+    {
+      "name": "original weapon produces visible framebuffer pixels",
+      "data": {
+        "changedPixels": 5362
+      }
+    },
+    {
+      "name": "A head produces visible framebuffer pixels",
+      "data": {
+        "changedPixels": 635
+      }
+    },
+    {
+      "name": "A weapon produces visible framebuffer pixels",
+      "data": {
+        "changedPixels": 1360
+      }
+    },
+    {
+      "name": "B head produces visible framebuffer pixels",
+      "data": {
+        "changedPixels": 666
+      }
+    },
+    {
+      "name": "B weapon produces visible framebuffer pixels",
+      "data": {
+        "changedPixels": 931
+      }
+    },
+    {
+      "name": "C head produces visible framebuffer pixels",
+      "data": {
+        "changedPixels": 622
+      }
+    },
+    {
+      "name": "C weapon produces visible framebuffer pixels",
+      "data": {
+        "changedPixels": 857
+      }
+    },
+    {
+      "name": "four directions and three close-ups captured with identical physical state, bones, springs and hitboxes"
+    },
+    {
+      "name": "C submitted far, near and foreground motion preserves depth order",
+      "data": {
+        "cameraDelta": 40,
+        "relativeWorldMovement": {
+          "background0": 6,
+          "background1": 18,
+          "foreground": 48
+        }
+      }
+    },
+    {
+      "name": "repeatable CPU submission and completion measurements recorded"
+    },
+    {
+      "name": "A live run, slide, crouch, firing/reload, jump/jetpack and simulated ragdoll",
+      "data": {
+        "slide": {
+          "active": true,
+          "crouch": 1,
+          "box": [
+            -5,
+            5,
+            -6,
+            16
+          ]
+        },
+        "death": 9,
+        "bones": 18
+      }
+    },
+    {
+      "name": "B live run, slide, crouch, firing/reload, jump/jetpack and simulated ragdoll",
+      "data": {
+        "slide": {
+          "active": true,
+          "crouch": 1,
+          "box": [
+            -5,
+            5,
+            -6,
+            16
+          ]
+        },
+        "death": 9,
+        "bones": 18
+      }
+    },
+    {
+      "name": "C live run, slide, crouch, firing/reload, jump/jetpack and simulated ragdoll",
+      "data": {
+        "slide": {
+          "active": true,
+          "crouch": 1,
+          "box": [
+            -5,
+            5,
+            -6,
+            16
+          ]
+        },
+        "death": 9,
+        "bones": 18
+      }
+    },
+    {
+      "name": "repeated comparison resets retain a single fresh enemy",
+      "data": {
+        "count": 10,
+        "enemies": 1,
+        "health": 250
+      }
+    },
+    {
+      "name": "all existing world namespaces and legacy saves preserved",
+      "data": {
+        "names": [
+          {
+            "name": "localforage",
+            "value": {
+              "sentinel": "localforage"
+            }
+          },
+          {
+            "name": "sd-combat-experimental",
+            "value": {
+              "sentinel": "sd-combat-experimental"
+            }
+          },
+          {
+            "name": "sd-movement-experimental",
+            "value": {
+              "sentinel": "sd-movement-experimental"
+            }
+          }
+        ],
+        "legacy": "{\"legacy\":\"preserved\"}"
+      }
+    },
+    {
+      "name": "original, combat and movement modes omit all art-lab assets and adapters"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "badResponses": [
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    }
+  ],
+  "parallax": [
+    {
+      "camera": 736,
+      "name": "background0",
+      "x": 432
+    },
+    {
+      "camera": 736,
+      "name": "background1",
+      "x": 432
+    },
+    {
+      "camera": 736,
+      "name": "foreground",
+      "x": 432
+    },
+    {
+      "camera": 776,
+      "name": "background0",
+      "x": 466
+    },
+    {
+      "camera": 776,
+      "name": "background1",
+      "x": 454
+    },
+    {
+      "camera": 776,
+      "name": "foreground",
+      "x": 424
+    }
+  ],
+  "performance": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "glVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "gpuTimerExtension": false,
+    "samples": {
+      "original": [
+        {
+          "cpuSubmitMs": 0.6000000089406967,
+          "blockingCompletionMs": 0.6000000089406967,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5999999940395355,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 2.9000000059604645,
+          "blockingCompletionMs": 3,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.7000000029802322,
+          "blockingCompletionMs": 0.800000011920929,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.7999999970197678,
+          "blockingCompletionMs": 0.7999999970197678,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.7000000029802322,
+          "blockingCompletionMs": 0.7000000029802322,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 4.5999999940395355,
+          "blockingCompletionMs": 4.5999999940395355,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.6000000089406967,
+          "blockingCompletionMs": 0.7000000029802322,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 2.2999999970197678,
+          "blockingCompletionMs": 2.2999999970197678,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.6000000089406967,
+          "blockingCompletionMs": 0.6000000089406967,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 2.7000000029802322,
+          "blockingCompletionMs": 2.7000000029802322,
+          "gpuMs": null,
+          "calls": 3
+        }
+      ],
+      "A": [
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5999999940395355,
+          "blockingCompletionMs": 0.5999999940395355,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 4.9000000059604645,
+          "blockingCompletionMs": 4.9000000059604645,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.4000000059604645,
+          "blockingCompletionMs": 0.4000000059604645,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5999999940395355,
+          "blockingCompletionMs": 0.5999999940395355,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5999999940395355,
+          "blockingCompletionMs": 0.5999999940395355,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.4000000059604645,
+          "blockingCompletionMs": 0.4000000059604645,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 1.2999999970197678,
+          "blockingCompletionMs": 1.2999999970197678,
+          "gpuMs": null,
+          "calls": 3
+        }
+      ],
+      "B": [
+        {
+          "cpuSubmitMs": 2.6000000089406967,
+          "blockingCompletionMs": 2.6000000089406967,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.4000000059604645,
+          "blockingCompletionMs": 0.4000000059604645,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 2.4000000059604645,
+          "blockingCompletionMs": 2.4000000059604645,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.4000000059604645,
+          "blockingCompletionMs": 0.4000000059604645,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 1.2000000029802322,
+          "blockingCompletionMs": 1.2000000029802322,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.3999999910593033,
+          "blockingCompletionMs": 0.3999999910593033,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.3999999910593033,
+          "blockingCompletionMs": 0.3999999910593033,
+          "gpuMs": null,
+          "calls": 3
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 3
+        }
+      ],
+      "C": [
+        {
+          "cpuSubmitMs": 4.199999988079071,
+          "blockingCompletionMs": 4.199999988079071,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 4.100000008940697,
+          "blockingCompletionMs": 4.100000008940697,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 0.6000000089406967,
+          "blockingCompletionMs": 0.7000000029802322,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 3,
+          "blockingCompletionMs": 3,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 2.5999999940395355,
+          "blockingCompletionMs": 2.5999999940395355,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 2.7000000029802322,
+          "blockingCompletionMs": 2.7000000029802322,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 0.5,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 31.400000005960464,
+          "blockingCompletionMs": 31.400000005960464,
+          "gpuMs": null,
+          "calls": 4
+        },
+        {
+          "cpuSubmitMs": 0.5,
+          "blockingCompletionMs": 3.0999999940395355,
+          "gpuMs": null,
+          "calls": 4
+        }
+      ]
+    },
+    "scope": "12 samples/mode after 3 warmups, rotating order, frozen identical normal scene. CPU time around Render; blocking completion includes CPU/driver and gl.finish wait. GPU-only values require non-disjoint timer-query results. No FPS/input-latency or macOS hardware claim."
+  }
+}

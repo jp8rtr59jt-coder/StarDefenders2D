@@ -429,6 +429,7 @@ class sdStorage extends sdEntity
 	}
 	Draw( ctx, attached )
 	{
+		if(globalThis.sdArtLab?.storage(ctx,this)) return;
 		let xx = 0;
 		
 		let yy = Math.round( ( 1 - ( Math.cos( this._open_anim * Math.PI ) * 0.5 + 0.5 ) ) * 2 );

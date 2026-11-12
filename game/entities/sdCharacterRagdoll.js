@@ -1426,13 +1426,13 @@ class sdCharacterRagdoll
 						ctx.sd_filter = this.character._sd_filter_darkened;
 					}
 					
-					this.character.DrawHelmet( ctx );
+					if(!globalThis.sdArtLab?.head(ctx,this.character)) this.character.DrawHelmet( ctx );
 				}
 				else
 				{
 					if ( !this.character.driver_of || !this.character.driver_of.VehicleHidesLegs() || spring.subgroup !== 1 ) // No legs in vehicles
 					{
-						ctx.drawImageFilterCache( skin_images_by_subgroup[ spring.subgroup ], spring.image,source_y_offset, 32,32, -16,-16, 32,32 );
+						if(!globalThis.sdArtLab?.part(ctx,this.character,spring.image)) ctx.drawImageFilterCache( skin_images_by_subgroup[ spring.subgroup ], spring.image,source_y_offset, 32,32, -16,-16, 32,32 );
 
 						if ( this.character.flying )
 						{

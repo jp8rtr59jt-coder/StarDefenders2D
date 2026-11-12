@@ -89,6 +89,9 @@ const arena = {
    e._ai_enabled=this.hostile?e._combatModel:sdCharacter.AI_MODEL_NONE;
    e._ai=null;e._key_states.Reset();e.sx=0;
    humanoidAI.reset(e);
+   // Passive test actors may already be asleep. Enabling their native model
+   // must schedule them again; otherwise the existing AI never gets a tick.
+   if(this.hostile&&e.hea>0)e.SetHiberState(sdEntity.HIBERSTATE_ACTIVE);
   }
   document.getElementById('combat-hostility').textContent='Hostility: '+(this.hostile?'on':'off');
  },
