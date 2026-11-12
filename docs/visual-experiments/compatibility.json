@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "errors": [],
+  "external": [],
+  "modes": [
+    {
+      "url": "?mode=combat&visual=1",
+      "visual": true,
+      "alive": true
+    },
+    {
+      "url": "?mode=combat",
+      "visual": false,
+      "alive": true
+    },
+    {
+      "url": "original offline",
+      "visual": false,
+      "alive": true
+    }
+  ],
+  "impact": {
+    "damage": 18,
+    "effects": 2,
+    "muzzle": 0
+  }
+}

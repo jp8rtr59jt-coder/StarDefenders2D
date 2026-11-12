@@ -1662,6 +1662,7 @@ class sdRenderer
 			ctx.z_offset = offset0 * sdWorld.camera.scale;
 			ctx.z_depth = ( sdRenderer.draw_in_3d ? 16 : 0 ) * sdWorld.camera.scale;
 			
+			globalThis.sdVisualPreview?.background(ctx);
 			const void_draw = sdEntity.prototype.DrawBG;
 			
 			//let double_draw_catcher = new WeakMap();

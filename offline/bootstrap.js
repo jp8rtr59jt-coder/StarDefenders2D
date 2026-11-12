@@ -42,6 +42,7 @@ const ready = setInterval(async () => {
 		if (globalThis.SD_COMBAT)
 		{
 			await import('./combat/sandbox.js');
+			if(new URLSearchParams(location.search).has('visual')) await import('./visual/preview.js');
 			play.textContent = 'Start combat sandbox';
 			play.onclick = () => {
 				const settings = GetPlayerSettings();
