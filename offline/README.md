@@ -2,6 +2,8 @@
 
 For the optional experimental arena, see [Milestone 2 combat sandbox](COMBAT_SANDBOX.md).
 It is separate from the original world and opens at `/?mode=combat`.
+For the opt-in slide and traversal prototype, see [Milestone 3B](ADVANCED_MOVEMENT.md)
+and open `/?mode=combat&movement=1`.
 
 Uses the original Star Defenders 2D offline sandbox. No Node game server,
 multiplayer account, npm installation, internet connection, new level or new

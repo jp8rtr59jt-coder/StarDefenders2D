@@ -1,0 +1,277 @@
+{
+  "passed": true,
+  "errors": [],
+  "external": [],
+  "checks": [
+    {
+      "name": "startup and traversal lane",
+      "data": {
+        "x": -848,
+        "y": -80.00001,
+        "sx": 0,
+        "sy": 0,
+        "ground": true,
+        "crouch": 0,
+        "active": false,
+        "recovery": 0,
+        "remaining": 0,
+        "clear": true,
+        "box": [
+          -12,
+          16
+        ],
+        "flying": false,
+        "health": 250
+      }
+    },
+    {
+      "name": "stationary slide rejected"
+    },
+    {
+      "name": "native run",
+      "data": {
+        "x": -802.1025163520001,
+        "y": -80.00001,
+        "sx": 5.7131290880000005,
+        "sy": 0,
+        "ground": true,
+        "crouch": 0,
+        "active": false,
+        "recovery": 0,
+        "remaining": 0,
+        "clear": true,
+        "box": [
+          -12,
+          16
+        ],
+        "flying": false,
+        "health": 250
+      }
+    },
+    {
+      "name": "slide initiation, no boost, native reduced box",
+      "data": {
+        "x": -774.8000000000001,
+        "y": -80.00001,
+        "sx": 5.100503270400002,
+        "sy": 0,
+        "ground": true,
+        "crouch": 1,
+        "active": true,
+        "recovery": 0,
+        "remaining": 966.6666666666667,
+        "clear": true,
+        "box": [
+          -6,
+          16
+        ],
+        "flying": false,
+        "health": 250
+      }
+    },
+    {
+      "name": "momentum deceleration",
+      "data": {
+        "x": -744.1364771072001,
+        "y": -80.00001,
+        "sx": 3.8405032704000033,
+        "sy": 0,
+        "ground": true,
+        "crouch": 1,
+        "active": true,
+        "recovery": 0,
+        "remaining": 733.3333333333331,
+        "clear": true,
+        "box": [
+          -6,
+          16
+        ],
+        "flying": false,
+        "health": 250
+      }
+    },
+    {
+      "name": "natural termination",
+      "data": {
+        "x": -708.1289280512,
+        "y": -80.00001,
+        "sx": 1.140503270400002,
+        "sy": 0,
+        "ground": true,
+        "crouch": 1,
+        "active": false,
+        "recovery": 300,
+        "remaining": 233.33333333333306,
+        "clear": true,
+        "box": [
+          -6,
+          16
+        ],
+        "flying": false,
+        "health": 250
+      }
+    },
+    {
+      "name": "held key does not retrigger"
+    },
+    {
+      "name": "bounded simulation, corridor, ceiling, ledge and wall collision",
+      "data": {
+        "initialSpeed": 5.82,
+        "maxSpeed": 5.82,
+        "steps": 26,
+        "distance": 93.96000000000004,
+        "left": {
+          "x": -865.9,
+          "sx": -4.380000000000003,
+          "active": true
+        },
+        "recovery": {
+          "active": false,
+          "remaining": 266.6666666666667
+        },
+        "entrance": {
+          "x": -677.00001,
+          "crouch": 0.63,
+          "clearOfGeometry": true
+        },
+        "capped": 7.82,
+        "obstacle": {
+          "x": -533.00001,
+          "active": false
+        },
+        "ceiling": {
+          "crouch": 1,
+          "clear": false,
+          "top": -86.00001
+        },
+        "corridor": {
+          "x": -592.6753766399999,
+          "active": false,
+          "crouch": 1,
+          "clear": false,
+          "top": -86
+        },
+        "ledge": {
+          "active": false,
+          "ground": false,
+          "y": -135.9277330636608,
+          "sy": 1.9781170012992
+        },
+        "wall": {
+          "x": -389.00001,
+          "sx": 0,
+          "active": false
+        }
+      }
+    },
+    {
+      "name": "pistol firing while sliding",
+      "data": {
+        "x": -744.2307952631302,
+        "y": -80.00001,
+        "sx": 3.369969578811661,
+        "sy": 0,
+        "ground": true,
+        "crouch": 1,
+        "active": true,
+        "recovery": 0,
+        "remaining": 666.6666666666664,
+        "clear": true,
+        "box": [
+          -6,
+          16
+        ],
+        "flying": false,
+        "health": 250
+      }
+    },
+    {
+      "name": "jump cancels slide",
+      "data": {
+        "x": -717.5736226251255,
+        "y": -96.33290600000002,
+        "sx": 4.019449078256724,
+        "sy": -2.5826480000000007,
+        "ground": false,
+        "crouch": 0,
+        "active": false,
+        "recovery": 133.33333333333331,
+        "remaining": 633.333333333333,
+        "clear": true,
+        "box": [
+          -12,
+          16
+        ],
+        "flying": true,
+        "health": 250
+      }
+    },
+    {
+      "name": "native jetpack after slide jump",
+      "data": {
+        "x": -696.6379045894029,
+        "y": -107.49956273069976,
+        "sx": 4.29977791748518,
+        "sy": -2.141712860793593,
+        "ground": false,
+        "crouch": 0,
+        "active": false,
+        "recovery": 0,
+        "remaining": 633.333333333333,
+        "clear": true,
+        "box": [
+          -12,
+          16
+        ],
+        "flying": true,
+        "health": 250
+      }
+    },
+    {
+      "name": "jetpack release"
+    },
+    {
+      "name": "enemy projectile damages sliding actor",
+      "data": {
+        "x": -758.9748855122353,
+        "y": -80.00001,
+        "sx": 3.9025981357646944,
+        "sy": 0,
+        "ground": true,
+        "crouch": 1,
+        "active": true,
+        "recovery": 0,
+        "remaining": 799.9999999999999,
+        "clear": true,
+        "box": [
+          -6,
+          16
+        ],
+        "flying": false,
+        "health": 220.3
+      }
+    },
+    {
+      "name": "death cancels slide, native ragdoll"
+    },
+    {
+      "name": "three resets clear movement state"
+    },
+    {
+      "name": "native rendered standing, sliding and recovery sequence"
+    },
+    {
+      "name": "original, combat and legacy saves unchanged",
+      "data": {
+        "original": {
+          "sentinel": "original-world"
+        },
+        "combat": {
+          "sentinel": "combat-world"
+        },
+        "legacy": "{\"legacy\":\"untouched\"}"
+      }
+    }
+  ]
+}

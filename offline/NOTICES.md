@@ -31,3 +31,7 @@ The optional music directory and music manager are excluded from this export.
 No new permission is asserted for contributor assets. Before commercial
 redistribution, resolve upstream's ambiguous additional terms and asset rights.
 Keep corresponding source and notices with any distributed modified game.
+
+The Milestone 3B movement prototype adds no third-party dependencies or artwork.
+Its source changes are provided under GPL-3.0 with the existing engine. Recorded
+prototype screenshots depict the retained upstream assets and are not final art.

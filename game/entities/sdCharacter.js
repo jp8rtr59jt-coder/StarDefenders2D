@@ -5181,6 +5181,8 @@ class sdCharacter extends sdEntity
 		//this.HandlePlayerPowerups( GSPEED );
 		
 
+		const movement = globalThis.sdMovementPrototype?.has(this) ? globalThis.sdMovementPrototype : null;
+		if(movement) movement.before(this,GSPEED);
 		let act_y_or_unstable = ( this.driver_of || this._frozen > 0 ) ? 0 : this.act_y;
 		
 		if ( this.stability < 50 )
@@ -5203,6 +5205,7 @@ class sdCharacter extends sdEntity
 		
 		//let target_crouch = ( this.stability < 50 ) ? 3 : Math.max( 0, act_y_or_unstable );
 		let target_crouch = ( this.stability < 50 ) ? 3 : Math.max( 0, act_y_or_unstable );
+		if(movement?.sliding(this)) target_crouch=Math.max(1,target_crouch);
 		
 		if ( this._crouch_intens !== target_crouch )
 		{
@@ -5235,6 +5238,9 @@ class sdCharacter extends sdEntity
 				}
 			}
 		}
+		// Keep the optional movement actor's expanded posture authoritative for
+		// this tick's collision sweep, including recovery at a corridor entrance.
+		if(movement) movement.refresh(this);
 		/*if ( ( ( act_y_or_unstable === 1 ) ? 1 : 0 ) !== this._crouch_intens )
 		{
 			let target_crouch = ( this.stability < 50 ) ? 3 : 1;
@@ -6010,6 +6016,8 @@ class sdCharacter extends sdEntity
 					}
 					else
 					{
+						if(!movement?.ground(this,GSPEED))
+						{
 						this.sx = sdWorld.MorphWithTimeScale( this.sx, 0, 0.8, GSPEED );
 						
 						if ( !this.driver_of )
@@ -6026,6 +6034,7 @@ class sdCharacter extends sdEntity
 
 						if ( this._anim_walk > 10 )
 						this._anim_walk -= 10;
+						}
 					}
 				}
 			}
@@ -6148,6 +6157,7 @@ class sdCharacter extends sdEntity
 			this.DamageWithEffect( Infinity );
 		}*/
 									
+		if(movement) movement.after(this,GSPEED);
 		if ( this._ragdoll )
 		{
 			if ( !sdWorld.is_server && !this._local_ragdoll_ever_synced )
@@ -6188,6 +6198,7 @@ class sdCharacter extends sdEntity
 	}
 	GetStepHeight()
 	{
+		if(globalThis.sdMovementPrototype?.sliding(this)) return 3;
 		return ( this.hea > 0 && ( !this.flying || this.sy >= 0 ) ) ? ( this.act_y !== 1 ? 10 : 3 ) : 0;
 	}
 	onThinkFrozen( GSPEED )

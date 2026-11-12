@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "modes": [
+    {
+      "mode": "combat",
+      "prototype": "undefined",
+      "movement": false,
+      "storage": "sd-combat-experimental",
+      "hRegistered": false,
+      "traversalBlocks": 0
+    },
+    {
+      "mode": "original",
+      "prototype": "undefined",
+      "movement": false,
+      "storage": "localforage",
+      "hRegistered": false
+    }
+  ],
+  "errors": [],
+  "external": []
+}

@@ -135,11 +135,13 @@ class CombatConfig extends sdServerConfigFull {
   sdTask.MakeSureCharacterHasTask=()=>{};
   sdWorld.world_bounds={x1:-960,y1:-256,x2:960,y2:256};
   arena.geometry();
+  globalThis.sdMovementPrototype?.buildArea(arena);
  }
  static PlayerSpawnPointSeeker(p){p.x=-560;p.y=128;}
  static onRespawn(p){
   sdRenderer.service_mesage='';sdRenderer.service_mesage_until=0;
   arena.supply(p);
+  globalThis.sdMovementPrototype?.attach(p);
   if(sdWeather.only_instance) sdWeather.only_instance.onThink=()=>{};
   if(!document.getElementById('combat-controls')) arena.controls();
  }
