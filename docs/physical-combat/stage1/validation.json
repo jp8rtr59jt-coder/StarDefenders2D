@@ -1,0 +1,5938 @@
+{
+  "passed": true,
+  "errors": [],
+  "external": [],
+  "checks": [
+    {
+      "name": "all four styles / weapons / poses / eight aim directions align",
+      "data": {
+        "cases": 512,
+        "maxRenderError": 5.838134859003413e-7,
+        "oldMaxOriginError": 22.036180957052405
+      }
+    },
+    {
+      "name": "native circled rail beam starts at its physical muzzle",
+      "data": {
+        "x": -715.1402362460485,
+        "y": -153.8055264201265
+      }
+    },
+    {
+      "name": "fresh / teleported rigs retain native firing origin",
+      "data": {
+        "nativeFallback": true
+      }
+    },
+    {
+      "name": "one-unit walls and ceilings prevent cover bypass in all poses and aim directions",
+      "data": {
+        "cases": 128
+      }
+    },
+    {
+      "name": "A uses original cargo artwork",
+      "data": {
+        "native": true,
+        "props": 4
+      }
+    }
+  ],
+  "alignment": {
+    "cases": 512,
+    "maxRenderError": 5.838134859003413e-7,
+    "oldMaxOriginError": 22.036180957052405,
+    "rows": [
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 0,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 90,
+        "error": 2.972455774408006e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 180,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 270,
+        "error": 7.608857695506496e-8
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 9.379210201838763e-8
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 4.3200759517072455e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 5.838134859003413e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 4.3200759517072455e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 9.379210201838763e-8
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 3.6518040345421615e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.384508108436079e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 3.6518040345421615e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.1496034863052947e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.055755827491408e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 3.3411339581378674e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.9984642695320756e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 6.712685580118719e-8
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 7.373383933095874e-8
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 4.2591431210767025e-8
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.1725450608297569e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 1.3542834018063348e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 2.972455774408006e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 7.608857695506496e-8
+      },
+      {
+        "mode": "original",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "original",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "original",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503899092412377e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914526236318245e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914526236318245e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503899092412377e-7
+      },
+      {
+        "mode": "original",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 0,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 90,
+        "error": 2.972455774408006e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 180,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 270,
+        "error": 7.608857695506496e-8
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 9.379210201838763e-8
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 4.3200759517072455e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 5.838134859003413e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 4.3200759517072455e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 9.379210201838763e-8
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 3.6518040345421615e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.384508108436079e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 3.6518040345421615e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.1496034863052947e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.055755827491408e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 3.3411339581378674e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.9984642695320756e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 6.712685580118719e-8
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 7.373383933095874e-8
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 4.2591431210767025e-8
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.1725450608297569e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 1.3542834018063348e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 2.972455774408006e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 7.608857695506496e-8
+      },
+      {
+        "mode": "A",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "A",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "A",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503899092412377e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914526236318245e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914526236318245e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503899092412377e-7
+      },
+      {
+        "mode": "A",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 0,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 90,
+        "error": 2.972455774408006e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 180,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 270,
+        "error": 7.608857695506496e-8
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 9.379210201838763e-8
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 4.3200759517072455e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 5.838134859003413e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 4.3200759517072455e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 9.379210201838763e-8
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 3.6518040345421615e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.384508108436079e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 3.6518040345421615e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.1496034863052947e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.055755827491408e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 3.3411339581378674e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.9984642695320756e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 6.712685580118719e-8
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 7.373383933095874e-8
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 4.2591431210767025e-8
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.1725450608297569e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 1.3542834018063348e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 2.972455774408006e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 7.608857695506496e-8
+      },
+      {
+        "mode": "B",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "B",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "B",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503899092412377e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914526236318245e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914526236318245e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503899092412377e-7
+      },
+      {
+        "mode": "B",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 0,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 90,
+        "error": 2.972455774408006e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 180,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 270,
+        "error": 7.608857695506496e-8
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 9.379210201838763e-8
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 4.3200759517072455e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 5.838134859003413e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 4.3200759517072455e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 9.379210201838763e-8
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 3.6518040345421615e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.384508108436079e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 3.6518040345421615e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.1496034863052947e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.055755827491408e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 3.3411339581378674e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.9984642695320756e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 6.712685580118719e-8
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 7.373383933095874e-8
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 4.2591431210767025e-8
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.1725450608297569e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 1.3542834018063348e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 2.972455774408006e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.4955682938544031e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 1.3627159129829792e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 7.608857695506496e-8
+      },
+      {
+        "mode": "C",
+        "kind": "pistol",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.6097145398797316e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "C",
+        "kind": "rifle",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914527192952069e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503901695487482e-7
+      },
+      {
+        "mode": "C",
+        "kind": "shotgun",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 0,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 270,
+        "error": 1.2503899092412377e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "standing",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 0,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 45,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 90,
+        "error": 4.6775941534358584e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 135,
+        "error": 1.2796097032976667e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 180,
+        "error": 1.3601987077376815e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 225,
+        "error": 6.914526236318245e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 270,
+        "error": 1.103674586275978e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "crouching",
+        "degrees": 315,
+        "error": 6.914526236318245e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 0,
+        "error": 4.920362549229846e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 45,
+        "error": 3.846712924929932e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 90,
+        "error": 4.475560257729777e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 135,
+        "error": 1.4488503549963076e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 180,
+        "error": 1.6677361439962394e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 225,
+        "error": 5.024650262187868e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 270,
+        "error": 1.2525882781474294e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "sliding",
+        "degrees": 315,
+        "error": 1.8376800983914526e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 0,
+        "error": 6.830743508130282e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 45,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 90,
+        "error": 1.431103970619154e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 135,
+        "error": 1.9078085926077972e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 180,
+        "error": 6.94834373437199e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 225,
+        "error": 1.0754571120600857e-8
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 270,
+        "error": 1.2503899092412377e-7
+      },
+      {
+        "mode": "C",
+        "kind": "railgun",
+        "state": "jetpack",
+        "degrees": 315,
+        "error": 1.0754571120600857e-8
+      }
+    ]
+  },
+  "cover": [
+    {
+      "kind": "pistol",
+      "state": "standing",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3017364643389,
+          "y": -150.2563177650229
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "standing",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.3018985504192,
+          "y": -148.88749038650744
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "standing",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -714.4071491195145,
+          "y": -153.30276738554446
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "standing",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -716.3712672020843,
+          "y": -154.1232111606276
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "standing",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -717.2998657527666,
+          "y": -156.07902007511552
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "standing",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -716.5955188513296,
+          "y": -158.24219127241676
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "standing",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -715.6028059889211,
+          "y": -156.6981784846861
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "standing",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -713.5243527821733,
+          "y": -153.41643487237113
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "crouching",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3019617708486,
+          "y": -144.05893743193135
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "crouching",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.3019999719122,
+          "y": -142.95876996772984
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "crouching",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -720.5721127849474,
+          "y": -146.66786757841118
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "crouching",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -722.6459208221332,
+          "y": -147.4900127394734
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "crouching",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -723.58076961761,
+          "y": -149.5612557828395
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "crouching",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -722.7524327566468,
+          "y": -151.73958817702766
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "crouching",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -720.4557812438824,
+          "y": -150.69800343253672
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "crouching",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -709.6460693707718,
+          "y": -147.38420572381966
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "sliding",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3019617708486,
+          "y": -144.05893743193135
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "sliding",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.3019999719122,
+          "y": -142.95876996772984
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "sliding",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -720.5721127849474,
+          "y": -146.66786757841118
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "sliding",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -722.6459208221332,
+          "y": -147.4900127394734
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "sliding",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -723.58076961761,
+          "y": -149.5612557828395
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "sliding",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -722.7524327566468,
+          "y": -151.73958817702766
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "sliding",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -720.4557812438824,
+          "y": -150.69800343253672
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "sliding",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -709.6460693707718,
+          "y": -147.38420572381966
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "jetpack",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3017364643389,
+          "y": -150.2563177650229
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "jetpack",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.3018985504192,
+          "y": -148.88749038650744
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "jetpack",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -714.4071491195145,
+          "y": -153.30276738554446
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "jetpack",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -716.3712672020843,
+          "y": -154.1232111606276
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "jetpack",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -717.2998657527666,
+          "y": -156.07902007511552
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "jetpack",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -716.5955188513296,
+          "y": -158.24219127241676
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "pistol",
+      "state": "jetpack",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -715.6028059889211,
+          "y": -156.6981784846861
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "pistol",
+      "state": "jetpack",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -713.5243527821733,
+          "y": -153.41643487237113
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "standing",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "standing",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "standing",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "standing",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "standing",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "standing",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "standing",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "standing",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "crouching",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "crouching",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "crouching",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "crouching",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "crouching",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "crouching",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "crouching",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "crouching",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "sliding",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "sliding",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "sliding",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "sliding",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "sliding",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "sliding",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "sliding",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "sliding",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "jetpack",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "jetpack",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "jetpack",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "jetpack",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "jetpack",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "jetpack",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "rifle",
+      "state": "jetpack",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "rifle",
+      "state": "jetpack",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "standing",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        },
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        },
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        },
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        },
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "standing",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        },
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        },
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        },
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        },
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "standing",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        },
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        },
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        },
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        },
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "standing",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        },
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        },
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        },
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        },
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "standing",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        },
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        },
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        },
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        },
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "standing",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        },
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        },
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        },
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        },
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "standing",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        },
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        },
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        },
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        },
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "standing",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        },
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        },
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        },
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        },
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "crouching",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        },
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        },
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        },
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        },
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "crouching",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        },
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        },
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        },
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        },
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "crouching",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        },
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        },
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        },
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        },
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "crouching",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        },
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        },
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        },
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        },
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "crouching",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        },
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        },
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        },
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        },
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "crouching",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        },
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        },
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        },
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        },
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "crouching",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        },
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        },
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        },
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        },
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "crouching",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        },
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        },
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        },
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        },
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "sliding",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        },
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        },
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        },
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        },
+        {
+          "x": -714.301998394708,
+          "y": -143.1570056472848
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "sliding",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        },
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        },
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        },
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        },
+        {
+          "x": -714.3017912808112,
+          "y": -140.0988163705215
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "sliding",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        },
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        },
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        },
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        },
+        {
+          "x": -720.5821010310372,
+          "y": -138.61443248958133
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "sliding",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        },
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        },
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        },
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        },
+        {
+          "x": -725.5095585432164,
+          "y": -140.61646507070247
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "sliding",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        },
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        },
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        },
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        },
+        {
+          "x": -725.6981085987761,
+          "y": -144.88702160584057
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "sliding",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        },
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        },
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        },
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        },
+        {
+          "x": -725.5803751787065,
+          "y": -150.54185769934773
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "sliding",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        },
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        },
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        },
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        },
+        {
+          "x": -720.4665014020882,
+          "y": -150.69800359546448
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "sliding",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        },
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        },
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        },
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        },
+        {
+          "x": -710.7560037501631,
+          "y": -148.41778477673765
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "jetpack",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        },
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        },
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        },
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        },
+        {
+          "x": -714.3019052190423,
+          "y": -148.81956678761242
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "jetpack",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        },
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        },
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        },
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        },
+        {
+          "x": -714.6536308760167,
+          "y": -144.5710675004185
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "jetpack",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        },
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        },
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        },
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        },
+        {
+          "x": -714.3249522548873,
+          "y": -145.09906491014343
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "jetpack",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        },
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        },
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        },
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        },
+        {
+          "x": -718.9832958584128,
+          "y": -147.10041577552732
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "jetpack",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        },
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        },
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        },
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        },
+        {
+          "x": -721.0702000554273,
+          "y": -151.7536259448515
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "jetpack",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        },
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        },
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        },
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        },
+        {
+          "x": -719.3275844605082,
+          "y": -156.7258460719547
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "shotgun",
+      "state": "jetpack",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        },
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        },
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        },
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        },
+        {
+          "x": -715.4684870526494,
+          "y": -156.69818804145208
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "shotgun",
+      "state": "jetpack",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        },
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        },
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        },
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        },
+        {
+          "x": -714.4058876126232,
+          "y": -154.48451583287016
+        }
+      ],
+      "impacts": 5,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "standing",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3018734884546,
+          "y": -149.12910598034858
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "standing",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -715.3416015349728,
+          "y": -145.2968060018193
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "standing",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -714.2897470238248,
+          "y": -146.09844501386064
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "standing",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -718.2826129697038,
+          "y": -147.81388861276113
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "standing",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -720.0713879957162,
+          "y": -151.80235447218186
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "standing",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -718.5777174857856,
+          "y": -156.0642574382703
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "standing",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -715.0261115694585,
+          "y": -156.69822039801312
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "standing",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -715.1292501663498,
+          "y": -153.79404742963501
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "crouching",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3019981065195,
+          "y": -143.1766913098576
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "crouching",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.301821782985,
+          "y": -140.34722091217273
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "crouching",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -720.5858658600788,
+          "y": -139.61442540258736
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "crouching",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -724.8094008705181,
+          "y": -141.33045332926264
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "crouching",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -725.6981412851909,
+          "y": -145.19212155621634
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "crouching",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -724.8701008437953,
+          "y": -149.8379327252443
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "crouching",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -720.5236460799438,
+          "y": -150.69800452710462
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "crouching",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -711.4468815342648,
+          "y": -147.69481320922287
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "sliding",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3019981065195,
+          "y": -143.1766913098576
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "sliding",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -714.301821782985,
+          "y": -140.34722091217273
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "sliding",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -720.5858658600788,
+          "y": -139.61442540258736
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "sliding",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -724.8094008705181,
+          "y": -141.33045332926264
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "sliding",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -725.6981412851909,
+          "y": -145.19212155621634
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "sliding",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -724.8701008437953,
+          "y": -149.8379327252443
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "sliding",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -720.5236460799438,
+          "y": -150.69800452710462
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "sliding",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -711.4468815342648,
+          "y": -147.69481320922287
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "jetpack",
+      "degrees": 0,
+      "births": [
+        {
+          "x": -714.3018734884546,
+          "y": -149.12910598034858
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "jetpack",
+      "degrees": 45,
+      "births": [
+        {
+          "x": -715.3416015349728,
+          "y": -145.2968060018193
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "jetpack",
+      "degrees": 90,
+      "births": [
+        {
+          "x": -714.2897470238248,
+          "y": -146.09844501386064
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "jetpack",
+      "degrees": 135,
+      "births": [
+        {
+          "x": -718.2826129697038,
+          "y": -147.81388861276113
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "jetpack",
+      "degrees": 180,
+      "births": [
+        {
+          "x": -720.0713879957162,
+          "y": -151.80235447218186
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "jetpack",
+      "degrees": 225,
+      "births": [
+        {
+          "x": -717.4268448152847,
+          "y": -156.55799823862498
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    },
+    {
+      "kind": "railgun",
+      "state": "jetpack",
+      "degrees": 270,
+      "births": [
+        {
+          "x": -714.3052333886627,
+          "y": -156.6982753470654
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": true
+    },
+    {
+      "kind": "railgun",
+      "state": "jetpack",
+      "degrees": 315,
+      "births": [
+        {
+          "x": -715.3426558247409,
+          "y": -153.6415716275818
+        }
+      ],
+      "impacts": 1,
+      "protectedHealth": 1000,
+      "flashSuppressed": false
+    }
+  ]
+}

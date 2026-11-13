@@ -1370,6 +1370,7 @@ class sdCharacterRagdoll
 							{
 								ctx.save();
 								{
+									if(!this.character._inventory[this.character.gun_slot].DrawAligned(ctx,this.character,spring)){
 									ctx.translate( -7, 3 );
 
 									let activation = Math.pow( this.character._weapon_draw_timer / sdCharacter.default_weapon_draw_time, 2 );
@@ -1385,6 +1386,7 @@ class sdCharacterRagdoll
 									ctx.sd_filter = null;
 
 									this.character._inventory[ this.character.gun_slot ].Draw( ctx, true );
+									}
 
 									ctx.filter = char_filter;
 									ctx.sd_filter = this.character.sd_filter;

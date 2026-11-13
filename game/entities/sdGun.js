@@ -26,6 +26,7 @@ import sdStatusEffect from './sdStatusEffect.js';
 import sdCrystal from './sdCrystal.js';
 import sdTurret from './sdTurret.js';
 import sdGunClass from './sdGunClass.js';
+import sdWeaponPose from '../combat/weapon-pose.js';
 
 import sdShop from '../client/sdShop.js';
 
@@ -1327,8 +1328,9 @@ class sdGun extends sdEntity
 						}
 					}
 					
-					let initial_an = this._held_by.IsPlayerClass() ?  this._held_by.GetLookAngle() + this._held_by._side * ( ( Math.pow( this._held_by._recoil * 5, 2 ) / 5 ) * ( 0.5 + 0.5 * Math.random() ) ) : 
-                                    this._held_by.GetLookAngle();
+					const aligned_pose = background_shoot ? null : this.GetAlignedPose();
+					const firing_angle = aligned_pose ? aligned_pose.fireAngle : this._held_by.GetLookAngle();
+					let initial_an = this._held_by.IsPlayerClass() ? firing_angle + this._held_by._side * ( ( Math.pow( this._held_by._recoil * 5, 2 ) / 5 ) * ( 0.5 + 0.5 * Math.random() ) ) : firing_angle;
 					
 					let count = this._count; //sdGun.classes[ this.class ].count === undefined ? 1 : sdGun.classes[ this.class ].count;
 					let spread = this._spread; //sdGun.classes[ this.class ].spread || 0;
@@ -1484,6 +1486,7 @@ class sdGun extends sdEntity
 
 						if ( sdWorld.is_server )
 						{
+							if(aligned_pose)sdWeaponPose.place(bullet_obj,this._held_by,aligned_pose);
 							sdEntity.AddEntityToEntitiesArray( bullet_obj );
 						}
 						else
@@ -2006,6 +2009,28 @@ class sdGun extends sdEntity
 			this.BasicCarryTooltip( ctx, xx );
 		}
 	}
+	GetAlignedPose()
+	{
+		const c=this._held_by;
+		if(!sdWorld.is_singleplayer||!sdWorld.server_config?.align_combat_muzzles||!c?._ragdoll||c.driver_of||c._inventory[c.gun_slot]!==this)return null;
+		if(this.class!==sdGun.CLASS_PISTOL&&this.class!==sdGun.CLASS_RIFLE&&this.class!==sdGun.CLASS_SHOTGUN&&this.class!==sdGun.CLASS_RAILGUN)return null;
+		// Fresh spawns, teleports and collapsed rigs can have unprepared or distant
+		// hand bones. Keep the native origin until the live rig is near its owner.
+		if(c.hea<=0||Math.hypot(c._ragdoll.elbow2.x-c.x,c._ragdoll.elbow2.y-c.y)>48*c.s/100||Math.hypot(c._ragdoll.hand2.x-c.x,c._ragdoll.hand2.y-c.y)>48*c.s/100)return null;
+		return sdWeaponPose.solve(c,this.GetMuzzleLocal());
+	}
+	GetMuzzleLocal(){const def=sdGun.classes[this.class];return {x:(def.muzzle_x||0)+(def.image_offset_x||0),y:(def.muzzle_y||0)+(def.image_offset_y||0)};}
+	MuzzleBlocked(){return sdWorld.server_config?.align_combat_muzzles&&sdWeaponPose.blocked(this);}
+	DrawAligned(ctx,c,spring)
+	{
+		const p=this.GetAlignedPose();if(!p)return false;
+		// Undo the already-applied native spring basis, then use the same pose
+		// that Shoot uses. The caller's save/restore protects the limb drawing.
+		ctx.scale(1/p.scale,p.side/p.scale);ctx.rotate(-p.arm);
+		ctx.translate(c.x-spring.parent.x,c.y-spring.parent.y);
+		ctx.translate(p.x-c.x,p.y-c.y);ctx.rotate(p.angle);ctx.scale(p.scale,p.side*p.scale);
+		this.Draw(ctx,true);return true;
+	}
 	Draw( ctx, attached )
 	{
 		this.UpdateHolderClientSide();
@@ -2315,7 +2340,7 @@ class sdGun extends sdEntity
 			ctx.filter = 'none';
 			ctx.sd_filter = null;
 			
-			if ( muzzle_x !== undefined )
+			if ( muzzle_x !== undefined && !this.MuzzleBlocked() )
 			if ( this.muzzle > 0 )
 			{
 				/*if ( this.muzzle > 2.5 )

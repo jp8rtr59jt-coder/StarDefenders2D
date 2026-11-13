@@ -1,6 +1,7 @@
 
 import sdWorld from '../sdWorld.js';
 import sdEntity from './sdEntity.js';
+import sdWeaponPose from '../combat/weapon-pose.js';
 
 import sdEffect from './sdEffect.js';
 import sdCube from './sdCube.js';
@@ -584,6 +585,7 @@ class sdBullet extends sdEntity
 	}
 	onRemove()
 	{
+		const visual_origin=sdWeaponPose.origins.get(this);
 		if ( this._custom_detonation_logic )
 		this._custom_detonation_logic( this );
 
@@ -599,10 +601,10 @@ class sdBullet extends sdEntity
 			sdWorld.SendEffect({ x:this._start_x, y:this._start_y, x2:this.x, y2:this.y, type:sdEffect.TYPE_ALT_RAIL, color:this.color });
 			else
 			if ( this._rail_circled )
-			sdWorld.SendEffect({ x:this._start_x, y:this._start_y, x2:this.x, y2:this.y, type:sdEffect.TYPE_BEAM_CIRCLED, color:this.color });
+			sdWorld.SendEffect({ x:visual_origin?visual_origin.x:this._start_x, y:visual_origin?visual_origin.y:this._start_y, x2:this.x, y2:this.y, type:sdEffect.TYPE_BEAM_CIRCLED, color:this.color });
 			else
 			if ( this._rail )
-			sdWorld.SendEffect({ x:this._start_x, y:this._start_y, x2:this.x, y2:this.y, type:sdEffect.TYPE_BEAM, color:this.color });
+			sdWorld.SendEffect({ x:visual_origin?visual_origin.x:this._start_x, y:visual_origin?visual_origin.y:this._start_y, x2:this.x, y2:this.y, type:sdEffect.TYPE_BEAM, color:this.color });
 		}
 
 		if ( this.explosion_radius > 0 )

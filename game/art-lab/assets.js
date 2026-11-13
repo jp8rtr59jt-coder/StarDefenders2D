@@ -2,6 +2,7 @@
 // Each family has different contours and surface construction, not a palette LUT.
 export const contract=Object.freeze({
  logicalSize:32,pivot:[16,16],sourceScale:8,
+ pistolMuzzle:[(23.1-16)*.6,(13.5-16)*.6],
  parts:['pelvis','torso','upper arm','forearm','thigh','calf','foot','head'],
  note:'Native spring transforms and logical sizes; artwork never sets bone positions or collision bounds.'
 });

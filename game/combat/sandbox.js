@@ -126,6 +126,7 @@ const arena = {
 };
 
 class CombatConfig extends sdServerConfigFull {
+ static align_combat_muzzles=true;
  static humanoid_ai=humanoidAI;
  static enable_bounds_move=false;
  static aggressive_hibernation=false;

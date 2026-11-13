@@ -39,8 +39,12 @@ const lab={
   this.paint(ctx,this.images[role][7],-16,-16,32,32);return true;},
  weapon(ctx,g,attached){
   if(!this.images||!attached||!g._held_by||!this.role(g._held_by)||g.class!==sdGun.CLASS_PISTOL)return false;
-  this.paint(ctx,this.images.pistol,-16,-16,32,32);
-  if(g.muzzle>0)this.paint(ctx,this.images.flash,4,-7,14,10);
+  const muzzle=g.GetMuzzleLocal();
+  // The code-authored barrel ends at (23.1,13.5), scaled around (16,16)
+  // by .6 in assets.js. Map that declared artwork anchor to native metadata.
+  const x=muzzle.x-contract.pistolMuzzle[0],y=muzzle.y-contract.pistolMuzzle[1];
+  this.paint(ctx,this.images.pistol,-16+x,-16+y,32,32);
+  if(g.muzzle>0&&!g.MuzzleBlocked())this.paint(ctx,this.images.flash,muzzle.x,muzzle.y-5,14,10);
   return true;
  },
  block(ctx,b){
@@ -48,7 +52,7 @@ const lab={
   this.paint(ctx,this.images.tile,0,0,b.width,b.height);return true;
  },
  storage(ctx,e){
-  if(!this.images||e.x<544||e.x>928||e.type!==sdStorage.TYPE_CARGO||e.held_by)return false;
+  if(!this.images||this.mode==='A'||e.x<544||e.x>928||e.type!==sdStorage.TYPE_CARGO||e.held_by)return false;
   this.paint(ctx,this.images.crate,-13,-11,26,24);return true;
  },
  effect(ctx,e){
