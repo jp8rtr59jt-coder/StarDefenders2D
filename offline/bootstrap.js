@@ -3,8 +3,9 @@ globalThis.SD_OFFLINE = true;
 globalThis.SD_COMBAT = new URLSearchParams(location.search).get('mode') === 'combat';
 globalThis.SD_ART_LAB = globalThis.SD_COMBAT && new URLSearchParams(location.search).get('art') === '1';
 globalThis.SD_MOVEMENT = globalThis.SD_COMBAT && new URLSearchParams(location.search).get('movement') === '1';
+globalThis.SD_PHYSICAL = globalThis.SD_COMBAT && new URLSearchParams(location.search).get('physical') === '1';
 if (globalThis.SD_COMBAT)
-localforage.config({name:globalThis.SD_ART_LAB ? 'sd-art-direction-lab' : globalThis.SD_MOVEMENT ? 'sd-movement-experimental' : 'sd-combat-experimental'});
+localforage.config({name:globalThis.SD_PHYSICAL ? 'sd-physical-combat-lab' : globalThis.SD_ART_LAB ? 'sd-art-direction-lab' : globalThis.SD_MOVEMENT ? 'sd-movement-experimental' : 'sd-combat-experimental'});
 
 // Keep the music interface used by settings, speech and the renderer, without
 // distributing or loading optional tracks. Settings cannot turn music back on.
@@ -46,6 +47,7 @@ const ready = setInterval(async () => {
 			await import('./combat/sandbox.js');
 			if(globalThis.SD_MOVEMENT) await import('./movement/slide.js');
 			if(globalThis.SD_ART_LAB) await import('./art-lab/presentation.js');
+			if(globalThis.SD_PHYSICAL) await import('./combat/physical.js');
 			play.textContent = 'Start combat sandbox';
 			play.onclick = () => {
 				const settings = GetPlayerSettings();
@@ -59,6 +61,10 @@ const ready = setInterval(async () => {
 			combat.textContent = 'Experimental combat sandbox';
 			combat.onclick = () => { location.href = '?mode=combat'; };
 			play.after(combat);
+			const physical = document.createElement('menu_button');
+			physical.textContent = 'Physical combat laboratory';
+			physical.onclick = () => { location.href = '?mode=combat&movement=1&art=1&physical=1'; };
+			combat.after(physical);
 		}
 		const music = document.getElementById('music');
 		music.value = '2';

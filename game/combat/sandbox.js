@@ -96,6 +96,7 @@ const arena = {
   document.getElementById('combat-hostility').textContent='Hostility: '+(this.hostile?'on':'off');
  },
  reset() {
+  globalThis.sdPhysicalCombat?.clear();
   for(const e of sdEntity.entities.slice()) if(!e.IsGlobalEntity() && !this.fixed.includes(e)) this.remove(e);
   this.enemies=[];this.objects=[];
   this.restoreObjects();this.respawn();

@@ -660,6 +660,12 @@ class sdCharacter extends sdEntity
 		sdWorld.entity_classes[ this.name ] = this; // Register for object spawn
 	}
 	
+	PlayDamageEffect( xx, yy, scale=1 )
+	{
+		const physical=sdWorld.server_config.physical_combat;
+		if(physical?.has(this)){physical.blood(this,xx,yy,scale);return;}
+		super.PlayDamageEffect(xx,yy,scale);
+	}
 	GetBleedEffect( allow_randomized_armor_effect=true )
 	{
 		if ( allow_randomized_armor_effect ) // Or else it randomizes walk sound on each connection for players
@@ -3538,6 +3544,7 @@ class sdCharacter extends sdEntity
 	{
 		if ( !sdWorld.is_server )
 		return;
+		if(sdWorld.server_config.physical_combat?.blocked(this))return;
 		const policy = sdWorld.server_config.humanoid_ai;
 		const combat_ai = policy && policy.has( this ) ? policy : null;
 		if ( combat_ai ) combat_ai.before( this, GSPEED );
@@ -4852,6 +4859,8 @@ class sdCharacter extends sdEntity
 	{
 		if ( this.PlayerClassThinkPausedLogic( GSPEED ) )
 		return;
+		const physical=sdWorld.server_config.physical_combat;
+		if(physical?.has(this))physical.tick(this,GSPEED);
 		
 		if ( sdWorld.is_server )
 		this.lst = sdLost.entities_and_affection.get( this ) || 0;

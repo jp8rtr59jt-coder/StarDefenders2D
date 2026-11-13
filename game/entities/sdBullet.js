@@ -1256,6 +1256,8 @@ class sdBullet extends sdEntity
 							let critical_hit_mult = this.GetCriticalHitMult();
 
 							let dmg = limb_mult * critical_hit_mult * this._damage;
+							const physical=sdWorld.server_config.physical_combat;
+							const injury_hit=physical?.context(this,from_entity,dmg,limb_mult);
 
 
 							let old_hea = ( from_entity.hea || from_entity._hea || 0 );
@@ -1274,14 +1276,14 @@ class sdBullet extends sdEntity
 									sdSound.PlaySound({ name:'player_hit3', x:this.x, y:this.y, volume:0.5 });
 								}
 
-								if ( !this._soft )
+								if ( !this._soft && !injury_hit )
 								{
 									from_entity.PlayDamageEffect( this.x, this.y, ( limb_mult === 1 ? 1 : 1.65 ) );
 									//sdWorld.SendEffect({ x:this.x, y:this.y, type:from_entity.GetBleedEffect(), filter:from_entity.GetBleedEffectFilter(), scale:( limb_mult === 1 ? 1 : 1.65 ) });
 								}
 							}
 
-							damaged = from_entity.DamageWithEffect( dmg, this._owner, limb_mult !== 1 );
+							damaged = injury_hit ? physical.damage(injury_hit) : from_entity.DamageWithEffect( dmg, this._owner, limb_mult !== 1 );
 
 							if ( damaged )
 							{

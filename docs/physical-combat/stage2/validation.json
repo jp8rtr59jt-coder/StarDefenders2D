@@ -1,0 +1,844 @@
+{
+  "date": "2026-11-13T23:46:14.767Z",
+  "browser": "156.0.8078.79",
+  "passed": true,
+  "checks": [
+    {
+      "name": "isolated lab launches; player unchanged",
+      "data": {
+        "namespace": "sd-physical-combat-lab",
+        "player": 250,
+        "target": 60,
+        "hostile": false
+      }
+    },
+    {
+      "name": "all training tiers: four native pistol torso shots instead of fourteen",
+      "data": [
+        {
+          "tier": "basic",
+          "health": 60,
+          "shots": 4,
+          "remaining": -12
+        },
+        {
+          "tier": "intermediate",
+          "health": 60,
+          "shots": 4,
+          "remaining": -12
+        },
+        {
+          "tier": "advanced",
+          "health": 60,
+          "shots": 4,
+          "remaining": -12
+        }
+      ]
+    },
+    {
+      "name": "native armor absorption and ammunition penetration measured",
+      "data": [
+        {
+          "profile": "unarmored",
+          "weapon": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.68229546141623,
+          "damage": 18,
+          "loss": 18,
+          "absorbed": 0,
+          "penetration": 0.1,
+          "health": 42,
+          "armor": 0,
+          "time": 0,
+          "actualLoss": 18,
+          "phase": "wounded",
+          "stability": 100,
+          "bullets": 1
+        },
+        {
+          "profile": "unarmored",
+          "weapon": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.6828972608012,
+          "damage": 20,
+          "loss": 20,
+          "absorbed": 0,
+          "penetration": 0.6,
+          "health": 40,
+          "armor": 0,
+          "time": 0,
+          "actualLoss": 20,
+          "phase": "wounded",
+          "stability": 100,
+          "bullets": 1
+        },
+        {
+          "profile": "unarmored",
+          "weapon": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.6804663636392,
+          "damage": 85,
+          "loss": 60,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": -25,
+          "armor": 0,
+          "time": 0,
+          "actualLoss": 85,
+          "phase": "dead",
+          "stability": -100,
+          "bullets": 1
+        },
+        {
+          "profile": "light",
+          "weapon": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.6775413402647,
+          "damage": 18,
+          "loss": 8.549999999999997,
+          "absorbed": 9.450000000000003,
+          "penetration": 0.1,
+          "health": 51.45,
+          "armor": 50.55,
+          "time": 0,
+          "actualLoss": 8.549999999999997,
+          "phase": "wounded",
+          "stability": 100,
+          "bullets": 1
+        },
+        {
+          "profile": "light",
+          "weapon": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.6840565983826,
+          "damage": 20,
+          "loss": 20,
+          "absorbed": 0,
+          "penetration": 0.6,
+          "health": 40,
+          "armor": 60,
+          "time": 0,
+          "actualLoss": 20,
+          "phase": "wounded",
+          "stability": 100,
+          "bullets": 1
+        },
+        {
+          "profile": "light",
+          "weapon": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.67622691445058,
+          "damage": 85,
+          "loss": 60,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": -25,
+          "armor": 60,
+          "time": 0,
+          "actualLoss": 85,
+          "phase": "dead",
+          "stability": -100,
+          "bullets": 1
+        },
+        {
+          "profile": "heavy",
+          "weapon": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.67002850744308,
+          "damage": 18,
+          "loss": 2.911764705882355,
+          "absorbed": 15.088235294117652,
+          "penetration": 0.1,
+          "health": 57.088235294117645,
+          "armor": 84.91176470588235,
+          "time": 0,
+          "actualLoss": 2.911764705882355,
+          "phase": "wounded",
+          "stability": 100,
+          "bullets": 1
+        },
+        {
+          "profile": "heavy",
+          "weapon": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.681719102426,
+          "damage": 20,
+          "loss": 14.411764705882355,
+          "absorbed": 5.588235294117652,
+          "penetration": 0.6,
+          "health": 45.588235294117645,
+          "armor": 94.41176470588235,
+          "time": 0,
+          "actualLoss": 14.411764705882355,
+          "phase": "wounded",
+          "stability": 100,
+          "bullets": 1
+        },
+        {
+          "profile": "heavy",
+          "weapon": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.681760481811,
+          "damage": 85,
+          "loss": 60,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": -25,
+          "armor": 100,
+          "time": 0,
+          "actualLoss": 85,
+          "phase": "dead",
+          "stability": -100,
+          "bullets": 1
+        }
+      ]
+    },
+    {
+      "name": "ordinary first torso hit does not force collapse"
+    },
+    {
+      "name": "shotgun retains five native pellets",
+      "data": {
+        "region": "torso",
+        "ammo": "shotgun",
+        "x": 650.89999,
+        "y": 146.6826164965816,
+        "damage": 20,
+        "loss": 20,
+        "absorbed": 0,
+        "penetration": 0.08,
+        "health": 0,
+        "armor": 0,
+        "time": 0,
+        "actualLoss": 100,
+        "phase": "dead",
+        "stability": -100,
+        "bullets": 5
+      }
+    },
+    {
+      "name": "rig-overlap arm approximation causes finite native weapon stun",
+      "data": {
+        "hit": {
+          "region": "arms",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 142.89329727209218,
+          "damage": 18,
+          "loss": 18,
+          "absorbed": 0,
+          "penetration": 0.1,
+          "health": 42,
+          "armor": 0,
+          "time": 0,
+          "actualLoss": 18,
+          "phase": "wounded",
+          "stability": 100,
+          "bullets": 1
+        },
+        "stunned": {
+          "health": 42,
+          "phase": "wounded",
+          "time": 33.333333333333336,
+          "stability": 100,
+          "mobility": 33,
+          "dying": false,
+          "death": 0
+        },
+        "timer": 1,
+        "recovered": 0,
+        "attempts": [
+          {
+            "dy": -1,
+            "region": "arms",
+            "x": 650.89999,
+            "y": 142.89329727209218
+          }
+        ]
+      }
+    },
+    {
+      "name": "unprotected head retains native head detection and is highly vulnerable",
+      "data": {
+        "region": "head",
+        "ammo": "pistol",
+        "x": 650.89999,
+        "y": 137.2055901212407,
+        "damage": 77.22,
+        "loss": 60,
+        "absorbed": 0,
+        "penetration": 0.1,
+        "health": -17.22,
+        "armor": 100,
+        "time": 0,
+        "actualLoss": 77.22,
+        "phase": "dead",
+        "stability": -100,
+        "bullets": 1
+      }
+    },
+    {
+      "name": "native armor break and overflow expose health",
+      "data": {
+        "region": "torso",
+        "ammo": "pistol",
+        "x": 650.89999,
+        "y": 146.6697027661675,
+        "damage": 18,
+        "loss": 14,
+        "absorbed": 4,
+        "penetration": 0.1,
+        "health": 46,
+        "armor": 0,
+        "time": 0,
+        "actualLoss": 14,
+        "phase": "wounded",
+        "stability": 100,
+        "bullets": 1,
+        "broken": true
+      }
+    },
+    {
+      "name": "leg impact uses native instability and finite mobility restriction",
+      "data": {
+        "hit": {
+          "region": "legs",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 155.19899943492865,
+          "damage": 20,
+          "loss": 20,
+          "absorbed": 0,
+          "penetration": 0.6,
+          "health": 40,
+          "armor": 0,
+          "time": 0,
+          "actualLoss": 20,
+          "phase": "wounded",
+          "stability": -60,
+          "bullets": 1
+        },
+        "down": {
+          "health": 40,
+          "phase": "wounded",
+          "time": 33.333333333333336,
+          "stability": -17.5,
+          "mobility": 18.150000000000002,
+          "dying": false,
+          "death": 0
+        },
+        "recovered": {
+          "health": 40,
+          "phase": "wounded",
+          "time": 3033.3333333333358,
+          "stability": 100,
+          "mobility": 33,
+          "dying": false,
+          "death": 0
+        }
+      }
+    },
+    {
+      "name": "seeded native collapse, blood loss, active AI cannot fire",
+      "data": {
+        "hit": {
+          "region": "legs",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 155.200465411749,
+          "damage": 20,
+          "loss": 20,
+          "absorbed": 0,
+          "penetration": 0.6,
+          "health": 40,
+          "armor": 0,
+          "time": 0,
+          "actualLoss": 20,
+          "phase": "critical",
+          "stability": -60,
+          "bullets": 1
+        },
+        "startHealth": 40,
+        "down": {
+          "health": 36.7489394919248,
+          "phase": "critical",
+          "time": 1000.0000000000005,
+          "stability": -17.5,
+          "mobility": 18.150000000000002,
+          "dying": true,
+          "death": 0
+        },
+        "ammo": -123,
+        "afterAmmo": -123,
+        "enemyBullets": 0,
+        "stable": true,
+        "deadline": 10954.165389761329,
+        "bonesMoved": true
+      }
+    },
+    {
+      "name": "bleeding terminates, native death and settled corpse remain finite",
+      "data": {
+        "mid": {
+          "health": 30.246818475774404,
+          "phase": "critical",
+          "time": 3000.0000000000023,
+          "stability": -17.5,
+          "mobility": 33,
+          "dying": true,
+          "death": 0
+        },
+        "end": {
+          "ticks": 239,
+          "endedAt": 10966.666666666688,
+          "health": -1,
+          "phase": "dead",
+          "dying": false,
+          "death": 91,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "hard simulation-time endpoint prevents immortal critical target",
+      "data": {
+        "health": -1,
+        "phase": "dead",
+        "time": 11000.000000000022,
+        "stability": -15,
+        "mobility": 33,
+        "dying": false,
+        "death": 2,
+        "deadline": 10954.165389761329
+      }
+    },
+    {
+      "name": "default chance produces both critical and recoverable severe leg injuries",
+      "data": {
+        "critical": 11,
+        "wounded": 21
+      }
+    },
+    {
+      "name": "native blood droplets / background decals are capped; cosmetic RNG isolated",
+      "data": {
+        "particles": 96,
+        "marks": 24,
+        "decisionSeedUnchanged": true,
+        "zeroIntensityAdds": 0
+      }
+    },
+    {
+      "name": "cap controls immediately trim existing laboratory effects",
+      "data": {
+        "particles": 8,
+        "marks": 4
+      }
+    },
+    {
+      "name": "health control recreates target without changing player health"
+    },
+    {
+      "name": "model toggle creates fresh original / experimental encounters",
+      "data": {
+        "oldHealth": 250,
+        "oldShots": 14,
+        "hit": {
+          "actualLoss": 18,
+          "phase": "original",
+          "stability": 100,
+          "bullets": 1
+        },
+        "experimentalHealth": 60,
+        "originalPlayer": 250
+      }
+    },
+    {
+      "name": "laboratory target retains native AI and inflicts meaningful damage",
+      "data": {
+        "health": 967,
+        "phase": "engaged"
+      }
+    },
+    {
+      "name": "six fresh encounters clear injury state and bound entity counts",
+      "data": [
+        {
+          "live": 216,
+          "targets": 1,
+          "particles": 0,
+          "marks": 0,
+          "history": 0,
+          "health": 250
+        },
+        {
+          "live": 216,
+          "targets": 1,
+          "particles": 0,
+          "marks": 0,
+          "history": 0,
+          "health": 250
+        },
+        {
+          "live": 216,
+          "targets": 1,
+          "particles": 0,
+          "marks": 0,
+          "history": 0,
+          "health": 250
+        },
+        {
+          "live": 216,
+          "targets": 1,
+          "particles": 0,
+          "marks": 0,
+          "history": 0,
+          "health": 250
+        },
+        {
+          "live": 216,
+          "targets": 1,
+          "particles": 0,
+          "marks": 0,
+          "history": 0,
+          "health": 250
+        },
+        {
+          "live": 216,
+          "targets": 1,
+          "particles": 0,
+          "marks": 0,
+          "history": 0,
+          "health": 250
+        }
+      ]
+    },
+    {
+      "name": "attachment leaves hitboxes intact; standard sandbox spawns retain 250 HP",
+      "data": {
+        "before": [
+          -5,
+          5,
+          -12,
+          16
+        ],
+        "after": [
+          -5,
+          5,
+          -12,
+          16
+        ],
+        "nativeHealth": 250,
+        "nativePolicy": false
+      }
+    },
+    {
+      "name": "live sliding, firing, jump and jetpack work with injury lab enabled"
+    },
+    {
+      "name": "all prior namespaces and legacy save unchanged",
+      "data": {
+        "values": [
+          {
+            "name": "localforage",
+            "value": {
+              "sentinel": "localforage"
+            }
+          },
+          {
+            "name": "sd-combat-experimental",
+            "value": {
+              "sentinel": "sd-combat-experimental"
+            }
+          },
+          {
+            "name": "sd-movement-experimental",
+            "value": {
+              "sentinel": "sd-movement-experimental"
+            }
+          },
+          {
+            "name": "sd-art-direction-lab",
+            "value": {
+              "sentinel": "sd-art-direction-lab"
+            }
+          }
+        ],
+        "legacy": "{\"legacy\":\"preserved\"}"
+      }
+    },
+    {
+      "name": "all original modes omit the optional injury policy"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "badResponses": [
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+      "status": 404
+    }
+  ],
+  "health": [
+    {
+      "tier": "basic",
+      "health": 60,
+      "shots": 4,
+      "remaining": -12
+    },
+    {
+      "tier": "intermediate",
+      "health": 60,
+      "shots": 4,
+      "remaining": -12
+    },
+    {
+      "tier": "advanced",
+      "health": 60,
+      "shots": 4,
+      "remaining": -12
+    }
+  ],
+  "armor": [
+    {
+      "profile": "unarmored",
+      "weapon": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.68229546141623,
+      "damage": 18,
+      "loss": 18,
+      "absorbed": 0,
+      "penetration": 0.1,
+      "health": 42,
+      "armor": 0,
+      "time": 0,
+      "actualLoss": 18,
+      "phase": "wounded",
+      "stability": 100,
+      "bullets": 1
+    },
+    {
+      "profile": "unarmored",
+      "weapon": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.6828972608012,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 40,
+      "armor": 0,
+      "time": 0,
+      "actualLoss": 20,
+      "phase": "wounded",
+      "stability": 100,
+      "bullets": 1
+    },
+    {
+      "profile": "unarmored",
+      "weapon": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.6804663636392,
+      "damage": 85,
+      "loss": 60,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": -25,
+      "armor": 0,
+      "time": 0,
+      "actualLoss": 85,
+      "phase": "dead",
+      "stability": -100,
+      "bullets": 1
+    },
+    {
+      "profile": "light",
+      "weapon": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.6775413402647,
+      "damage": 18,
+      "loss": 8.549999999999997,
+      "absorbed": 9.450000000000003,
+      "penetration": 0.1,
+      "health": 51.45,
+      "armor": 50.55,
+      "time": 0,
+      "actualLoss": 8.549999999999997,
+      "phase": "wounded",
+      "stability": 100,
+      "bullets": 1
+    },
+    {
+      "profile": "light",
+      "weapon": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.6840565983826,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 40,
+      "armor": 60,
+      "time": 0,
+      "actualLoss": 20,
+      "phase": "wounded",
+      "stability": 100,
+      "bullets": 1
+    },
+    {
+      "profile": "light",
+      "weapon": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.67622691445058,
+      "damage": 85,
+      "loss": 60,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": -25,
+      "armor": 60,
+      "time": 0,
+      "actualLoss": 85,
+      "phase": "dead",
+      "stability": -100,
+      "bullets": 1
+    },
+    {
+      "profile": "heavy",
+      "weapon": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.67002850744308,
+      "damage": 18,
+      "loss": 2.911764705882355,
+      "absorbed": 15.088235294117652,
+      "penetration": 0.1,
+      "health": 57.088235294117645,
+      "armor": 84.91176470588235,
+      "time": 0,
+      "actualLoss": 2.911764705882355,
+      "phase": "wounded",
+      "stability": 100,
+      "bullets": 1
+    },
+    {
+      "profile": "heavy",
+      "weapon": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.681719102426,
+      "damage": 20,
+      "loss": 14.411764705882355,
+      "absorbed": 5.588235294117652,
+      "penetration": 0.6,
+      "health": 45.588235294117645,
+      "armor": 94.41176470588235,
+      "time": 0,
+      "actualLoss": 14.411764705882355,
+      "phase": "wounded",
+      "stability": 100,
+      "bullets": 1
+    },
+    {
+      "profile": "heavy",
+      "weapon": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.681760481811,
+      "damage": 85,
+      "loss": 60,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": -25,
+      "armor": 100,
+      "time": 0,
+      "actualLoss": 85,
+      "phase": "dead",
+      "stability": -100,
+      "bullets": 1
+    }
+  ],
+  "critical": {
+    "hit": {
+      "region": "legs",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 155.200465411749,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 40,
+      "armor": 0,
+      "time": 0,
+      "actualLoss": 20,
+      "phase": "critical",
+      "stability": -60,
+      "bullets": 1
+    },
+    "startHealth": 40,
+    "down": {
+      "health": 36.7489394919248,
+      "phase": "critical",
+      "time": 1000.0000000000005,
+      "stability": -17.5,
+      "mobility": 18.150000000000002,
+      "dying": true,
+      "death": 0
+    },
+    "ammo": -123,
+    "afterAmmo": -123,
+    "enemyBullets": 0,
+    "stable": true,
+    "deadline": 10954.165389761329,
+    "bonesMoved": true
+  }
+}
