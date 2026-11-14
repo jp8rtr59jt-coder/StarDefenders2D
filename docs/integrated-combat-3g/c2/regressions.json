@@ -1,0 +1,1913 @@
+{
+  "phase": "3G C2",
+  "base": "1bfdeef104b34e4a71bd4c88812d66b4459a5583",
+  "passed": true,
+  "recordedUTC": "2026-11-14T17:45:28.078730+00:00",
+  "environment": "Linux Chromium with SwiftShader; native macOS not retested",
+  "offlineExport": true,
+  "focusedChecks": 16,
+  "regressions": [
+    {
+      "test": "shield-test.cjs",
+      "exitCode": 0,
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "Native pistol completely absorbed once without biological injury",
+            "data": {
+              "hp": 90,
+              "armor": 0,
+              "shield": 82,
+              "matter": 20,
+              "phase": "ready",
+              "sx": 0,
+              "removed": false,
+              "bullets": 1,
+              "hit": null
+            }
+          },
+          {
+            "name": "1-capacity shield versus native 85-damage rail: 84 reaches body, impulse retained",
+            "data": {
+              "hp": 6,
+              "armor": 0,
+              "shield": 0,
+              "matter": 20,
+              "phase": "wounded",
+              "sx": 1.0060425491147638,
+              "removed": false,
+              "bullets": 1,
+              "hit": {
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.6817022382187,
+                "damage": 84,
+                "loss": 84,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 6,
+                "armor": 0,
+                "time": 0
+              }
+            }
+          },
+          {
+            "name": "Non-penetrating overflow continues original sweep into body exactly once",
+            "data": {
+              "hp": 77,
+              "armor": 0,
+              "shield": 0,
+              "matter": 20,
+              "phase": "wounded",
+              "sx": 0.14401549282503273,
+              "removed": false,
+              "bullets": 1,
+              "hit": {
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.8999914262114,
+                "y": 146.67926799957007,
+                "damage": 13,
+                "loss": 13,
+                "absorbed": 0,
+                "penetration": 0.1,
+                "health": 77,
+                "armor": 0,
+                "time": 0
+              }
+            }
+          },
+          {
+            "name": "Exact depletion followed by exposed biological damage",
+            "data": {
+              "first": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 0,
+                "matter": 20,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false,
+                "bullets": 1,
+                "hit": null
+              },
+              "second": {
+                "hp": 72,
+                "armor": 0,
+                "shield": 0,
+                "matter": 20,
+                "phase": "wounded",
+                "sx": 0.1993076325955617,
+                "removed": false,
+                "bullets": 1,
+                "hit": {
+                  "helmetAbsorbed": 0,
+                  "helmetBroken": false,
+                  "helmetIntegrity": 0,
+                  "shieldAbsorbed": 0,
+                  "region": "torso",
+                  "ammo": "pistol",
+                  "x": 650.89999,
+                  "y": 146.64129555296893,
+                  "damage": 18,
+                  "loss": 18,
+                  "absorbed": 0,
+                  "penetration": 0.1,
+                  "health": 72,
+                  "armor": 0,
+                  "time": 0
+                }
+              }
+            }
+          },
+          {
+            "name": "Five native shotgun pellets deplete capacity without double charging",
+            "data": {
+              "hp": 90,
+              "armor": 0,
+              "shield": 0,
+              "matter": 20,
+              "phase": "ready",
+              "sx": 0,
+              "removed": false,
+              "bullets": 5,
+              "hit": null
+            }
+          },
+          {
+            "name": "Residual damage enters native body armor ledger once",
+            "data": {
+              "hp": 87.8970588235294,
+              "armor": 89.1029411764706,
+              "shield": 0,
+              "matter": 20,
+              "phase": "wounded",
+              "sx": 0.14400045729163283,
+              "removed": false,
+              "bullets": 1,
+              "hit": {
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.8999914198465,
+                "y": 146.67087636023044,
+                "damage": 13,
+                "loss": 2.102941176470594,
+                "absorbed": 10.897058823529406,
+                "penetration": 0.1,
+                "health": 87.8970588235294,
+                "armor": 89.1029411764706,
+                "time": 0
+              }
+            }
+          },
+          {
+            "name": "Biological head amplification does not multiply shield energy",
+            "data": {
+              "hp": 90,
+              "armor": 0,
+              "shield": 82,
+              "matter": 20,
+              "phase": "ready",
+              "sx": 0,
+              "removed": false,
+              "bullets": 1,
+              "hit": null
+            }
+          },
+          {
+            "name": "Bubble-edge graze drains finite charge without damaging owner",
+            "data": {
+              "hp": 90,
+              "armor": 0,
+              "shield": 0,
+              "matter": 20,
+              "phase": "ready",
+              "sx": 0,
+              "removed": false,
+              "remaining": 84,
+              "hit": null
+            }
+          },
+          {
+            "name": "Exterior and interior explosion-wave projectiles use single residual transaction",
+            "data": {
+              "outside": {
+                "hp": 75,
+                "armor": 0,
+                "shield": 0,
+                "matter": 20,
+                "phase": "wounded",
+                "sx": 0.3,
+                "removed": false,
+                "remaining": 0,
+                "hit": {
+                  "helmetAbsorbed": 0,
+                  "helmetBroken": false,
+                  "helmetIntegrity": 0,
+                  "shieldAbsorbed": 0,
+                  "region": "torso",
+                  "ammo": "other",
+                  "x": 650.89999,
+                  "y": 147,
+                  "damage": 15,
+                  "loss": 15,
+                  "absorbed": 0,
+                  "penetration": 0.53,
+                  "health": 75,
+                  "armor": 0,
+                  "time": 0
+                }
+              },
+              "inside": {
+                "hp": 75,
+                "armor": 0,
+                "shield": 0,
+                "matter": 20,
+                "phase": "wounded",
+                "sx": 0.3,
+                "removed": false,
+                "remaining": 0,
+                "hit": {
+                  "helmetAbsorbed": 0,
+                  "helmetBroken": false,
+                  "helmetIntegrity": 0,
+                  "shieldAbsorbed": 0,
+                  "region": "torso",
+                  "ammo": "other",
+                  "x": 650.89999,
+                  "y": 147,
+                  "damage": 15,
+                  "loss": 15,
+                  "absorbed": 0,
+                  "penetration": 0.53,
+                  "health": 75,
+                  "armor": 0,
+                  "time": 0
+                }
+              }
+            }
+          },
+          {
+            "name": "Direct damage overflow; native NPC healing restriction preserved",
+            "data": {
+              "loss": {
+                "hp": 65,
+                "armor": 0,
+                "shield": 0,
+                "matter": 20,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              },
+              "healed": {
+                "hp": 65,
+                "armor": 0,
+                "shield": 0,
+                "matter": 20,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              }
+            }
+          },
+          {
+            "name": "DamageWithEffect, outgoing shots, penetrating projectiles, body-origin waves and scoped bypass cleanup",
+            "data": {
+              "effect": {
+                "hp": 75,
+                "armor": 0,
+                "shield": 0,
+                "matter": 20,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              },
+              "outgoing": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 100,
+                "matter": 20,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              },
+              "penetrating": {
+                "hp": 75,
+                "armor": 0,
+                "shield": 0,
+                "matter": 20,
+                "phase": "wounded",
+                "sx": 0.3,
+                "removed": false,
+                "remaining": 0,
+                "hit": {
+                  "helmetAbsorbed": 0,
+                  "helmetBroken": false,
+                  "helmetIntegrity": 0,
+                  "shieldAbsorbed": 0,
+                  "region": "torso",
+                  "ammo": "railgun",
+                  "x": 650.9,
+                  "y": 147,
+                  "damage": 15,
+                  "loss": 15,
+                  "absorbed": 0,
+                  "penetration": 1,
+                  "health": 75,
+                  "armor": 0,
+                  "time": 0
+                }
+              },
+              "insideBody": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 80,
+                "matter": 20,
+                "phase": "ready",
+                "sx": 0.4,
+                "removed": false,
+                "remaining": 0,
+                "hit": {
+                  "helmetAbsorbed": 0,
+                  "helmetBroken": false,
+                  "helmetIntegrity": 0,
+                  "shieldAbsorbed": 20,
+                  "region": "torso",
+                  "ammo": "other",
+                  "x": 656,
+                  "y": 147,
+                  "damage": 0,
+                  "loss": 0,
+                  "absorbed": 0,
+                  "penetration": 0.53,
+                  "health": 90,
+                  "armor": 0,
+                  "time": 0
+                }
+              },
+              "bodyPenetrating": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 80,
+                "matter": 20,
+                "phase": "ready",
+                "sx": 0.4,
+                "removed": false,
+                "remaining": 0,
+                "hit": {
+                  "helmetAbsorbed": 0,
+                  "helmetBroken": false,
+                  "helmetIntegrity": 0,
+                  "shieldAbsorbed": 20,
+                  "region": "torso",
+                  "ammo": "railgun",
+                  "x": 656,
+                  "y": 147,
+                  "damage": 0,
+                  "loss": 0,
+                  "absorbed": 0,
+                  "penetration": 1,
+                  "health": 90,
+                  "armor": 0,
+                  "time": 0
+                }
+              },
+              "restored": true
+            }
+          },
+          {
+            "name": "Delayed recharge spends finite matter and stops when empty",
+            "data": {
+              "waiting": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 0,
+                "matter": 5,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              },
+              "recovered": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 2.5,
+                "matter": 0,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              },
+              "empty": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 2.5,
+                "matter": 0,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              },
+              "refilled": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 20,
+                "matter": 65,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              },
+              "regen": 0
+            }
+          },
+          {
+            "name": "Native ability refresh and duplicate equip cannot grant free capacity",
+            "data": {
+              "value": {
+                "hp": 90,
+                "armor": 0,
+                "shield": 80,
+                "matter": 20,
+                "phase": "ready",
+                "sx": 0,
+                "removed": false
+              },
+              "rejected": true
+            }
+          },
+          {
+            "name": "Internal critical bleeding reaches finite death endpoint through a charged shield",
+            "data": {
+              "hp": -1,
+              "armor": 0,
+              "shield": 0,
+              "matter": 5,
+              "phase": "dead",
+              "sx": 0,
+              "removed": true,
+              "finite": true
+            }
+          },
+          {
+            "name": "Unattached native shields retain original full-block and free-regeneration behavior",
+            "data": {
+              "before": {
+                "hp": 250,
+                "shield": -84,
+                "finite": false
+              },
+              "after": -78
+            }
+          },
+          {
+            "name": "Native player shield behavior preserved",
+            "data": {
+              "hp": 250,
+              "before": 250,
+              "shield": -84,
+              "finite": false
+            }
+          },
+          {
+            "name": "Original and ordinary combat startup omit finite equipment policy"
+          }
+        ],
+        "errors": [],
+        "external": [],
+        "badResponses": [
+          "http://127.0.0.1:8000/audio/rocket_loop.wav",
+          "http://127.0.0.1:8000/audio/rocket_loop.wav",
+          "http://127.0.0.1:8000/audio/rocket_loop.wav"
+        ]
+      }
+    },
+    {
+      "test": "physical-test.cjs",
+      "exitCode": 0,
+      "result": {
+        "date": "2026-11-14T17:39:10.306Z",
+        "browser": "156.0.8078.79",
+        "passed": true,
+        "checks": [
+          {
+            "name": "isolated lab launches; player unchanged",
+            "data": {
+              "namespace": "sd-physical-combat-lab",
+              "player": 250,
+              "target": 90,
+              "hostile": false
+            }
+          },
+          {
+            "name": "all training tiers use configured biological health and native pistol damage",
+            "data": [
+              {
+                "tier": "basic",
+                "health": 90,
+                "shots": 5,
+                "remaining": 0
+              },
+              {
+                "tier": "intermediate",
+                "health": 90,
+                "shots": 5,
+                "remaining": 0
+              },
+              {
+                "tier": "advanced",
+                "health": 90,
+                "shots": 5,
+                "remaining": 0
+              }
+            ]
+          },
+          {
+            "name": "native armor absorption and ammunition penetration measured",
+            "data": [
+              {
+                "profile": "unarmored",
+                "weapon": "pistol",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.67359533867497,
+                "damage": 18,
+                "loss": 18,
+                "absorbed": 0,
+                "penetration": 0.1,
+                "health": 72,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 18,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "unarmored",
+                "weapon": "rifle",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.68201513378617,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 20,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "unarmored",
+                "weapon": "railgun",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.6767790964044,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 85,
+                "phase": "wounded",
+                "stability": -77.08333333333334,
+                "bullets": 1
+              },
+              {
+                "profile": "light",
+                "weapon": "pistol",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.68228034230998,
+                "damage": 18,
+                "loss": 8.549999999999997,
+                "absorbed": 9.45,
+                "penetration": 0.1,
+                "health": 81.45,
+                "armor": 50.55,
+                "time": 0,
+                "actualLoss": 8.549999999999997,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "light",
+                "weapon": "rifle",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.68388119290162,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 60,
+                "time": 0,
+                "actualLoss": 20,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "light",
+                "weapon": "railgun",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.67911240333487,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 60,
+                "time": 0,
+                "actualLoss": 85,
+                "phase": "wounded",
+                "stability": -77.08333333333334,
+                "bullets": 1
+              },
+              {
+                "profile": "heavy",
+                "weapon": "pistol",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.6756864690946,
+                "damage": 18,
+                "loss": 2.911764705882348,
+                "absorbed": 15.088235294117645,
+                "penetration": 0.1,
+                "health": 87.08823529411765,
+                "armor": 84.91176470588235,
+                "time": 0,
+                "actualLoss": 2.911764705882348,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "heavy",
+                "weapon": "rifle",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.6839585871373,
+                "damage": 20,
+                "loss": 14.411764705882348,
+                "absorbed": 5.588235294117646,
+                "penetration": 0.6,
+                "health": 75.58823529411765,
+                "armor": 94.41176470588235,
+                "time": 0,
+                "actualLoss": 14.411764705882348,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "heavy",
+                "weapon": "railgun",
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.67621275675162,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 100,
+                "time": 0,
+                "actualLoss": 85,
+                "phase": "wounded",
+                "stability": -77.08333333333334,
+                "bullets": 1
+              }
+            ]
+          },
+          {
+            "name": "ordinary first torso hit does not force collapse"
+          },
+          {
+            "name": "shotgun retains five native pellets",
+            "data": {
+              "helmetAbsorbed": 0,
+              "helmetBroken": false,
+              "helmetIntegrity": 0,
+              "shieldAbsorbed": 0,
+              "region": "torso",
+              "ammo": "shotgun",
+              "x": 650.89999,
+              "y": 146.68429990475693,
+              "damage": 20,
+              "loss": 10,
+              "absorbed": 0,
+              "penetration": 0.08,
+              "health": -10,
+              "armor": 0,
+              "time": 0,
+              "actualLoss": 100,
+              "phase": "dead",
+              "stability": -100,
+              "bullets": 5
+            }
+          },
+          {
+            "name": "rig-overlap arm approximation causes finite native weapon stun",
+            "data": {
+              "hit": {
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "arms",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 142.89623885874832,
+                "damage": 18,
+                "loss": 18,
+                "absorbed": 0,
+                "penetration": 0.1,
+                "health": 72,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 18,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              "stunned": {
+                "health": 72,
+                "phase": "wounded",
+                "time": 33.333333333333336,
+                "stability": 100,
+                "mobility": 33,
+                "dying": false,
+                "death": 0
+              },
+              "timer": 1,
+              "recovered": 0,
+              "attempts": [
+                {
+                  "dy": -1,
+                  "region": "arms",
+                  "x": 650.89999,
+                  "y": 142.89623885874832
+                }
+              ]
+            }
+          },
+          {
+            "name": "unprotected head retains native head detection and is highly vulnerable",
+            "data": {
+              "helmetAbsorbed": 0,
+              "helmetBroken": false,
+              "helmetIntegrity": 0,
+              "shieldAbsorbed": 0,
+              "region": "head",
+              "ammo": "pistol",
+              "x": 650.89999,
+              "y": 137.2093118820594,
+              "damage": 100.97999999999999,
+              "loss": 90,
+              "absorbed": 0,
+              "penetration": 0.1,
+              "health": -10.97999999999999,
+              "armor": 100,
+              "time": 0,
+              "actualLoss": 100.97999999999999,
+              "phase": "dead",
+              "stability": -100,
+              "bullets": 1
+            }
+          },
+          {
+            "name": "native armor break and overflow expose health",
+            "data": {
+              "helmetAbsorbed": 0,
+              "helmetBroken": false,
+              "helmetIntegrity": 0,
+              "shieldAbsorbed": 0,
+              "region": "torso",
+              "ammo": "pistol",
+              "x": 650.89999,
+              "y": 146.67503339087352,
+              "damage": 18,
+              "loss": 14,
+              "absorbed": 4,
+              "penetration": 0.1,
+              "health": 76,
+              "armor": 0,
+              "time": 0,
+              "actualLoss": 14,
+              "phase": "wounded",
+              "stability": 100,
+              "bullets": 1,
+              "broken": true
+            }
+          },
+          {
+            "name": "leg impact uses native instability and finite mobility restriction",
+            "data": {
+              "hit": {
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "legs",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 155.2022186777395,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 20,
+                "phase": "wounded",
+                "stability": -60,
+                "bullets": 1
+              },
+              "down": {
+                "health": 70,
+                "phase": "wounded",
+                "time": 33.333333333333336,
+                "stability": -17.5,
+                "mobility": 18.150000000000002,
+                "dying": false,
+                "death": 0
+              },
+              "recovered": {
+                "health": 70,
+                "phase": "wounded",
+                "time": 3033.3333333333358,
+                "stability": 100,
+                "mobility": 33,
+                "dying": false,
+                "death": 0
+              }
+            }
+          },
+          {
+            "name": "seeded native collapse, blood loss, active AI cannot fire",
+            "data": {
+              "hit": {
+                "helmetAbsorbed": 0,
+                "helmetBroken": false,
+                "helmetIntegrity": 0,
+                "shieldAbsorbed": 0,
+                "region": "legs",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 155.20603450054068,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 20,
+                "phase": "critical",
+                "stability": -60,
+                "bullets": 1
+              },
+              "startHealth": 70,
+              "down": {
+                "health": 63.609736797891955,
+                "phase": "critical",
+                "time": 1000.0000000000005,
+                "stability": -17.5,
+                "mobility": 18.150000000000002,
+                "dying": true,
+                "death": 0
+              },
+              "ammo": -123,
+              "afterAmmo": -123,
+              "enemyBullets": 0,
+              "stable": true,
+              "deadline": 10954.165389761329,
+              "bonesMoved": true
+            }
+          },
+          {
+            "name": "bleeding terminates, native death and settled corpse remain finite",
+            "data": {
+              "mid": {
+                "health": 50.82921039367547,
+                "phase": "critical",
+                "time": 3000.0000000000023,
+                "stability": -17.5,
+                "mobility": 33,
+                "dying": true,
+                "death": 0
+              },
+              "end": {
+                "ticks": 239,
+                "endedAt": 10966.666666666688,
+                "health": -1,
+                "phase": "dead",
+                "dying": false,
+                "death": 91,
+                "finite": true
+              }
+            }
+          },
+          {
+            "name": "hard simulation-time endpoint prevents immortal critical target",
+            "data": {
+              "health": -1,
+              "phase": "dead",
+              "time": 11000.000000000022,
+              "stability": -15,
+              "mobility": 33,
+              "dying": false,
+              "death": 2,
+              "deadline": 10954.165389761329
+            }
+          },
+          {
+            "name": "default chance produces both critical and recoverable severe leg injuries",
+            "data": {
+              "critical": 16,
+              "wounded": 16
+            }
+          },
+          {
+            "name": "native blood droplets / background decals are capped; cosmetic RNG isolated",
+            "data": {
+              "particles": 96,
+              "marks": 24,
+              "decisionSeedUnchanged": true,
+              "zeroIntensityAdds": 0,
+              "attachedMarks": 7
+            }
+          },
+          {
+            "name": "cap controls immediately trim existing laboratory effects",
+            "data": {
+              "particles": 8,
+              "marks": 4
+            }
+          },
+          {
+            "name": "health control recreates target without changing player health"
+          },
+          {
+            "name": "model toggle creates fresh original / experimental encounters",
+            "data": {
+              "oldHealth": 250,
+              "oldShots": 14,
+              "hit": {
+                "actualLoss": 18,
+                "phase": "original",
+                "stability": 100,
+                "bullets": 1
+              },
+              "experimentalHealth": 90,
+              "originalPlayer": 250
+            }
+          },
+          {
+            "name": "laboratory target retains native AI and inflicts meaningful damage",
+            "data": {
+              "health": 967,
+              "phase": "engaged"
+            }
+          },
+          {
+            "name": "six fresh encounters clear injury state and bound entity counts",
+            "data": [
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              }
+            ]
+          },
+          {
+            "name": "attachment leaves hitboxes intact; standard sandbox spawns retain 250 HP",
+            "data": {
+              "before": [
+                -5,
+                5,
+                -12,
+                16
+              ],
+              "after": [
+                -5,
+                5,
+                -12,
+                16
+              ],
+              "nativeHealth": 250,
+              "nativePolicy": false
+            }
+          },
+          {
+            "name": "live sliding, firing, jump and jetpack work with injury lab enabled"
+          },
+          {
+            "name": "all prior namespaces and legacy save unchanged",
+            "data": {
+              "values": [
+                {
+                  "name": "localforage",
+                  "value": {
+                    "sentinel": "localforage"
+                  }
+                },
+                {
+                  "name": "sd-combat-experimental",
+                  "value": {
+                    "sentinel": "sd-combat-experimental"
+                  }
+                },
+                {
+                  "name": "sd-movement-experimental",
+                  "value": {
+                    "sentinel": "sd-movement-experimental"
+                  }
+                },
+                {
+                  "name": "sd-art-direction-lab",
+                  "value": {
+                    "sentinel": "sd-art-direction-lab"
+                  }
+                }
+              ],
+              "legacy": "{\"legacy\":\"preserved\"}"
+            }
+          },
+          {
+            "name": "all original modes omit the optional injury policy"
+          }
+        ],
+        "errors": [],
+        "external": [],
+        "badResponses": [
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          }
+        ],
+        "health": [
+          {
+            "tier": "basic",
+            "health": 90,
+            "shots": 5,
+            "remaining": 0
+          },
+          {
+            "tier": "intermediate",
+            "health": 90,
+            "shots": 5,
+            "remaining": 0
+          },
+          {
+            "tier": "advanced",
+            "health": 90,
+            "shots": 5,
+            "remaining": 0
+          }
+        ],
+        "armor": [
+          {
+            "profile": "unarmored",
+            "weapon": "pistol",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "pistol",
+            "x": 650.89999,
+            "y": 146.67359533867497,
+            "damage": 18,
+            "loss": 18,
+            "absorbed": 0,
+            "penetration": 0.1,
+            "health": 72,
+            "armor": 0,
+            "time": 0,
+            "actualLoss": 18,
+            "phase": "wounded",
+            "stability": 100,
+            "bullets": 1
+          },
+          {
+            "profile": "unarmored",
+            "weapon": "rifle",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "rifle",
+            "x": 650.89999,
+            "y": 146.68201513378617,
+            "damage": 20,
+            "loss": 20,
+            "absorbed": 0,
+            "penetration": 0.6,
+            "health": 70,
+            "armor": 0,
+            "time": 0,
+            "actualLoss": 20,
+            "phase": "wounded",
+            "stability": 100,
+            "bullets": 1
+          },
+          {
+            "profile": "unarmored",
+            "weapon": "railgun",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "railgun",
+            "x": 650.9,
+            "y": 146.6767790964044,
+            "damage": 85,
+            "loss": 85,
+            "absorbed": 0,
+            "penetration": 1,
+            "health": 5,
+            "armor": 0,
+            "time": 0,
+            "actualLoss": 85,
+            "phase": "wounded",
+            "stability": -77.08333333333334,
+            "bullets": 1
+          },
+          {
+            "profile": "light",
+            "weapon": "pistol",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "pistol",
+            "x": 650.89999,
+            "y": 146.68228034230998,
+            "damage": 18,
+            "loss": 8.549999999999997,
+            "absorbed": 9.45,
+            "penetration": 0.1,
+            "health": 81.45,
+            "armor": 50.55,
+            "time": 0,
+            "actualLoss": 8.549999999999997,
+            "phase": "wounded",
+            "stability": 100,
+            "bullets": 1
+          },
+          {
+            "profile": "light",
+            "weapon": "rifle",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "rifle",
+            "x": 650.89999,
+            "y": 146.68388119290162,
+            "damage": 20,
+            "loss": 20,
+            "absorbed": 0,
+            "penetration": 0.6,
+            "health": 70,
+            "armor": 60,
+            "time": 0,
+            "actualLoss": 20,
+            "phase": "wounded",
+            "stability": 100,
+            "bullets": 1
+          },
+          {
+            "profile": "light",
+            "weapon": "railgun",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "railgun",
+            "x": 650.9,
+            "y": 146.67911240333487,
+            "damage": 85,
+            "loss": 85,
+            "absorbed": 0,
+            "penetration": 1,
+            "health": 5,
+            "armor": 60,
+            "time": 0,
+            "actualLoss": 85,
+            "phase": "wounded",
+            "stability": -77.08333333333334,
+            "bullets": 1
+          },
+          {
+            "profile": "heavy",
+            "weapon": "pistol",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "pistol",
+            "x": 650.89999,
+            "y": 146.6756864690946,
+            "damage": 18,
+            "loss": 2.911764705882348,
+            "absorbed": 15.088235294117645,
+            "penetration": 0.1,
+            "health": 87.08823529411765,
+            "armor": 84.91176470588235,
+            "time": 0,
+            "actualLoss": 2.911764705882348,
+            "phase": "wounded",
+            "stability": 100,
+            "bullets": 1
+          },
+          {
+            "profile": "heavy",
+            "weapon": "rifle",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "rifle",
+            "x": 650.89999,
+            "y": 146.6839585871373,
+            "damage": 20,
+            "loss": 14.411764705882348,
+            "absorbed": 5.588235294117646,
+            "penetration": 0.6,
+            "health": 75.58823529411765,
+            "armor": 94.41176470588235,
+            "time": 0,
+            "actualLoss": 14.411764705882348,
+            "phase": "wounded",
+            "stability": 100,
+            "bullets": 1
+          },
+          {
+            "profile": "heavy",
+            "weapon": "railgun",
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "railgun",
+            "x": 650.9,
+            "y": 146.67621275675162,
+            "damage": 85,
+            "loss": 85,
+            "absorbed": 0,
+            "penetration": 1,
+            "health": 5,
+            "armor": 100,
+            "time": 0,
+            "actualLoss": 85,
+            "phase": "wounded",
+            "stability": -77.08333333333334,
+            "bullets": 1
+          }
+        ],
+        "critical": {
+          "hit": {
+            "helmetAbsorbed": 0,
+            "helmetBroken": false,
+            "helmetIntegrity": 0,
+            "shieldAbsorbed": 0,
+            "region": "legs",
+            "ammo": "rifle",
+            "x": 650.89999,
+            "y": 155.20603450054068,
+            "damage": 20,
+            "loss": 20,
+            "absorbed": 0,
+            "penetration": 0.6,
+            "health": 70,
+            "armor": 0,
+            "time": 0,
+            "actualLoss": 20,
+            "phase": "critical",
+            "stability": -60,
+            "bullets": 1
+          },
+          "startHealth": 70,
+          "down": {
+            "health": 63.609736797891955,
+            "phase": "critical",
+            "time": 1000.0000000000005,
+            "stability": -17.5,
+            "mobility": 18.150000000000002,
+            "dying": true,
+            "death": 0
+          },
+          "ammo": -123,
+          "afterAmmo": -123,
+          "enemyBullets": 0,
+          "stable": true,
+          "deadline": 10954.165389761329,
+          "bonesMoved": true
+        }
+      }
+    },
+    {
+      "test": "crouch-test.cjs",
+      "exitCode": 0,
+      "result": {
+        "passed": true,
+        "baseline": false,
+        "checks": [
+          {
+            "name": "Effective constrained posture retains native crouch acceleration",
+            "data": {
+              "standing": {
+                "x": -744.2963125582235,
+                "y": -80,
+                "sx": 6.074078139555841,
+                "sy": 0,
+                "crouch": 0,
+                "clear": true,
+                "overlap": false,
+                "ground": true,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -12,
+                  16
+                ]
+              },
+              "held": {
+                "x": -622.1481562791117,
+                "y": -80,
+                "sx": 3.0370390697779204,
+                "sy": 0,
+                "crouch": 1,
+                "clear": false,
+                "overlap": false,
+                "ground": true,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -6,
+                  16
+                ]
+              },
+              "released": {
+                "x": -622.1481562791117,
+                "y": -80,
+                "sx": 3.0370390697779204,
+                "sy": 0,
+                "crouch": 1,
+                "clear": false,
+                "overlap": false,
+                "ground": true,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -6,
+                  16
+                ]
+              },
+              "openRelease": {
+                "x": -744.2963125582235,
+                "y": -80,
+                "sx": 6.074078139555841,
+                "sy": 0,
+                "crouch": 0,
+                "clear": true,
+                "overlap": false,
+                "ground": true,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -12,
+                  16
+                ]
+              }
+            }
+          },
+          {
+            "name": "Corridor exit, slide input independence, collision interruption, jump/jetpack, native actors and rapid transitions",
+            "data": {
+              "exit": {
+                "x": -538.1241492940828,
+                "y": -80,
+                "sx": 3.124787323520675,
+                "sy": 0,
+                "crouch": 1,
+                "clear": true,
+                "overlap": false,
+                "ground": true,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -6,
+                  16
+                ]
+              },
+              "frames": 43,
+              "open": {
+                "x": -768.2820130816001,
+                "y": -80,
+                "sx": 5.820503270400001,
+                "sy": 0,
+                "crouch": 0,
+                "clear": true,
+                "overlap": false,
+                "ground": true,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -12,
+                  16
+                ]
+              },
+              "slideHeld": {
+                "a": {
+                  "x": -689.18,
+                  "y": -80,
+                  "sx": 5.82,
+                  "sy": 0,
+                  "crouch": 1,
+                  "clear": true,
+                  "overlap": false,
+                  "ground": true,
+                  "slide": true,
+                  "flying": false,
+                  "health": 250,
+                  "box": [
+                    -6,
+                    16
+                  ]
+                },
+                "b": {
+                  "x": -649.1,
+                  "y": -80,
+                  "sx": 4.380000000000003,
+                  "sy": 0,
+                  "crouch": 1,
+                  "clear": false,
+                  "overlap": false,
+                  "ground": true,
+                  "slide": true,
+                  "flying": false,
+                  "health": 250,
+                  "box": [
+                    -6,
+                    16
+                  ]
+                }
+              },
+              "slideReleased": {
+                "a": {
+                  "x": -689.18,
+                  "y": -80,
+                  "sx": 5.82,
+                  "sy": 0,
+                  "crouch": 1,
+                  "clear": true,
+                  "overlap": false,
+                  "ground": true,
+                  "slide": true,
+                  "flying": false,
+                  "health": 250,
+                  "box": [
+                    -6,
+                    16
+                  ]
+                },
+                "b": {
+                  "x": -649.1,
+                  "y": -80,
+                  "sx": 4.380000000000003,
+                  "sy": 0,
+                  "crouch": 1,
+                  "clear": false,
+                  "overlap": false,
+                  "ground": true,
+                  "slide": true,
+                  "flying": false,
+                  "health": 250,
+                  "box": [
+                    -6,
+                    16
+                  ]
+                }
+              },
+              "obstacle": {
+                "x": -533.00001,
+                "y": -80,
+                "sx": 0,
+                "sy": 0,
+                "crouch": 0,
+                "clear": true,
+                "overlap": false,
+                "ground": true,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -12,
+                  16
+                ]
+              },
+              "jump": {
+                "x": -820,
+                "y": -84,
+                "sx": 0,
+                "sy": -4,
+                "crouch": 0,
+                "clear": true,
+                "overlap": false,
+                "ground": true,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -12,
+                  16
+                ]
+              },
+              "flight": {
+                "x": -820,
+                "y": -107.66348800000002,
+                "sx": 0,
+                "sy": -2.982648000000001,
+                "crouch": 0,
+                "clear": true,
+                "overlap": false,
+                "ground": false,
+                "slide": false,
+                "flying": true,
+                "health": 250,
+                "box": [
+                  -12,
+                  16
+                ]
+              },
+              "release": {
+                "x": -820,
+                "y": -110.28648304000002,
+                "sx": 0,
+                "sy": -2.622995040000001,
+                "crouch": 0,
+                "clear": true,
+                "overlap": false,
+                "ground": false,
+                "slide": false,
+                "flying": false,
+                "health": 250,
+                "box": [
+                  -12,
+                  16
+                ]
+              },
+              "rapidTransitionsStable": true,
+              "original": {
+                "speed": 2.9941581162946567,
+                "crouch": 1,
+                "clear": false,
+                "attached": false
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "external": [],
+        "transitions": {
+          "exit": {
+            "x": -538.1241492940828,
+            "y": -80,
+            "sx": 3.124787323520675,
+            "sy": 0,
+            "crouch": 1,
+            "clear": true,
+            "overlap": false,
+            "ground": true,
+            "slide": false,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -6,
+              16
+            ]
+          },
+          "frames": 43,
+          "open": {
+            "x": -768.2820130816001,
+            "y": -80,
+            "sx": 5.820503270400001,
+            "sy": 0,
+            "crouch": 0,
+            "clear": true,
+            "overlap": false,
+            "ground": true,
+            "slide": false,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -12,
+              16
+            ]
+          },
+          "slideHeld": {
+            "a": {
+              "x": -689.18,
+              "y": -80,
+              "sx": 5.82,
+              "sy": 0,
+              "crouch": 1,
+              "clear": true,
+              "overlap": false,
+              "ground": true,
+              "slide": true,
+              "flying": false,
+              "health": 250,
+              "box": [
+                -6,
+                16
+              ]
+            },
+            "b": {
+              "x": -649.1,
+              "y": -80,
+              "sx": 4.380000000000003,
+              "sy": 0,
+              "crouch": 1,
+              "clear": false,
+              "overlap": false,
+              "ground": true,
+              "slide": true,
+              "flying": false,
+              "health": 250,
+              "box": [
+                -6,
+                16
+              ]
+            }
+          },
+          "slideReleased": {
+            "a": {
+              "x": -689.18,
+              "y": -80,
+              "sx": 5.82,
+              "sy": 0,
+              "crouch": 1,
+              "clear": true,
+              "overlap": false,
+              "ground": true,
+              "slide": true,
+              "flying": false,
+              "health": 250,
+              "box": [
+                -6,
+                16
+              ]
+            },
+            "b": {
+              "x": -649.1,
+              "y": -80,
+              "sx": 4.380000000000003,
+              "sy": 0,
+              "crouch": 1,
+              "clear": false,
+              "overlap": false,
+              "ground": true,
+              "slide": true,
+              "flying": false,
+              "health": 250,
+              "box": [
+                -6,
+                16
+              ]
+            }
+          },
+          "obstacle": {
+            "x": -533.00001,
+            "y": -80,
+            "sx": 0,
+            "sy": 0,
+            "crouch": 0,
+            "clear": true,
+            "overlap": false,
+            "ground": true,
+            "slide": false,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -12,
+              16
+            ]
+          },
+          "jump": {
+            "x": -820,
+            "y": -84,
+            "sx": 0,
+            "sy": -4,
+            "crouch": 0,
+            "clear": true,
+            "overlap": false,
+            "ground": true,
+            "slide": false,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -12,
+              16
+            ]
+          },
+          "flight": {
+            "x": -820,
+            "y": -107.66348800000002,
+            "sx": 0,
+            "sy": -2.982648000000001,
+            "crouch": 0,
+            "clear": true,
+            "overlap": false,
+            "ground": false,
+            "slide": false,
+            "flying": true,
+            "health": 250,
+            "box": [
+              -12,
+              16
+            ]
+          },
+          "release": {
+            "x": -820,
+            "y": -110.28648304000002,
+            "sx": 0,
+            "sy": -2.622995040000001,
+            "crouch": 0,
+            "clear": true,
+            "overlap": false,
+            "ground": false,
+            "slide": false,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -12,
+              16
+            ]
+          },
+          "rapidTransitionsStable": true,
+          "original": {
+            "speed": 2.9941581162946567,
+            "crouch": 1,
+            "clear": false,
+            "attached": false
+          }
+        }
+      }
+    }
+  ],
+  "sourceSHA256": {
+    "game/combat/physical.js": "1a12d3748876547d0f19bc8aca27acc4eb70e65a0a00dcc05470eef50252946c",
+    "game/entities/sdCharacterRagdoll.js": "029fba7e7a0304b227673f5ba6e0f026a7f8478c7477a5518427a4f3bbdbd61e",
+    "offline/helmet-test.cjs": "d55daf5023f4280b6626234de6832e53144e0ef620091936b1b94dd0c51da977"
+  },
+  "notes": [
+    "No full unrelated browser suite repeated; one pass of the requested relevant regressions.",
+    "Native armor drop on death is excluded from absorbed-damage accounting.",
+    "Bleedout fixture observes the normal following tick for the lab dead-state update.",
+    "Capture fixture advances native AliveUpdate targets before Think; cap on/off is controlled state comparison, not a captured second shot."
+  ],
+  "playtestPromoted": false
+}

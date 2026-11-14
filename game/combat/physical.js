@@ -38,6 +38,34 @@ const lab={
  tuning,armorProfiles,ammunition,enabled:true,tier:'intermediate',profile:'unarmored',
  targets:[],particles:[],marks:[],history:[],
  has:e=>lab.enabled&&states.has(e),state:e=>states.get(e),
+ equipmentState(e){
+  if(!this.has(e)||e===sdWorld.my_entity||e.hea<=0)throw Error('Equipment requires a living opt-in NPC');
+  return states.get(e);
+ },
+ equipHelmet(e,{integrity=60,absorb=.95,resistance=.85}={}){
+  const s=this.equipmentState(e);
+  if(![integrity,absorb,resistance].every(Number.isFinite)||integrity<=0||absorb<0||absorb>1||resistance<=0||resistance>1)
+   throw Error('Invalid helmet protection');
+  s.helmet={integrity,maxIntegrity:integrity,absorb,resistance};
+  return s.helmet;
+ },
+ equipArmor(e,kind='medium',{resistance=.85,coverage=['torso']}={}){
+  const s=this.equipmentState(e),classes={light:sdGun.CLASS_LVL1_LIGHT_ARMOR,medium:sdGun.CLASS_LVL1_MEDIUM_ARMOR,heavy:sdGun.CLASS_LVL1_HEAVY_ARMOR};
+  if(!Object.hasOwn(classes,kind)||!Number.isFinite(resistance)||resistance<=0||resistance>1||
+   !Array.isArray(coverage)||!coverage.length||coverage.some(v=>!['torso','arms','legs'].includes(v)))throw Error('Invalid body armor protection');
+  const cls=classes[kind],params=sdGun.classes[cls].armor_properties;
+  if(!e.IsArmorBetter(params))return false; // Preserve native replacement rules.
+  const gun=new sdGun({x:e.x,y:e.y,class:cls});sdEntity.AddEntityToEntitiesArray(gun);
+  try{e.ApplyArmor(gun);}finally{gun.remove();}
+  s.bodyArmor={resistance,coverage:[...new Set(coverage)]};
+  return true;
+ },
+ drawHelmet(ctx,e){
+  const helmet=this.has(e)&&states.get(e).helmet;if(!helmet||helmet.integrity<=0)return;
+  // Prototype equipment marker on the existing articulated head transform.
+  ctx.save();ctx.fillStyle='#39454a';ctx.fillRect(-3.2,-7.7,5.8,2.3);
+  ctx.fillStyle='#839395';ctx.fillRect(-3.2,-7.7,5.8,.5);ctx.fillRect(2.6,-5.9,1.2,.5);ctx.restore();
+ },
  equipShield(e,options){
   if(!this.has(e)||e===sdWorld.my_entity||e.hea<=0)throw Error('Finite shields require a living opt-in NPC');
   if(e._shield_ent)throw Error('Wait for existing shield removal before equipping');
@@ -78,11 +106,11 @@ const lab={
  },
  context(b,e,damage,mult){
   if(!this.has(e)||e.hea<=0||damage<=0||b._hook)return null;
-  const region=this.region(e,b.x,b.y,mult),a=armorProfiles[states.get(e).profile];
+  const region=this.region(e,b.x,b.y,mult),s=states.get(e),a=s.bodyArmor||armorProfiles[s.profile];
   const ammo=weaponKinds.get(b._gun?.class)||(b._rail?'railgun':'other');
   const penetration=clamp(ammunition[ammo].penetration+Math.max(0,(b._armor_penetration_level??3)-3)*.04,0,1);
-  const covered=e.armor>0&&a.coverage.includes(region),absorb=covered?a.absorb*clamp(1-penetration/Math.max(.001,a.resistance),0,1):0;
-  return {b,e,region,ammo,penetration,covered,absorb,damage:damage*(region==='head'?tuning.headVulnerability:1),mult};
+  const covered=e.armor>0&&a.coverage.includes(region),absorb=covered?(s.bodyArmor?e._armor_absorb_perc:a.absorb)*clamp(1-penetration/Math.max(.001,a.resistance),0,1):0;
+  return {b,e,region,ammo,penetration,covered,absorb,energy:damage/mult,damage:damage*(region==='head'?tuning.headVulnerability:1),mult};
  },
  damage(hit){
   const {e,b,region}=hit,s=states.get(e),hp=e.hea,armor=e.armor,perc=e._armor_absorb_perc;
@@ -95,17 +123,28 @@ const lab={
   const finite=shield?._finite&&!shield._is_being_removed;
   if(finite&&!b._physical_shield_hits?.has(e)&&!e.IsInSafeArea()&&!(e._god&&e._socket)){
    const energy=b._damage*b.GetCriticalHitMult(),remaining=shield.AbsorbFiniteDamage(energy,b._owner);
-   shieldAbsorbed=energy-remaining;hit.damage*=remaining/energy;
+   shieldAbsorbed=energy-remaining;hit.damage*=remaining/energy;hit.energy*=remaining/energy;
    // Body-origin/penetrating shots can encounter the bubble later in the sweep.
    if(!b._physical_shield_hits)b._physical_shield_hits=new WeakSet();
    b._physical_shield_hits.add(e);
+  }
+  let helmetAbsorbed=0,helmetBroken=false;
+  const helmet=s.helmet;
+  if(region==='head'&&helmet?.integrity>0&&!e.IsInSafeArea()&&!(e._god&&e._socket)&&e._respawn_protection<=0){
+   // Protection consumes residual impact energy before biological amplification.
+   const multiplier=hit.mult*tuning.headVulnerability,energy=hit.energy;
+   const absorption=helmet.absorb*clamp(1-hit.penetration/helmet.resistance,0,1);
+   helmetAbsorbed=Math.min(helmet.integrity,energy*absorption);
+   helmet.integrity=Math.max(0,helmet.integrity-helmetAbsorbed);
+   hit.damage=(energy-helmetAbsorbed)*multiplier;
+   helmetBroken=helmetAbsorbed>0&&helmet.integrity===0;
   }
   e._armor_absorb_perc=hit.absorb;
   try{const apply=()=>e.DamageWithEffect(hit.damage,b._owner,hit.mult>1,hit.covered&&hit.absorb>0);
    result=finite?this.withoutShield(e,apply):apply();}
   finally{e._armor_absorb_perc=perc;}
-  const loss=Math.max(0,Math.max(0,hp)-Math.max(0,e.hea)),absorbed=Math.max(0,armor-e.armor);
-  s.last={shieldAbsorbed,region,ammo:hit.ammo,x:b.x,y:b.y,damage:hit.damage,loss,absorbed,penetration:hit.penetration,health:e.hea,armor:e.armor,time:s.time};
+  const loss=Math.max(0,Math.max(0,hp)-Math.max(0,e.hea)),absorbed=hit.covered?Math.max(0,Math.min(armor-e.armor,hit.damage*hit.absorb)):0;
+  s.last={helmetAbsorbed,helmetBroken,helmetIntegrity:helmet?.integrity??0,shieldAbsorbed,region,ammo:hit.ammo,x:b.x,y:b.y,damage:hit.damage,loss,absorbed,penetration:hit.penetration,health:e.hea,armor:e.armor,time:s.time};
   if(loss>0){
    s.totalLoss+=loss;s.initiator=b._owner;e._regen_timeout=tuning.regenDelayTicks;
    // Biological HP can change without weakening the established leg/arm response.
@@ -130,7 +169,13 @@ const lab={
     }
    }
    this.blood(e,b.x,b.y,clamp(loss/18,.3,2),b.sx,b.sy);
-  }else if(absorbed>0)e.DamageStability(absorbed*.15);
+  }else if(absorbed>0&&!s.bodyArmor&&!helmet)e.DamageStability(absorbed*.15);
+  if(s.bodyArmor||helmet)e.DamageStability(Math.min(40,(absorbed+helmetAbsorbed)*.5));
+  if(helmetAbsorbed>0){
+   this.effect({x:b.x,y:b.y,type:sdEffect.TYPE_WALL_HIT});
+   sdSound.PlaySound({name:helmetBroken?'armor_break':'world_hit2',x:b.x,y:b.y,volume:.45,pitch:helmetBroken?1.8:2.2});
+   if(helmetBroken)for(let i=0;i<3;i++)this.effect({x:b.x,y:b.y,type:sdEffect.TYPE_ROCK,sx:(i-1)*.6,sy:-.7-i*.2});
+  }
   if(absorbed>0){this.effect({x:b.x,y:b.y,type:sdEffect.TYPE_WALL_HIT});sdSound.PlaySound({name:'world_hit2',x:b.x,y:b.y,volume:.35,pitch:1.4});}
   this.history.push({...s.last,phase:s.phase});if(this.history.length>32)this.history.shift();
   return result;
@@ -254,7 +299,7 @@ const wait=setInterval(()=>{
  button('physical-debug','Injury diagnostics',()=>{out.hidden=!out.hidden;});
  setInterval(()=>{if(out.hidden)return;compact(lab.particles);compact(lab.marks);
   out.textContent=`Injury laboratory · ${lab.enabled?'EXPERIMENTAL':'original 250 HP model'}\nBlood particles ${lab.particles.length}/${tuning.maxParticles}; marks ${lab.marks.length}/${tuning.maxMarks}\n`+lab.targets.filter(e=>!e._is_being_removed).map(e=>{const s=states.get(e),h=s.last;
-   return `#${e._net_id} ${s.profile}: ${s.phase}${lab.blocked(e)?' / DOWN':''} HP ${e.hea.toFixed(1)} armor ${e.armor.toFixed(1)}\n${h?`${h.region} · ${h.ammo} · loss ${h.loss.toFixed(1)} · absorbed ${h.absorbed.toFixed(1)}`:'No hit'}\ncritical endpoint ${Math.max(0,s.deadline-s.time).toFixed(0)}ms; weapon stun ${e.weapon_stun_timer.toFixed(1)}`;}).join('\n');
+   return `#${e._net_id} ${s.profile}: ${s.phase}${lab.blocked(e)?' / DOWN':''} HP ${e.hea.toFixed(1)} armor ${e.armor.toFixed(1)} helmet ${(s.helmet?.integrity??0).toFixed(1)}\n${h?`${h.region} · ${h.ammo} · loss ${h.loss.toFixed(1)} · absorbed ${h.absorbed.toFixed(1)}`:'No hit'}\ncritical endpoint ${Math.max(0,s.deadline-s.time).toFixed(0)}ms; weapon stun ${e.weapon_stun_timer.toFixed(1)}`;}).join('\n');
  },200);
  // A passive, repeatable initial comparison. Existing Hostility control enables
  // the unchanged native AI and its existing competence policy when desired.

@@ -1429,6 +1429,7 @@ class sdCharacterRagdoll
 					}
 					
 					if(!globalThis.sdArtLab?.head(ctx,this.character)) this.character.DrawHelmet( ctx );
+					globalThis.sdPhysicalCombat?.drawHelmet(ctx,this.character);
 				}
 				else
 				{

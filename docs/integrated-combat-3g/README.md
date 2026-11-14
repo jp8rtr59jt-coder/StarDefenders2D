@@ -1,4 +1,4 @@
-# 3G development checkpoints — movement and personal shields
+# 3G development checkpoints — movement and layered protection
 
 Base: `d03c900219e14ea11ee55b2587e92194826d9766` (`playtest`).
 Development branch: `integrated-combat-3g`. **Not ready for promotion.**
@@ -8,7 +8,8 @@ report, a native crouch patch, a focused movement test, and unfinished integrati
 and CI drafts. Prior agents stopped at a usage limit. Continuation used one Sol
 implementation agent; no further agents or duplicate architecture reviews ran.
 No protection implementation or faction module existed to integrate at recovery.
-Phase C1 now implements opt-in native NPC shields; see [C1 details and tests](c1/README.md).
+Phase C1 implements opt-in native NPC shields; see [C1 details and tests](c1/README.md).
+Phase C2 adds localized helmets and native body armor; see [C2 details and tests](c2/README.md).
 The complete 3G milestone remains unfinished and is not promoted.
 
 ## Working change
@@ -60,8 +61,8 @@ this partial checkpoint. No CI gate or complete 3G acceptance pass is claimed.
 
 1. Personal shield integration is implemented in C1; equipment UI/loadouts and
    broader faction acceptance remain for later phases. See its focused validation.
-2. Add region-aware helmet integrity before biological head amplification and
-   integrate existing native body armor/penetration with the physical policy.
+2. Helmet integrity and native body armor integration are implemented in C2.
+   Future equipment loadouts/UI and balance remain separate milestone work.
 3. Implement six independent faction/equipment/training loadouts, their minimal
    readable A overlays, native arsenal selection and limited matter preset/UI.
 4. Adapt the recovered integration test to the actual implemented APIs; run
