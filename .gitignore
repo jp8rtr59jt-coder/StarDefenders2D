@@ -120,3 +120,4 @@ dist/offline/
 dist/StarDefenders2D-offline.zip
 __pycache__/
 offline/test-output/
+.playtest/

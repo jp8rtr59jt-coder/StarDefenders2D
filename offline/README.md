@@ -1,5 +1,8 @@
 # Standalone offline engine — milestone 1
 
+For install-once, approved automatic updates and double-click Chrome startup on
+macOS, use the [Milestone 3F launcher](../docs/macos-launcher/README.md).
+
 Latest optional tuning on this branch: [Milestone 3E combat feel refinement](../docs/combat-feel-refinement/README.md).
 
 For the optional experimental arena, see [Milestone 2 combat sandbox](COMBAT_SANDBOX.md).

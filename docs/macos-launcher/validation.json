@@ -1,0 +1,77 @@
+{
+  "tests": [
+    {
+      "name": "Initial installation",
+      "pathHasSpaces": true,
+      "branch": "playtest"
+    },
+    {
+      "name": "First launch, fixed address, fresh assets, duplicate refusal and clean stop"
+    },
+    {
+      "name": "Subsequent launch checks GitHub without rebuilding unchanged files"
+    },
+    {
+      "name": "New approved commit fetched and fast-forwarded; local hook not run"
+    },
+    {
+      "name": "GitHub failure/offline launch retains complete installed version"
+    },
+    {
+      "name": "Local tracked edits prevent fetch/update/rebuild and remain unchanged"
+    },
+    {
+      "name": "Untracked local files also prevent updates and remain intact"
+    },
+    {
+      "name": "Failed partial exporter and broken new server cannot replace cached working game/server"
+    },
+    {
+      "name": "Later approved version recovers, retains one rollback, SIGTERM leaves port free"
+    },
+    {
+      "name": "Missing Git reports problem and uses verified cached export"
+    },
+    {
+      "name": "Wrong branch/divergent local history preserved; only last approved cache runs"
+    },
+    {
+      "name": "Updater uses only intended repository/ref, no force/reset/checkout/stash"
+    },
+    {
+      "name": "Hung Git fetch times out and is terminated"
+    },
+    {
+      "name": "Version status, symlink, desktop copy and arbitrary working directory locate the install"
+    },
+    {
+      "name": "Installer preserves unrelated folder and cleans failed clone"
+    },
+    {
+      "name": "Missing Python/initial Git give actionable errors; a real PTY error remains open until Return"
+    },
+    {
+      "name": "Unrelated occupied port refused before network/update/browser; not killed or probed"
+    },
+    {
+      "name": "macOS Chrome command and missing-Chrome errors (mocked, not native Finder)"
+    },
+    {
+      "name": "Exporter refuses nonempty custom output; existing files preserved"
+    },
+    {
+      "name": "Readiness/Chrome failure always stops supervised server; no premature browser"
+    },
+    {
+      "name": "Invalid cache metadata is refused without using arbitrary paths"
+    },
+    {
+      "name": "Verified readiness precedes Chrome opening"
+    }
+  ],
+  "platform": "linux",
+  "nativeMacOSTested": false,
+  "passed": true,
+  "testMethods": 7,
+  "failures": []
+}

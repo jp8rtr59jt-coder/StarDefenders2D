@@ -1,0 +1,2800 @@
+{
+  "milestone": "3F",
+  "recordedUTC": "2026-11-14T14:23:38.584098+00:00",
+  "baseCommit": "269c784c6ca22e7bf33e51475b8bcd8d38acd1c1",
+  "passed": true,
+  "environment": {
+    "os": "Linux",
+    "browser": "Chromium 156",
+    "renderer": "SwiftShader software rendering",
+    "nativeMacOSTested": false,
+    "launcherIntegrationAddress": "127.0.0.1:8001",
+    "launcherPortIsolation": "Private Linux user/network namespace; existing cloud gateway on host port 8001 left untouched",
+    "legacyRegressionAddress": "127.0.0.1:8000"
+  },
+  "sourceIntegrity": {
+    "gameDirectoryUnchanged": true,
+    "legacyLauncherUnchanged": true,
+    "licenseUnchanged": true,
+    "existingRegressionScriptsUnchanged": true,
+    "requiredNoticesRetained": true,
+    "optionalMusicExcluded": true,
+    "newRuntimeDependencies": []
+  },
+  "launcherWorkflowTests": {
+    "methodsPassed": 7,
+    "scenarioResults": "validation.json"
+  },
+  "installedGameTest": {
+    "passed": true,
+    "result": "browser-validation.json",
+    "privateFixtureCommitsNeverPublished": true,
+    "testedIndexTree": "ab565f8914128e6c18c64cdcedac4f0ec41e0406"
+  },
+  "regressions": [
+    {
+      "suite": "feel",
+      "exitCode": 0,
+      "command": "node offline/combat-feel-test.cjs",
+      "rawReportSHA256": "c23dc7ab3f7f5b4f5cf3ebab8c8c2612bed5db30ef30a4dabac2ba60dd490fa6",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "provisional default",
+            "data": 90
+          },
+          {
+            "name": "80/90/100 HP: real torso and unprotected head shot counts",
+            "data": [
+              {
+                "hp": 80,
+                "tier": "basic",
+                "torso": 5,
+                "head": 1
+              },
+              {
+                "hp": 80,
+                "tier": "intermediate",
+                "torso": 5,
+                "head": 1
+              },
+              {
+                "hp": 80,
+                "tier": "advanced",
+                "torso": 5,
+                "head": 1
+              },
+              {
+                "hp": 90,
+                "tier": "basic",
+                "torso": 5,
+                "head": 1
+              },
+              {
+                "hp": 90,
+                "tier": "intermediate",
+                "torso": 5,
+                "head": 1
+              },
+              {
+                "hp": 90,
+                "tier": "advanced",
+                "torso": 5,
+                "head": 1
+              },
+              {
+                "hp": 100,
+                "tier": "basic",
+                "torso": 6,
+                "head": 1
+              },
+              {
+                "hp": 100,
+                "tier": "intermediate",
+                "torso": 6,
+                "head": 1
+              },
+              {
+                "hp": 100,
+                "tier": "advanced",
+                "torso": 6,
+                "head": 1
+              }
+            ]
+          },
+          {
+            "name": "armor damage remains independent of biological health",
+            "data": [
+              {
+                "profile": "unarmored",
+                "gun": "pistol",
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.64257388275593,
+                "damage": 18,
+                "loss": 18,
+                "absorbed": 0,
+                "penetration": 0.1,
+                "health": 72,
+                "armor": 0,
+                "time": 0
+              },
+              {
+                "profile": "unarmored",
+                "gun": "rifle",
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.6621116505682,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 0,
+                "time": 0
+              },
+              {
+                "profile": "unarmored",
+                "gun": "railgun",
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.66000417956926,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 0,
+                "time": 0
+              },
+              {
+                "profile": "light",
+                "gun": "pistol",
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.65250887260248,
+                "damage": 18,
+                "loss": 8.549999999999997,
+                "absorbed": 9.450000000000003,
+                "penetration": 0.1,
+                "health": 81.45,
+                "armor": 50.55,
+                "time": 0
+              },
+              {
+                "profile": "light",
+                "gun": "rifle",
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.6659517934551,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 60,
+                "time": 0
+              },
+              {
+                "profile": "light",
+                "gun": "railgun",
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.65971477842342,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 60,
+                "time": 0
+              },
+              {
+                "profile": "heavy",
+                "gun": "pistol",
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.64943787672993,
+                "damage": 18,
+                "loss": 2.911764705882348,
+                "absorbed": 15.088235294117652,
+                "penetration": 0.1,
+                "health": 87.08823529411765,
+                "armor": 84.91176470588235,
+                "time": 0
+              },
+              {
+                "profile": "heavy",
+                "gun": "rifle",
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.66425560621235,
+                "damage": 20,
+                "loss": 14.411764705882348,
+                "absorbed": 5.588235294117652,
+                "penetration": 0.6,
+                "health": 75.58823529411765,
+                "armor": 94.41176470588235,
+                "time": 0
+              },
+              {
+                "profile": "heavy",
+                "gun": "railgun",
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.65868518079435,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 100,
+                "time": 0
+              }
+            ]
+          },
+          {
+            "name": "critical presentation, supported blood marks and finite death",
+            "data": {
+              "samples": [
+                {
+                  "health": 63.609736797891955,
+                  "time": 1000.0000000000005,
+                  "phase": "critical",
+                  "motion": 1,
+                  "maxDistance": 18.902705624699426,
+                  "maxSpeed": 2.7609794604769116
+                },
+                {
+                  "health": 50.82921039367547,
+                  "time": 3000.0000000000023,
+                  "phase": "critical",
+                  "motion": 1,
+                  "maxDistance": 18.820763839281536,
+                  "maxSpeed": 2.248740301776189
+                },
+                {
+                  "health": 31.658420787350728,
+                  "time": 5999.99999999999,
+                  "phase": "critical",
+                  "motion": 3,
+                  "maxDistance": 18.716688640126634,
+                  "maxSpeed": 1.7510830935496833
+                }
+              ],
+              "end": {
+                "atDeath": 10966.666666666688,
+                "health": -1,
+                "phase": "dead",
+                "motion": 5,
+                "events": [
+                  {
+                    "time": 6699.999999999984,
+                    "bone": "ankle2",
+                    "dx": 0.021170961984304588,
+                    "dy": -0.12820031084630237,
+                    "ceiling": 0.12820031084630237
+                  },
+                  {
+                    "time": 8333.333333333307,
+                    "bone": "hand2",
+                    "dx": 0.006065242775754498,
+                    "dy": -0.04865625988208759,
+                    "ceiling": 0.04865625988208759
+                  }
+                ],
+                "maxDistance": 19.200855613651733,
+                "maxSpeed": 2.714508194423204,
+                "emitted": 216,
+                "marks": 2,
+                "afterDeathMotion": 0,
+                "finite": true
+              }
+            }
+          },
+          {
+            "name": "irregular, diminishing bounded motion; zero disables it",
+            "data": [
+              {
+                "intensity": 0,
+                "motionSeed": 41,
+                "count": 0,
+                "events": [],
+                "maxDistance": 19.10089486868348,
+                "phase": "dead"
+              },
+              {
+                "intensity": 1,
+                "motionSeed": 41,
+                "count": 5,
+                "events": [
+                  {
+                    "time": 900.0000000000003,
+                    "bone": "ankle2",
+                    "dx": -0.22517527328217904,
+                    "dy": -0.7160649036479889,
+                    "ceiling": 0.7160649036479889
+                  },
+                  {
+                    "time": 3300.0000000000036,
+                    "bone": "hand2",
+                    "dx": -0.20076229857250658,
+                    "dy": -0.41500757369892893,
+                    "ceiling": 0.41500757369892893
+                  },
+                  {
+                    "time": 5333.333333333329,
+                    "bone": "hand2",
+                    "dx": 0.09784251017034706,
+                    "dy": -0.2238007598808251,
+                    "ceiling": 0.2238007598808251
+                  },
+                  {
+                    "time": 6699.999999999984,
+                    "bone": "ankle2",
+                    "dx": 0.021170961984304588,
+                    "dy": -0.12820031084630237,
+                    "ceiling": 0.12820031084630237
+                  },
+                  {
+                    "time": 8333.333333333307,
+                    "bone": "hand2",
+                    "dx": 0.006065242775754498,
+                    "dy": -0.04865625988208759,
+                    "ceiling": 0.04865625988208759
+                  }
+                ],
+                "maxDistance": 19.03121195235166,
+                "phase": "dead"
+              },
+              {
+                "intensity": 2,
+                "motionSeed": 41,
+                "count": 5,
+                "events": [
+                  {
+                    "time": 900.0000000000003,
+                    "bone": "ankle2",
+                    "dx": -0.4503505465643581,
+                    "dy": -1.4321298072959778,
+                    "ceiling": 1.4321298072959778
+                  },
+                  {
+                    "time": 3300.0000000000036,
+                    "bone": "hand2",
+                    "dx": -0.40152459714501315,
+                    "dy": -0.8300151473978579,
+                    "ceiling": 0.8300151473978579
+                  },
+                  {
+                    "time": 5333.333333333329,
+                    "bone": "hand2",
+                    "dx": 0.19568502034069413,
+                    "dy": -0.4476015197616502,
+                    "ceiling": 0.4476015197616502
+                  },
+                  {
+                    "time": 6699.999999999984,
+                    "bone": "ankle2",
+                    "dx": 0.042341923968609176,
+                    "dy": -0.25640062169260475,
+                    "ceiling": 0.25640062169260475
+                  },
+                  {
+                    "time": 8333.333333333307,
+                    "bone": "hand2",
+                    "dx": 0.012130485551508996,
+                    "dy": -0.09731251976417518,
+                    "ceiling": 0.09731251976417518
+                  }
+                ],
+                "maxDistance": 19.138074762264857,
+                "phase": "dead"
+              },
+              {
+                "intensity": 1,
+                "motionSeed": 777,
+                "count": 5,
+                "events": [
+                  {
+                    "time": 1100.0000000000002,
+                    "bone": "ankle2",
+                    "dx": -0.04843689073996878,
+                    "dy": -0.6878599635416986,
+                    "ceiling": 0.6878599635416986
+                  },
+                  {
+                    "time": 3200.000000000003,
+                    "bone": "ankle1",
+                    "dx": -0.10243432734411582,
+                    "dy": -0.42592237744584466,
+                    "ceiling": 0.42592237744584466
+                  },
+                  {
+                    "time": 4600.000000000003,
+                    "bone": "ankle2",
+                    "dx": -0.08028886358825651,
+                    "dy": -0.2860074642719955,
+                    "ceiling": 0.2860074642719955
+                  },
+                  {
+                    "time": 6366.666666666653,
+                    "bone": "ankle2",
+                    "dx": 0.020127066894143585,
+                    "dy": -0.14907755142670845,
+                    "ceiling": 0.14907755142670845
+                  },
+                  {
+                    "time": 7933.333333333306,
+                    "bone": "hand2",
+                    "dx": 0.01103694143510058,
+                    "dy": -0.06464180886307835,
+                    "ceiling": 0.06464180886307835
+                  }
+                ],
+                "maxDistance": 19.55826132035657,
+                "phase": "dead"
+              }
+            ]
+          },
+          {
+            "name": "critical frequency sample without converting fatal hits",
+            "data": {
+              "critical": 60,
+              "wounded": 68
+            }
+          },
+          {
+            "name": "HP preset controls independent of player and armor"
+          }
+        ],
+        "errors": [],
+        "external": [],
+        "badResponses": [
+          "http://127.0.0.1:8000/audio/rocket_loop.wav"
+        ]
+      }
+    },
+    {
+      "suite": "hostility",
+      "exitCode": 0,
+      "command": "node offline/hostility-test.cjs",
+      "rawReportSHA256": "5cc40762d51430bd429d746496d6c44029371d040087acbe5869e9783ee06775",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "new passive spawn faces relative idle direction and sleeps",
+            "data": {
+              "dx": 160,
+              "dy": -3,
+              "hiber": 1,
+              "native": null,
+              "passive": true,
+              "target": null,
+              "fire": 0,
+              "pose": {
+                "x": 77.65736635129454,
+                "y": 134.92634427180224,
+                "angle": 0.03739507125491761,
+                "fireAngle": 1.533401255539979,
+                "arm": -0.8038891224177355,
+                "scale": 1,
+                "side": 1,
+                "muzzleX": 84.65247255188208,
+                "muzzleY": 135.18804876641715
+              }
+            }
+          },
+          {
+            "name": "proximity changes do not track, flip or fire",
+            "data": [
+              {
+                "playerOffset": -80,
+                "dx": 160,
+                "dy": -3,
+                "hiber": 1,
+                "native": null,
+                "passive": true,
+                "target": null,
+                "fire": 0,
+                "pose": {
+                  "x": 77.65736635129454,
+                  "y": 134.92634427180224,
+                  "angle": 0.03739507125491761,
+                  "fireAngle": 1.533401255539979,
+                  "arm": -0.8038891224177355,
+                  "scale": 1,
+                  "side": 1,
+                  "muzzleX": 84.65247255188208,
+                  "muzzleY": 135.18804876641715
+                }
+              },
+              {
+                "playerOffset": -18,
+                "dx": 160,
+                "dy": -3,
+                "hiber": 1,
+                "native": null,
+                "passive": true,
+                "target": null,
+                "fire": 0,
+                "pose": {
+                  "x": 77.65736635129454,
+                  "y": 134.92634427180224,
+                  "angle": 0.03739507125491761,
+                  "fireAngle": 1.533401255539979,
+                  "arm": -0.8038891224177355,
+                  "scale": 1,
+                  "side": 1,
+                  "muzzleX": 84.65247255188208,
+                  "muzzleY": 135.18804876641715
+                }
+              },
+              {
+                "playerOffset": 18,
+                "dx": 160,
+                "dy": -3,
+                "hiber": 1,
+                "native": null,
+                "passive": true,
+                "target": null,
+                "fire": 0,
+                "pose": {
+                  "x": 77.65736635129454,
+                  "y": 134.92634427180224,
+                  "angle": 0.03739507125491761,
+                  "fireAngle": 1.533401255539979,
+                  "arm": -0.8038891224177355,
+                  "scale": 1,
+                  "side": 1,
+                  "muzzleX": 84.65247255188208,
+                  "muzzleY": 135.18804876641715
+                }
+              },
+              {
+                "playerOffset": 80,
+                "dx": 160,
+                "dy": -3,
+                "hiber": 1,
+                "native": null,
+                "passive": true,
+                "target": null,
+                "fire": 0,
+                "pose": {
+                  "x": 77.65736635129454,
+                  "y": 134.92634427180224,
+                  "angle": 0.03739507125491761,
+                  "fireAngle": 1.533401255539979,
+                  "arm": -0.8038891224177355,
+                  "scale": 1,
+                  "side": 1,
+                  "muzzleX": 84.65247255188208,
+                  "muzzleY": 135.18804876641715
+                }
+              }
+            ]
+          },
+          {
+            "name": "reactivation reacquires through fresh awareness and reaction",
+            "data": [
+              {
+                "angle": -0.15255637918397627,
+                "phase": "aware",
+                "time": 33.333333333333336,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 0,
+                "raw": [
+                  156.59492890241344,
+                  -24.268816612932454
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -1.223024987073832,
+                "phase": "aware",
+                "time": 300,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 0,
+                "raw": [
+                  53.47947485197771,
+                  -162.4546597750447
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -2.293493594963687,
+                "phase": "engaged",
+                "time": 566.6666666666666,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 0,
+                "raw": [
+                  -131.93781529530764,
+                  -140.31960207430677
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -2.6222209977499094,
+                "phase": "engaged",
+                "time": 833.3333333333336,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 0,
+                "raw": [
+                  -194.04056342571818,
+                  -105.42936631583113
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -2.6586289065422855,
+                "phase": "engaged",
+                "time": 1100.0000000000002,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 1,
+                "raw": [
+                  -199.58708930404194,
+                  -104.18025443959277
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -2.613558874618721,
+                "phase": "engaged",
+                "time": 1366.6666666666663,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 1,
+                "raw": [
+                  -192.36538899606396,
+                  -111.16035969095812
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -2.7434719241429244,
+                "phase": "engaged",
+                "time": 1633.3333333333323,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 1,
+                "raw": [
+                  -199.00923827310982,
+                  -82.33023240603343
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -2.8020901303406074,
+                "phase": "engaged",
+                "time": 1899.9999999999984,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 0,
+                "raw": [
+                  -192.0182043208565,
+                  -66.04439873167988
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -2.874223444351166,
+                "phase": "engaged",
+                "time": 2166.666666666665,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 1,
+                "raw": [
+                  -180.04258419997916,
+                  -48.73724758443899
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -2.6944373741169234,
+                "phase": "engaged",
+                "time": 2433.333333333333,
+                "ready": 444.796693137226,
+                "visible": true,
+                "target": 677,
+                "nativeTarget": 677,
+                "fire": 1,
+                "raw": [
+                  -152.03255277576156,
+                  -75.51376234897722
+                ],
+                "hiber": 0
+              }
+            ]
+          },
+          {
+            "name": "active aim settles at bounded rate without passive shooting",
+            "data": [
+              {
+                "angle": -2.7278850978142852,
+                "phase": "passive",
+                "time": 33.333333333333336,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -146.50186504574205,
+                  -70.4233987255227
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -3.1415926535897936,
+                "phase": "passive",
+                "time": 200.00000000000003,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -7.245422963296434
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 366.66666666666663,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -8.278714155735855
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -3.1415926535897936,
+                "phase": "passive",
+                "time": 533.3333333333333,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -5.8761676280055894
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 700.0000000000001,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 0
+              },
+              {
+                "angle": -3.1415926535897936,
+                "phase": "passive",
+                "time": 866.666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.999999999999943
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1033.3333333333337,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.1415926535897936,
+                "phase": "passive",
+                "time": 1200,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.999999999999943
+                ],
+                "hiber": 1
+              }
+            ]
+          },
+          {
+            "name": "twelve on/off transitions clear policy/native/trigger state",
+            "data": [
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              },
+              {
+                "angle": -3.141592653589794,
+                "phase": "passive",
+                "time": 1166.6666666666667,
+                "ready": null,
+                "visible": false,
+                "target": null,
+                "nativeTarget": null,
+                "fire": 0,
+                "raw": [
+                  -160,
+                  -2.9999999999998863
+                ],
+                "hiber": 1
+              }
+            ]
+          },
+          {
+            "name": "critical actors remain down, finite and unable to fire across toggles",
+            "data": {
+              "phase": "critical",
+              "deadline": 8562.17667274177,
+              "health": 59.09934507302738,
+              "bullets": 0,
+              "nativeKey": 0
+            }
+          },
+          {
+            "name": "dead actors stay dead; recovered actors restart fresh perception",
+            "data": {
+              "health": 70,
+              "offPhase": "passive",
+              "activePhase": "idle",
+              "time": 0,
+              "target": null,
+              "ready": null
+            }
+          }
+        ],
+        "errors": [],
+        "external": []
+      }
+    },
+    {
+      "suite": "physical",
+      "exitCode": 0,
+      "command": "node offline/physical-test.cjs",
+      "rawReportSHA256": "9ebc812afaf58b4a1595fcbbd3eca342474552e2c4bf3e9296fddae11e571497",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "isolated lab launches; player unchanged",
+            "data": {
+              "namespace": "sd-physical-combat-lab",
+              "player": 250,
+              "target": 90,
+              "hostile": false
+            }
+          },
+          {
+            "name": "all training tiers use configured biological health and native pistol damage",
+            "data": [
+              {
+                "tier": "basic",
+                "health": 90,
+                "shots": 5,
+                "remaining": 0
+              },
+              {
+                "tier": "intermediate",
+                "health": 90,
+                "shots": 5,
+                "remaining": 0
+              },
+              {
+                "tier": "advanced",
+                "health": 90,
+                "shots": 5,
+                "remaining": 0
+              }
+            ]
+          },
+          {
+            "name": "native armor absorption and ammunition penetration measured",
+            "data": [
+              {
+                "profile": "unarmored",
+                "weapon": "pistol",
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.6697170368073,
+                "damage": 18,
+                "loss": 18,
+                "absorbed": 0,
+                "penetration": 0.1,
+                "health": 72,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 18,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "unarmored",
+                "weapon": "rifle",
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.67765406570373,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 20,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "unarmored",
+                "weapon": "railgun",
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.68065361149948,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 85,
+                "phase": "wounded",
+                "stability": -77.08333333333334,
+                "bullets": 1
+              },
+              {
+                "profile": "light",
+                "weapon": "pistol",
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.677913626085,
+                "damage": 18,
+                "loss": 8.549999999999997,
+                "absorbed": 9.450000000000003,
+                "penetration": 0.1,
+                "health": 81.45,
+                "armor": 50.55,
+                "time": 0,
+                "actualLoss": 8.549999999999997,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "light",
+                "weapon": "rifle",
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.684186419115,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 60,
+                "time": 0,
+                "actualLoss": 20,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "light",
+                "weapon": "railgun",
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.6762602773649,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 60,
+                "time": 0,
+                "actualLoss": 85,
+                "phase": "wounded",
+                "stability": -77.08333333333334,
+                "bullets": 1
+              },
+              {
+                "profile": "heavy",
+                "weapon": "pistol",
+                "region": "torso",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 146.68151540155563,
+                "damage": 18,
+                "loss": 2.911764705882348,
+                "absorbed": 15.088235294117652,
+                "penetration": 0.1,
+                "health": 87.08823529411765,
+                "armor": 84.91176470588235,
+                "time": 0,
+                "actualLoss": 2.911764705882348,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "heavy",
+                "weapon": "rifle",
+                "region": "torso",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 146.67990120394958,
+                "damage": 20,
+                "loss": 14.411764705882348,
+                "absorbed": 5.588235294117652,
+                "penetration": 0.6,
+                "health": 75.58823529411765,
+                "armor": 94.41176470588235,
+                "time": 0,
+                "actualLoss": 14.411764705882348,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              {
+                "profile": "heavy",
+                "weapon": "railgun",
+                "region": "torso",
+                "ammo": "railgun",
+                "x": 650.9,
+                "y": 146.678258261996,
+                "damage": 85,
+                "loss": 85,
+                "absorbed": 0,
+                "penetration": 1,
+                "health": 5,
+                "armor": 100,
+                "time": 0,
+                "actualLoss": 85,
+                "phase": "wounded",
+                "stability": -77.08333333333334,
+                "bullets": 1
+              }
+            ]
+          },
+          {
+            "name": "ordinary first torso hit does not force collapse"
+          },
+          {
+            "name": "shotgun retains five native pellets",
+            "data": {
+              "region": "torso",
+              "ammo": "shotgun",
+              "x": 650.89999,
+              "y": 146.68372515767064,
+              "damage": 20,
+              "loss": 10,
+              "absorbed": 0,
+              "penetration": 0.08,
+              "health": -10,
+              "armor": 0,
+              "time": 0,
+              "actualLoss": 100,
+              "phase": "dead",
+              "stability": -100,
+              "bullets": 5
+            }
+          },
+          {
+            "name": "rig-overlap arm approximation causes finite native weapon stun",
+            "data": {
+              "hit": {
+                "region": "arms",
+                "ammo": "pistol",
+                "x": 650.89999,
+                "y": 142.895001430848,
+                "damage": 18,
+                "loss": 18,
+                "absorbed": 0,
+                "penetration": 0.1,
+                "health": 72,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 18,
+                "phase": "wounded",
+                "stability": 100,
+                "bullets": 1
+              },
+              "stunned": {
+                "health": 72,
+                "phase": "wounded",
+                "time": 33.333333333333336,
+                "stability": 100,
+                "mobility": 33,
+                "dying": false,
+                "death": 0
+              },
+              "timer": 1,
+              "recovered": 0,
+              "attempts": [
+                {
+                  "dy": -1,
+                  "region": "arms",
+                  "x": 650.89999,
+                  "y": 142.895001430848
+                }
+              ]
+            }
+          },
+          {
+            "name": "unprotected head retains native head detection and is highly vulnerable",
+            "data": {
+              "region": "head",
+              "ammo": "pistol",
+              "x": 650.89999,
+              "y": 137.2054147929239,
+              "damage": 100.97999999999999,
+              "loss": 90,
+              "absorbed": 0,
+              "penetration": 0.1,
+              "health": -10.97999999999999,
+              "armor": 100,
+              "time": 0,
+              "actualLoss": 100.97999999999999,
+              "phase": "dead",
+              "stability": -100,
+              "bullets": 1
+            }
+          },
+          {
+            "name": "native armor break and overflow expose health",
+            "data": {
+              "region": "torso",
+              "ammo": "pistol",
+              "x": 650.89999,
+              "y": 146.6700040473733,
+              "damage": 18,
+              "loss": 14,
+              "absorbed": 4,
+              "penetration": 0.1,
+              "health": 76,
+              "armor": 0,
+              "time": 0,
+              "actualLoss": 14,
+              "phase": "wounded",
+              "stability": 100,
+              "bullets": 1,
+              "broken": true
+            }
+          },
+          {
+            "name": "leg impact uses native instability and finite mobility restriction",
+            "data": {
+              "hit": {
+                "region": "legs",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 155.19910801579786,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 20,
+                "phase": "wounded",
+                "stability": -60,
+                "bullets": 1
+              },
+              "down": {
+                "health": 70,
+                "phase": "wounded",
+                "time": 33.333333333333336,
+                "stability": -17.5,
+                "mobility": 18.150000000000002,
+                "dying": false,
+                "death": 0
+              },
+              "recovered": {
+                "health": 70,
+                "phase": "wounded",
+                "time": 3033.3333333333358,
+                "stability": 100,
+                "mobility": 33,
+                "dying": false,
+                "death": 0
+              }
+            }
+          },
+          {
+            "name": "seeded native collapse, blood loss, active AI cannot fire",
+            "data": {
+              "hit": {
+                "region": "legs",
+                "ammo": "rifle",
+                "x": 650.89999,
+                "y": 155.20169986340778,
+                "damage": 20,
+                "loss": 20,
+                "absorbed": 0,
+                "penetration": 0.6,
+                "health": 70,
+                "armor": 0,
+                "time": 0,
+                "actualLoss": 20,
+                "phase": "critical",
+                "stability": -60,
+                "bullets": 1
+              },
+              "startHealth": 70,
+              "down": {
+                "health": 63.609736797891955,
+                "phase": "critical",
+                "time": 1000.0000000000005,
+                "stability": -17.5,
+                "mobility": 18.150000000000002,
+                "dying": true,
+                "death": 0
+              },
+              "ammo": -123,
+              "afterAmmo": -123,
+              "enemyBullets": 0,
+              "stable": true,
+              "deadline": 10954.165389761329,
+              "bonesMoved": true
+            }
+          },
+          {
+            "name": "bleeding terminates, native death and settled corpse remain finite",
+            "data": {
+              "mid": {
+                "health": 50.82921039367547,
+                "phase": "critical",
+                "time": 3000.0000000000023,
+                "stability": -17.5,
+                "mobility": 33,
+                "dying": true,
+                "death": 0
+              },
+              "end": {
+                "ticks": 239,
+                "endedAt": 10966.666666666688,
+                "health": -1,
+                "phase": "dead",
+                "dying": false,
+                "death": 91,
+                "finite": true
+              }
+            }
+          },
+          {
+            "name": "hard simulation-time endpoint prevents immortal critical target",
+            "data": {
+              "health": -1,
+              "phase": "dead",
+              "time": 11000.000000000022,
+              "stability": -15,
+              "mobility": 33,
+              "dying": false,
+              "death": 2,
+              "deadline": 10954.165389761329
+            }
+          },
+          {
+            "name": "default chance produces both critical and recoverable severe leg injuries",
+            "data": {
+              "critical": 14,
+              "wounded": 18
+            }
+          },
+          {
+            "name": "native blood droplets / background decals are capped; cosmetic RNG isolated",
+            "data": {
+              "particles": 96,
+              "marks": 24,
+              "decisionSeedUnchanged": true,
+              "zeroIntensityAdds": 0,
+              "attachedMarks": 7
+            }
+          },
+          {
+            "name": "cap controls immediately trim existing laboratory effects",
+            "data": {
+              "particles": 8,
+              "marks": 4
+            }
+          },
+          {
+            "name": "health control recreates target without changing player health"
+          },
+          {
+            "name": "model toggle creates fresh original / experimental encounters",
+            "data": {
+              "oldHealth": 250,
+              "oldShots": 14,
+              "hit": {
+                "actualLoss": 18,
+                "phase": "original",
+                "stability": 100,
+                "bullets": 1
+              },
+              "experimentalHealth": 90,
+              "originalPlayer": 250
+            }
+          },
+          {
+            "name": "laboratory target retains native AI and inflicts meaningful damage",
+            "data": {
+              "health": 967,
+              "phase": "engaged"
+            }
+          },
+          {
+            "name": "six fresh encounters clear injury state and bound entity counts",
+            "data": [
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              },
+              {
+                "live": 216,
+                "targets": 1,
+                "particles": 0,
+                "marks": 0,
+                "history": 0,
+                "health": 250
+              }
+            ]
+          },
+          {
+            "name": "attachment leaves hitboxes intact; standard sandbox spawns retain 250 HP",
+            "data": {
+              "before": [
+                -5,
+                5,
+                -12,
+                16
+              ],
+              "after": [
+                -5,
+                5,
+                -12,
+                16
+              ],
+              "nativeHealth": 250,
+              "nativePolicy": false
+            }
+          },
+          {
+            "name": "live sliding, firing, jump and jetpack work with injury lab enabled"
+          },
+          {
+            "name": "all prior namespaces and legacy save unchanged",
+            "data": {
+              "values": [
+                {
+                  "name": "localforage",
+                  "value": {
+                    "sentinel": "localforage"
+                  }
+                },
+                {
+                  "name": "sd-combat-experimental",
+                  "value": {
+                    "sentinel": "sd-combat-experimental"
+                  }
+                },
+                {
+                  "name": "sd-movement-experimental",
+                  "value": {
+                    "sentinel": "sd-movement-experimental"
+                  }
+                },
+                {
+                  "name": "sd-art-direction-lab",
+                  "value": {
+                    "sentinel": "sd-art-direction-lab"
+                  }
+                }
+              ],
+              "legacy": "{\"legacy\":\"preserved\"}"
+            }
+          },
+          {
+            "name": "all original modes omit the optional injury policy"
+          }
+        ],
+        "errors": [],
+        "external": [],
+        "badResponses": [
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          }
+        ]
+      }
+    },
+    {
+      "suite": "muzzle",
+      "exitCode": 0,
+      "command": "node offline/muzzle-test.cjs",
+      "rawReportSHA256": "4e2a7487841e5e9fcaeee450a325ea8515c6af29e219ff21e566dbf306ba390d",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "all four styles / weapons / poses / eight aim directions align",
+            "data": {
+              "cases": 512,
+              "maxRenderError": 5.619980848565992e-07,
+              "oldMaxOriginError": 22.123888356550648
+            }
+          },
+          {
+            "name": "native circled rail beam starts at its physical muzzle",
+            "data": {
+              "x": -715.1835641727167,
+              "y": -153.74181573249402
+            }
+          },
+          {
+            "name": "fresh / teleported rigs retain native firing origin",
+            "data": {
+              "nativeFallback": true
+            }
+          },
+          {
+            "name": "one-unit walls and ceilings prevent cover bypass in all poses and aim directions",
+            "data": {
+              "cases": 128
+            }
+          },
+          {
+            "name": "A uses original cargo artwork",
+            "data": {
+              "native": true,
+              "props": 4
+            }
+          }
+        ],
+        "errors": [],
+        "external": []
+      }
+    },
+    {
+      "suite": "combat",
+      "exitCode": 0,
+      "command": "node offline/combat-test.cjs",
+      "rawReportSHA256": "da9485f31f642df8f3ec612c2610ed53c86dff7bb26971286286f25cbeec5b79",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "startup",
+            "data": {
+              "entities": 182,
+              "config": "CombatConfig",
+              "player": "sdCharacter",
+              "bounds": {
+                "x1": -960,
+                "y1": -256,
+                "x2": 960,
+                "y2": 256
+              }
+            }
+          },
+          {
+            "name": "movement"
+          },
+          {
+            "name": "jump"
+          },
+          {
+            "name": "crouch"
+          },
+          {
+            "name": "weapon pistol",
+            "data": {
+              "before": 12,
+              "after": 11
+            }
+          },
+          {
+            "name": "weapon rifle",
+            "data": {
+              "before": 30,
+              "after": 28
+            }
+          },
+          {
+            "name": "weapon shotgun",
+            "data": {
+              "before": 8,
+              "after": 7
+            }
+          },
+          {
+            "name": "weapon railgun",
+            "data": {
+              "before": -1,
+              "after": -1
+            }
+          },
+          {
+            "name": "reload"
+          },
+          {
+            "name": "door",
+            "data": {
+              "open": 32,
+              "malfunction": false
+            }
+          },
+          {
+            "name": "destruction and fixed geometry"
+          },
+          {
+            "name": "restore objects"
+          },
+          {
+            "name": "three passive enemy presets"
+          },
+          {
+            "name": "enemy AI, bullets and damage",
+            "data": {
+              "health": 1970.3,
+              "targets": [
+                true,
+                false,
+                false
+              ]
+            }
+          },
+          {
+            "name": "enemy death and ragdoll"
+          },
+          {
+            "name": "respawn"
+          },
+          {
+            "name": "original build menu"
+          },
+          {
+            "name": "original construction placement",
+            "data": {
+              "type": "sdBlock",
+              "x": -528,
+              "y": 128,
+              "matterSpent": 55
+            }
+          },
+          {
+            "name": "three encounter resets",
+            "data": {
+              "entities": 197,
+              "enemies": 1
+            }
+          }
+        ],
+        "errors": [],
+        "external": []
+      }
+    },
+    {
+      "suite": "movement",
+      "exitCode": 0,
+      "command": "node offline/movement-test.cjs",
+      "rawReportSHA256": "6e315a781e183ccd6ee2a4f739a7514a65d5f3cd3d44da0c3d887a117d1cedee",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "startup and traversal lane",
+            "data": {
+              "x": -848,
+              "y": -80.00001,
+              "sx": 0,
+              "sy": 0,
+              "ground": true,
+              "crouch": 0,
+              "active": false,
+              "recovery": 0,
+              "remaining": 0,
+              "clear": true,
+              "box": [
+                -12,
+                16
+              ],
+              "flying": false,
+              "health": 250
+            }
+          },
+          {
+            "name": "stationary slide rejected"
+          },
+          {
+            "name": "native run",
+            "data": {
+              "x": -802.1025163520001,
+              "y": -80.00001,
+              "sx": 5.7131290880000005,
+              "sy": 0,
+              "ground": true,
+              "crouch": 0,
+              "active": false,
+              "recovery": 0,
+              "remaining": 0,
+              "clear": true,
+              "box": [
+                -12,
+                16
+              ],
+              "flying": false,
+              "health": 250
+            }
+          },
+          {
+            "name": "slide initiation, no boost, native reduced box",
+            "data": {
+              "x": -774.8000000000001,
+              "y": -80.00001,
+              "sx": 5.100503270400002,
+              "sy": 0,
+              "ground": true,
+              "crouch": 1,
+              "active": true,
+              "recovery": 0,
+              "remaining": 966.6666666666667,
+              "clear": true,
+              "box": [
+                -6,
+                16
+              ],
+              "flying": false,
+              "health": 250
+            }
+          },
+          {
+            "name": "momentum deceleration",
+            "data": {
+              "x": -744.1364771072001,
+              "y": -80.00001,
+              "sx": 3.8405032704000033,
+              "sy": 0,
+              "ground": true,
+              "crouch": 1,
+              "active": true,
+              "recovery": 0,
+              "remaining": 733.3333333333331,
+              "clear": true,
+              "box": [
+                -6,
+                16
+              ],
+              "flying": false,
+              "health": 250
+            }
+          },
+          {
+            "name": "natural termination",
+            "data": {
+              "x": -708.1289280512,
+              "y": -80.00001,
+              "sx": 1.140503270400002,
+              "sy": 0,
+              "ground": true,
+              "crouch": 1,
+              "active": false,
+              "recovery": 300,
+              "remaining": 233.33333333333306,
+              "clear": true,
+              "box": [
+                -6,
+                16
+              ],
+              "flying": false,
+              "health": 250
+            }
+          },
+          {
+            "name": "held key does not retrigger"
+          },
+          {
+            "name": "bounded simulation, corridor, ceiling, ledge and wall collision",
+            "data": {
+              "initialSpeed": 5.82,
+              "maxSpeed": 5.82,
+              "steps": 26,
+              "distance": 93.96000000000004,
+              "left": {
+                "x": -865.9,
+                "sx": -4.380000000000003,
+                "active": true
+              },
+              "recovery": {
+                "active": false,
+                "remaining": 266.6666666666667
+              },
+              "entrance": {
+                "x": -677.00001,
+                "crouch": 0.63,
+                "clearOfGeometry": true
+              },
+              "capped": 7.82,
+              "obstacle": {
+                "x": -533.00001,
+                "active": false
+              },
+              "ceiling": {
+                "crouch": 1,
+                "clear": false,
+                "top": -86.00001
+              },
+              "corridor": {
+                "x": -592.6753766399999,
+                "active": false,
+                "crouch": 1,
+                "clear": false,
+                "top": -86
+              },
+              "ledge": {
+                "active": false,
+                "ground": false,
+                "y": -135.9277330636608,
+                "sy": 1.9781170012992
+              },
+              "wall": {
+                "x": -389.00001,
+                "sx": 0,
+                "active": false
+              }
+            }
+          },
+          {
+            "name": "pistol firing while sliding",
+            "data": {
+              "x": -744.2302829819132,
+              "y": -80.00001,
+              "sx": 3.3700549590144675,
+              "sy": 0,
+              "ground": true,
+              "crouch": 1,
+              "active": true,
+              "recovery": 0,
+              "remaining": 666.6666666666664,
+              "clear": true,
+              "box": [
+                -6,
+                16
+              ],
+              "flying": false,
+              "health": 250
+            }
+          },
+          {
+            "name": "jump cancels slide",
+            "data": {
+              "x": -717.5726272433225,
+              "y": -96.33290600000002,
+              "sx": 4.0195133655877955,
+              "sy": -2.5826480000000007,
+              "ground": false,
+              "crouch": 0,
+              "active": false,
+              "recovery": 133.33333333333331,
+              "remaining": 633.333333333333,
+              "clear": true,
+              "box": [
+                -12,
+                16
+              ],
+              "flying": true,
+              "health": 250
+            }
+          },
+          {
+            "name": "native jetpack after slide jump",
+            "data": {
+              "x": -696.6365929139306,
+              "y": -107.49956273069976,
+              "sx": 4.299840919069631,
+              "sy": -2.141712860793593,
+              "ground": false,
+              "crouch": 0,
+              "active": false,
+              "recovery": 0,
+              "remaining": 633.333333333333,
+              "clear": true,
+              "box": [
+                -12,
+                16
+              ],
+              "flying": true,
+              "health": 250
+            }
+          },
+          {
+            "name": "jetpack release"
+          },
+          {
+            "name": "enemy projectile damages sliding actor",
+            "data": {
+              "x": -758.9721024620801,
+              "y": -80.00001,
+              "sx": 3.9053811859199885,
+              "sy": 0,
+              "ground": true,
+              "crouch": 1,
+              "active": true,
+              "recovery": 0,
+              "remaining": 799.9999999999999,
+              "clear": true,
+              "box": [
+                -6,
+                16
+              ],
+              "flying": false,
+              "health": 220.3
+            }
+          },
+          {
+            "name": "death cancels slide, native ragdoll"
+          },
+          {
+            "name": "three resets clear movement state"
+          },
+          {
+            "name": "native rendered standing, sliding and recovery sequence"
+          },
+          {
+            "name": "original, combat and legacy saves unchanged",
+            "data": {
+              "original": {
+                "sentinel": "original-world"
+              },
+              "combat": {
+                "sentinel": "combat-world"
+              },
+              "legacy": "{\"legacy\":\"untouched\"}"
+            }
+          }
+        ],
+        "errors": [],
+        "external": []
+      }
+    },
+    {
+      "suite": "ai",
+      "exitCode": 0,
+      "command": "node offline/intelligent-test.cjs",
+      "rawReportSHA256": "2e1326eafc261937284a2c8d832c50c9e01d4bbfa51da4cced551154a2b26a37",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "tier": "basic",
+            "health": 250,
+            "reactionMs": 648.2011935207993,
+            "firstAllowedFireMs": 566.6666666666666,
+            "turnDegreesPerTick": 4.999999999999995,
+            "initialError": 12,
+            "settledError": 3.5,
+            "movingError": 8.5,
+            "fastTargetError": 9.5,
+            "sustainedError": 7.3461538461538485,
+            "memoryMs": 1100,
+            "hiddenPoint": [
+              -640,
+              140
+            ]
+          },
+          {
+            "tier": "intermediate",
+            "health": 250,
+            "reactionMs": 333.89466194435954,
+            "firstAllowedFireMs": 433.33333333333326,
+            "turnDegreesPerTick": 7.666666666666655,
+            "initialError": 8,
+            "settledError": 2,
+            "movingError": 5.25,
+            "fastTargetError": 5.9,
+            "sustainedError": 4.692307692307693,
+            "memoryMs": 1500,
+            "hiddenPoint": [
+              -640,
+              140
+            ]
+          },
+          {
+            "tier": "advanced",
+            "health": 250,
+            "reactionMs": 271.23929146444425,
+            "firstAllowedFireMs": 333.3333333333333,
+            "turnDegreesPerTick": 10.666666666666673,
+            "initialError": 5,
+            "settledError": 1,
+            "movingError": 3,
+            "fastTargetError": 3.4000000000000004,
+            "sustainedError": 2.538461538461539,
+            "memoryMs": 1800,
+            "hiddenPoint": [
+              -640,
+              140
+            ]
+          }
+        ],
+        "errors": [],
+        "external": [],
+        "engagements": [
+          {
+            "tier": "basic",
+            "health": 99982,
+            "enemyHealth": 250,
+            "state": "engaged",
+            "reaction": 545.1925850473344,
+            "time": 2050.6666666666656,
+            "error": 9.616215955889576
+          },
+          {
+            "tier": "intermediate",
+            "health": 99967,
+            "enemyHealth": 250,
+            "state": "engaged",
+            "reaction": 412.50975135713816,
+            "time": 1364.0000000000002,
+            "error": 6.327514929274619
+          },
+          {
+            "tier": "advanced",
+            "health": 99859.75,
+            "enemyHealth": 250,
+            "state": "engaged",
+            "reaction": 321.5484888618812,
+            "time": 1557.333333333333,
+            "error": 1.8443715677008703
+          }
+        ]
+      }
+    },
+    {
+      "suite": "art",
+      "exitCode": 0,
+      "command": "node offline/art-lab-test.cjs",
+      "rawReportSHA256": "d708646b4c7aa2954664a4d141e4cce6c550915ab20488b4f341e06e0587418a",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "optional lab, separate storage, native stage, one enemy",
+            "data": {
+              "storage": "sd-art-direction-lab",
+              "enemies": 1,
+              "art": {
+                "generationMs": 104.09999999403954,
+                "canvases": 75,
+                "rgbaCanvasBytes": 19120128,
+                "maxWidth": 512
+              },
+              "contract": {
+                "logicalSize": 32,
+                "pivot": [
+                  16,
+                  16
+                ],
+                "sourceScale": 8,
+                "pistolMuzzle": [
+                  4.260000000000001,
+                  -1.5
+                ],
+                "parts": [
+                  "pelvis",
+                  "torso",
+                  "upper arm",
+                  "forearm",
+                  "thigh",
+                  "calf",
+                  "foot",
+                  "head"
+                ],
+                "note": "Native spring transforms and logical sizes; artwork never sets bone positions or collision bounds."
+              }
+            }
+          },
+          {
+            "name": "native shot and impact form identical combat comparison",
+            "data": {
+              "impacts": 1,
+              "ammo": 11,
+              "before": 12
+            }
+          },
+          {
+            "name": "original head produces visible framebuffer pixels",
+            "data": {
+              "changedPixels": 658
+            }
+          },
+          {
+            "name": "original weapon produces visible framebuffer pixels",
+            "data": {
+              "changedPixels": 6912
+            }
+          },
+          {
+            "name": "A head produces visible framebuffer pixels",
+            "data": {
+              "changedPixels": 620
+            }
+          },
+          {
+            "name": "A weapon produces visible framebuffer pixels",
+            "data": {
+              "changedPixels": 1431
+            }
+          },
+          {
+            "name": "B head produces visible framebuffer pixels",
+            "data": {
+              "changedPixels": 668
+            }
+          },
+          {
+            "name": "B weapon produces visible framebuffer pixels",
+            "data": {
+              "changedPixels": 918
+            }
+          },
+          {
+            "name": "C head produces visible framebuffer pixels",
+            "data": {
+              "changedPixels": 626
+            }
+          },
+          {
+            "name": "C weapon produces visible framebuffer pixels",
+            "data": {
+              "changedPixels": 842
+            }
+          },
+          {
+            "name": "four directions and three close-ups captured with identical physical state, bones, springs and hitboxes"
+          },
+          {
+            "name": "C submitted far, near and foreground motion preserves depth order",
+            "data": {
+              "cameraDelta": 40,
+              "relativeWorldMovement": {
+                "background0": 6,
+                "background1": 18,
+                "foreground": 48
+              }
+            }
+          },
+          {
+            "name": "repeatable CPU submission and completion measurements recorded"
+          },
+          {
+            "name": "A live run, slide, crouch, firing/reload, jump/jetpack and simulated ragdoll",
+            "data": {
+              "slide": {
+                "active": true,
+                "crouch": 1,
+                "box": [
+                  -5,
+                  5,
+                  -6,
+                  16
+                ]
+              },
+              "death": 9,
+              "bones": 18
+            }
+          },
+          {
+            "name": "B live run, slide, crouch, firing/reload, jump/jetpack and simulated ragdoll",
+            "data": {
+              "slide": {
+                "active": true,
+                "crouch": 1,
+                "box": [
+                  -5,
+                  5,
+                  -6,
+                  16
+                ]
+              },
+              "death": 9,
+              "bones": 18
+            }
+          },
+          {
+            "name": "C live run, slide, crouch, firing/reload, jump/jetpack and simulated ragdoll",
+            "data": {
+              "slide": {
+                "active": true,
+                "crouch": 1,
+                "box": [
+                  -5,
+                  5,
+                  -6,
+                  16
+                ]
+              },
+              "death": 9,
+              "bones": 18
+            }
+          },
+          {
+            "name": "repeated comparison resets retain a single fresh enemy",
+            "data": {
+              "count": 10,
+              "enemies": 1,
+              "health": 250
+            }
+          },
+          {
+            "name": "all existing world namespaces and legacy saves preserved",
+            "data": {
+              "names": [
+                {
+                  "name": "localforage",
+                  "value": {
+                    "sentinel": "localforage"
+                  }
+                },
+                {
+                  "name": "sd-combat-experimental",
+                  "value": {
+                    "sentinel": "sd-combat-experimental"
+                  }
+                },
+                {
+                  "name": "sd-movement-experimental",
+                  "value": {
+                    "sentinel": "sd-movement-experimental"
+                  }
+                }
+              ],
+              "legacy": "{\"legacy\":\"preserved\"}"
+            }
+          },
+          {
+            "name": "original, combat and movement modes omit all art-lab assets and adapters"
+          }
+        ],
+        "errors": [],
+        "external": [],
+        "badResponses": [
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          }
+        ]
+      }
+    },
+    {
+      "suite": "control",
+      "exitCode": 0,
+      "command": "node offline/art-lab-control-test.cjs",
+      "rawReportSHA256": "66faccedd32ad6833034c0628c13f940c393d5d8146fb8665f693ce08847f96d",
+      "result": {
+        "passed": true,
+        "checks": [
+          "Previously dormant soldier wakes, runs original AI and inflicts native damage"
+        ],
+        "errors": []
+      }
+    },
+    {
+      "suite": "storage",
+      "exitCode": 0,
+      "command": "node offline/combat-storage-test.cjs",
+      "result": {
+        "passed": true,
+        "log": "PASS storage isolation {\n  namespace: 'sd-combat-experimental',\n  original: { sentinel: 'original-world' },\n  legacy: '{\"legacy\":\"untouched\"}',\n  loadedLegacy: undefined\n}\nPASS aiming and native railgun projectile creation\nPASS repeated combat encounter 1 { entities: 215, health: 1970.3, error: '' }\nPASS repeated combat encounter 2 { entities: 213, health: 1982, error: '' }\nPASS repeated combat encounter 3 { entities: 213, health: 1970.3, error: '' }\nPASS original saves preserved after quit\n"
+      }
+    },
+    {
+      "suite": "isolation",
+      "exitCode": 0,
+      "command": "node offline/movement-isolation-test.cjs",
+      "rawReportSHA256": "161bb2097e2a0bb12f39f7b46a1daa2fcdb16707a52376df2a0f68c5393145c5",
+      "result": {
+        "passed": true,
+        "errors": [],
+        "external": [],
+        "modes": [
+          {
+            "mode": "combat",
+            "prototype": "undefined",
+            "movement": false,
+            "storage": "sd-combat-experimental",
+            "hRegistered": false,
+            "traversalBlocks": 0
+          },
+          {
+            "mode": "original",
+            "prototype": "undefined",
+            "movement": false,
+            "storage": "localforage",
+            "hRegistered": false
+          }
+        ]
+      }
+    },
+    {
+      "suite": "original",
+      "exitCode": 0,
+      "command": "node offline/test.cjs",
+      "rawReportSHA256": "b0039072b26786ef772cac7544625ac887277518771b4a2f0d642752850084b9",
+      "result": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "static startup",
+            "evidence": {
+              "ready": "Offline \u2014 ready",
+              "connected": false,
+              "music": false
+            }
+          },
+          {
+            "name": "original offline sandbox launched",
+            "evidence": {
+              "entities": 3602,
+              "health": 250,
+              "server": true,
+              "singleplayer": true
+            }
+          },
+          {
+            "name": "gravity and floor collision",
+            "evidence": {
+              "x": 192,
+              "y": -592.00001,
+              "sx": 0,
+              "sy": 0,
+              "stands": true,
+              "health": 250,
+              "ammo": 12,
+              "capacity": 12,
+              "reload": 0,
+              "look_x": -166.05504883505196,
+              "look_y": -855.2138224053153,
+              "crouch": 0,
+              "ragdoll": true,
+              "service": "Leaving vehicle",
+              "frame": 53
+            }
+          },
+          {
+            "name": "keyboard movement",
+            "evidence": {
+              "from": 192,
+              "to": 291.0382303761518
+            }
+          },
+          {
+            "name": "jump",
+            "evidence": {
+              "beforeY": -592.00001,
+              "afterY": -610.56390104,
+              "sy": -2.2309950400000007
+            }
+          },
+          {
+            "name": "crouch and animation state",
+            "evidence": {
+              "crouch": 1,
+              "ragdoll": true
+            }
+          },
+          {
+            "name": "wall collision",
+            "evidence": {
+              "playerX": 378.99999,
+              "wallX": 384
+            }
+          },
+          {
+            "name": "mouse aiming",
+            "evidence": {
+              "x": 192,
+              "y": -592.00001,
+              "lookX": 223.5789473684211,
+              "lookY": -686.7368421052631
+            }
+          },
+          {
+            "name": "shooting and projectile creation",
+            "evidence": {
+              "before": 12,
+              "after": 11,
+              "projectiles": 1
+            }
+          },
+          {
+            "name": "reload",
+            "evidence": {
+              "animation": 12,
+              "ammo": 12,
+              "capacity": 12
+            }
+          },
+          {
+            "name": "enemy AI targeting and firing",
+            "evidence": {
+              "target": 21,
+              "player": 21,
+              "bullets": 1,
+              "x": 356.5720685498319,
+              "health": 250,
+              "armor": 100
+            }
+          },
+          {
+            "name": "enemy projectile hits player",
+            "evidence": {
+              "health": 235.6,
+              "armor": 96.4
+            }
+          },
+          {
+            "name": "player projectiles damage enemy",
+            "evidence": {
+              "before": 250,
+              "health": -18.199999999999996,
+              "ragdoll": true
+            }
+          },
+          {
+            "name": "save to IndexedDB",
+            "evidence": {
+              "files": [
+                "fake_local_directory/presets",
+                "fake_local_directory/presets_users",
+                "fake_local_directory/star_defenders_snapshot.v"
+              ]
+            }
+          },
+          {
+            "name": "save reload",
+            "evidence": {
+              "player": 21,
+              "health": 1832.239999999999,
+              "entities": 2996,
+              "marker": {
+                "id": 4711,
+                "x": 96,
+                "y": -608,
+                "hue": 17
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "badResponses": [
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:8000/audio/rocket_loop.wav",
+            "status": 404
+          }
+        ]
+      }
+    }
+  ],
+  "initialIssues": [
+    {
+      "suite": "physical",
+      "issue": "Missing assets/guns/sword2b_disabled.png from native preview code; exporter now supplies existing stock sprite at the requested URL. Companion sword2b.png alias supplied too. No game source changes.",
+      "resolution": "Full physical and subsequent regressions passed after exporter alias correction."
+    },
+    {
+      "suite": "ai",
+      "issue": "First run timed out waiting for combat-hostility button to be visible/enabled/stable after live engagements succeeded. Cause not established.",
+      "firstAttempt": {
+        "passed": false,
+        "errors": [],
+        "external": [],
+        "checks": [
+          {
+            "tier": "basic",
+            "health": 250,
+            "reactionMs": 485.3861328680068,
+            "firstAllowedFireMs": 566.6666666666666,
+            "turnDegreesPerTick": 4.999999999999995,
+            "initialError": 12,
+            "settledError": 3.5,
+            "movingError": 8.5,
+            "fastTargetError": 9.5,
+            "sustainedError": 7.3461538461538485,
+            "memoryMs": 1100,
+            "hiddenPoint": [
+              -640,
+              140
+            ]
+          },
+          {
+            "tier": "intermediate",
+            "health": 250,
+            "reactionMs": 367.36110735684633,
+            "firstAllowedFireMs": 399.99999999999994,
+            "turnDegreesPerTick": 7.666666666666655,
+            "initialError": 8,
+            "settledError": 2,
+            "movingError": 5.25,
+            "fastTargetError": 5.9,
+            "sustainedError": 4.692307692307693,
+            "memoryMs": 1500,
+            "hiddenPoint": [
+              -640,
+              140
+            ]
+          },
+          {
+            "tier": "advanced",
+            "health": 250,
+            "reactionMs": 295.40950204012915,
+            "firstAllowedFireMs": 333.3333333333333,
+            "turnDegreesPerTick": 10.666666666666673,
+            "initialError": 5,
+            "settledError": 1,
+            "movingError": 3,
+            "fastTargetError": 3.4000000000000004,
+            "sustainedError": 2.538461538461539,
+            "memoryMs": 1800,
+            "hiddenPoint": [
+              -640,
+              140
+            ]
+          }
+        ],
+        "engagements": [
+          {
+            "tier": "basic",
+            "health": 99970.3,
+            "enemyHealth": 250,
+            "state": "engaged",
+            "reaction": 543.6423753388226,
+            "time": 2004.6666666666658,
+            "error": 6.165569159178001
+          },
+          {
+            "tier": "intermediate",
+            "health": 99967,
+            "enemyHealth": 250,
+            "state": "engaged",
+            "reaction": 410.55648712441325,
+            "time": 589.3333333333333,
+            "error": 5.286696323377298
+          },
+          {
+            "tier": "advanced",
+            "health": 99859.75,
+            "enemyHealth": 250,
+            "state": "engaged",
+            "reaction": 319.9362707650289,
+            "time": 1533.333333333333,
+            "error": 2.168756851064013
+          }
+        ],
+        "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#combat-hostility')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"combat-hostility\">Hostility: on</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at /workspace/StarDefenders2D/offline/intelligent-test.cjs:80:43"
+      },
+      "resolution": "Unmodified intelligent-test.cjs rerun passed; no assertion, UI click or timeout changes."
+    }
+  ],
+  "limits": [
+    "Native macOS Finder, Gatekeeper and Launch Services behavior remain untested; macOS open command is covered with mocks.",
+    "Optional upstream rocket_loop.wav returns 404; no unexpected JavaScript errors or external browser requests in final installed-game test.",
+    "Update integration uses private real Git fixtures and test-only transport mapping; production is fixed to intended public GitHub playtest ref.",
+    "No gameplay feel or native GPU performance claim."
+  ],
+  "launcherSourceSHA256": {
+    "Install StarDefenders.command": "5b07e9d7aa3b921a00de7c41afcfc13f5c0f1f9094d0da8a1460f95298b24f2c",
+    "Play StarDefenders.command": "3364915cefb69f0f25792af8e941d5f1083f01143edeb0a874ad26181baa2562",
+    "offline/playtest.py": "8bde960ef254c930fb49b80c8e2c821cfbebc814bdfb7e2b416b08896b014610",
+    "offline/playtest-start.js": "10fa9d4c2266a87bf0f008d30e03e8bfb32081685706ec5425226648a4352c82",
+    "offline/build.py": "10ca4427fc80750a9afab3cc085030196048ece023dfbbcb1eab1164b3865a6d",
+    "offline/launch.py": "84f9e22b8301f13dca14e59eb787513c623e777d8321a62640083d68d768ee99",
+    "offline/launcher_test.py": "8bc200f744de14a4c0e79502625993bc4379d9634bf92eaeb1e4916d79f21872",
+    "offline/launcher-browser-test.cjs": "0c4f4fe03a00c9df8fa637ace36386475b7029cd3491b1a678c91f3b9adf7e55"
+  }
+}

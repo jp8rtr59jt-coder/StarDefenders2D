@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Export the existing engine as static files. Python standard library only."""
 from pathlib import Path
+import argparse
 import re
 import shutil
 
@@ -8,10 +9,13 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'dist' / 'offline'
 
 
-def build():
-    OUTPUT.mkdir(parents=True, exist_ok=True)
+def build(output=None, playtest=False):
+    output = Path(output).resolve() if output else OUTPUT
+    if output != OUTPUT and output.exists() and any(output.iterdir()):
+        raise FileExistsError('A custom export directory must be empty: ' + str(output))
+    output.mkdir(parents=True, exist_ok=True)
     # Rebuild only this generated directory; never touch source or browser saves.
-    for path in OUTPUT.iterdir():
+    for path in output.iterdir():
         if path.is_dir():
             shutil.rmtree(path)
         else:
@@ -25,17 +29,21 @@ def build():
             return [name for name in names if name in ('sdMusic.js', 'sdTheatreAPIs.js')]
         return []
 
-    shutil.copytree(ROOT / 'game', OUTPUT, dirs_exist_ok=True, ignore=excluded)
+    shutil.copytree(ROOT / 'game', output, dirs_exist_ok=True, ignore=excluded)
     classes = [f'./{folder}/{p.stem}' for folder in ('entities', 'interfaces')
                for p in sorted((ROOT / 'game' / folder).glob('*.js'))]
-    (OUTPUT / 'get_classes.txt').write_text(','.join(classes), encoding='utf-8')
+    (output / 'get_classes.txt').write_text(','.join(classes), encoding='utf-8')
     # Upstream references this sprite at assets/ although it lives under guns/.
     # Supply the same existing art at that URL, without changing sdGunClass.
-    shutil.copy2(OUTPUT / 'assets/guns/buildtool_upgrade2.png',
-                 OUTPUT / 'assets/buildtool_upgrade2.png')
+    shutil.copy2(output / 'assets/guns/buildtool_upgrade2.png',
+                 output / 'assets/buildtool_upgrade2.png')
     # The retained native menu preview still uses this pre-relocation URL.
-    shutil.copy2(OUTPUT / 'assets/guns/grenade_launcher.png',
-                 OUTPUT / 'assets/grenade_launcher.png')
+    shutil.copy2(output / 'assets/guns/grenade_launcher.png',
+                 output / 'assets/grenade_launcher.png')
+    # Native preview variants also retain these old guns/ locations. Supply
+    # the existing stock sprites there; do not alter any weapon definition/art.
+    for name in ('sword2b.png', 'sword2b_disabled.png'):
+        shutil.copy2(output / 'assets' / name, output / 'assets/guns' / name)
 
     html = (ROOT / 'game' / 'index.html').read_text(encoding='utf-8')
     html = re.sub(r'<\?\s*print\( discord_url \)\s*\?>',
@@ -65,23 +73,26 @@ def build():
     html = html.replace('<head>', '<head>\n<meta http-equiv="Content-Security-Policy" content="' + csp + '">')
     # The adapter needs the original menu elements, before deferred module code.
     html = html.replace('</body>', '<script src="offline-bootstrap.js"></script>\n</body>')
-    (OUTPUT / 'index.html').write_text(html, encoding='utf-8')
-    shutil.copy2(ROOT / 'offline' / 'bootstrap.js', OUTPUT / 'offline-bootstrap.js')
+    if playtest:
+        html = html.replace('</body>', '<script src="playtest-start.js"></script>\n</body>')
+        shutil.copy2(ROOT / 'offline' / 'playtest-start.js', output / 'playtest-start.js')
+    (output / 'index.html').write_text(html, encoding='utf-8')
+    shutil.copy2(ROOT / 'offline' / 'bootstrap.js', output / 'offline-bootstrap.js')
     for name in ('LICENSE', 'README.md'):
-        shutil.copy2(ROOT / name, OUTPUT / name)
-    shutil.copy2(ROOT / 'offline' / 'NOTICES.md', OUTPUT / 'NOTICES.md')
-    shutil.copytree(ROOT / 'offline' / 'licenses', OUTPUT / 'licenses')
+        shutil.copy2(ROOT / name, output / name)
+    shutil.copy2(ROOT / 'offline' / 'NOTICES.md', output / 'NOTICES.md')
+    shutil.copytree(ROOT / 'offline' / 'licenses', output / 'licenses')
     # Include the changed source and build/launch instructions with the export.
-    shutil.copytree(ROOT / 'offline', OUTPUT / 'offline-source',
+    shutil.copytree(ROOT / 'offline', output / 'offline-source',
                     ignore=shutil.ignore_patterns('__pycache__', 'test-output'))
-    shutil.copy2(ROOT / 'game' / 'index.html', OUTPUT / 'offline-source' / 'upstream-index.html')
+    shutil.copy2(ROOT / 'game' / 'index.html', output / 'offline-source' / 'upstream-index.html')
     # The portable folder can launch itself without the original checkout.
     command = (ROOT / 'Start Offline.command').read_text(encoding='utf-8')
     command = command.replace('python3 offline/launch.py',
                               'python3 offline-source/launch.py --serve .')
-    (OUTPUT / 'Start Offline.command').write_text(command, encoding='utf-8')
-    (OUTPUT / 'Start Offline.command').chmod(0o755)
-    (OUTPUT / 'START-HERE.txt').write_text(
+    (output / 'Start Offline.command').write_text(command, encoding='utf-8')
+    (output / 'Start Offline.command').chmod(0o755)
+    (output / 'START-HERE.txt').write_text(
         'Star Defenders 2D — standalone offline engine\n\n'
         'Requires Python 3 and Chrome/Chromium with WebGL. No npm or Node server.\n'
         'On macOS: double-click Start Offline.command, or from this directory run:\n'
@@ -92,9 +103,13 @@ def build():
         'Detailed instructions, limitations and test results: offline-source/\n'
         'Licenses: LICENSE, NOTICES.md, licenses/, and retained library notices.\n',
         encoding='utf-8')
-    print(f'Offline export: {OUTPUT}')
-    return OUTPUT
+    print(f'Offline export: {output}')
+    return output
 
 
 if __name__ == '__main__':
-    build()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, help='New/empty staging directory; default: dist/offline')
+    parser.add_argument('--playtest', action='store_true', help='Automatically start the combined lab after storage/menu readiness')
+    args = parser.parse_args()
+    build(args.output, args.playtest)

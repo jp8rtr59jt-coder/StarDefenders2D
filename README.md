@@ -1,4 +1,8 @@
 # Star Defenders 2D
+
+**macOS playtest:** [Install once, then double-click to play and update](docs/macos-launcher/README.md).
+The `playtest` branch follows only explicitly approved versions and runs locally in Chrome.
+
 This is the source code of my Star Defenders 2D game, which you can usually play here: https://www.gevanni.com:3000
 
 Feel free to finish it (contact me on Twitter or Patreon - I have plenty of plans, features and bug-fix suggestions to share) or submit updates as pull requests if you'd like to.

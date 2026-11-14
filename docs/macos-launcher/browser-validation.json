@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Actual source installed once through the production installer",
+      "data": {
+        "commit": "41789dc4c7107f4bbcec73f6118e95ea701d3672",
+        "branch": "playtest"
+      }
+    },
+    {
+      "name": "Automatic native lab startup, without clicking Play",
+      "data": {
+        "namespace": "sd-physical-combat-lab",
+        "health": 250,
+        "enemyHealth": 90,
+        "art": "A",
+        "slide": true,
+        "jetpack": true,
+        "eliteReaction": 250,
+        "aligned": true,
+        "build": true
+      }
+    },
+    {
+      "name": "Second launch reuses the installed export and auto-starts again"
+    },
+    {
+      "name": "Real Git fast-forward, rebuild and native autostart after private approved update",
+      "data": {
+        "from": "41789dc4c7107f4bbcec73f6118e95ea701d3672",
+        "to": "e5ecb05aa7b3e0e89fd6778f3dc414d8edb3f4a0"
+      }
+    },
+    {
+      "name": "Stable port/hostname and all previous save namespaces preserved across update",
+      "data": {
+        "probe": "same-origin",
+        "legacy": "{\"legacy\":\"preserved\"}",
+        "worlds": [
+          {
+            "name": "localforage",
+            "value": {
+              "sentinel": "localforage"
+            }
+          },
+          {
+            "name": "sd-combat-experimental",
+            "value": {
+              "sentinel": "sd-combat-experimental"
+            }
+          },
+          {
+            "name": "sd-movement-experimental",
+            "value": {
+              "sentinel": "sd-movement-experimental"
+            }
+          },
+          {
+            "name": "sd-art-direction-lab",
+            "value": {
+              "sentinel": "sd-art-direction-lab"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fresh modules, assets and no stale conditional-cache responses"
+    },
+    {
+      "name": "Original sandbox menu remains available without forced autostart"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "badResponses": [
+    "http://127.0.0.1:8001/audio/rocket_loop.wav",
+    "http://127.0.0.1:8001/audio/rocket_loop.wav",
+    "http://127.0.0.1:8001/audio/rocket_loop.wav"
+  ],
+  "nativeMacOSTested": false,
+  "testedIndexTree": "ab565f8914128e6c18c64cdcedac4f0ec41e0406",
+  "screenshotCameraFramedForDocumentation": true
+}
