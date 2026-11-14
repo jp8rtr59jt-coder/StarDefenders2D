@@ -53,6 +53,7 @@ class sdBubbleShield extends sdEntity
 		if ( !sdWorld.is_server )
 		return;
 	
+		if ( this._finite ) { this.AbsorbFiniteDamage(Math.abs(dmg),initiator); return; }
 		dmg = Math.abs( dmg );
 		
 		this.hea -= dmg;
@@ -69,6 +70,31 @@ class sdBubbleShield extends sdEntity
 			else
 			this.hea = Math.max( -150, this.hea );
 		}
+	}
+	// Opt-in laboratory equipment; legacy shields never enter this path.
+	ConfigureFinite( { capacity, rechargePerSecond=0, rechargeDelayMs=1000, matterPerPoint=1 } )
+	{
+		if ( ![capacity,rechargePerSecond,rechargeDelayMs,matterPerPoint].every(Number.isFinite) ||
+			 capacity <= 0 || rechargePerSecond < 0 || rechargeDelayMs < 0 || matterPerPoint <= 0 )
+		throw new Error('Invalid finite shield configuration');
+		this._finite = { capacity, rechargePerSecond, delayTicks:rechargeDelayMs*30/1000, matterPerPoint };
+		this._hmax = this.hea = capacity;
+		this._regen_timeout = 0;
+		this._time_left = -1;
+	}
+	AbsorbFiniteDamage( dmg, initiator=null )
+	{
+		if ( !sdWorld.is_server || !this._finite || this._is_being_removed || !this.for_ent ||
+			 this.for_ent._is_being_removed || this.for_ent.hea <= 0 || dmg <= 0 ) return dmg;
+		const absorbed = Math.min(Math.max(0,this.hea),dmg);
+		this.hea = Math.max(0,this.hea-absorbed);
+		this._regen_timeout = this._finite.delayTicks;
+		if ( absorbed > 0 )
+		{
+			sdSound.PlaySound({name:'shield',x:this.x,y:this.y,volume:.6});
+			this._last_finite_hit = { absorbed, remaining:dmg-absorbed };
+		}
+		return dmg-absorbed;
 	}
 	GetShieldHealth( shield_type = 0 )
 	{
@@ -184,6 +210,7 @@ class sdBubbleShield extends sdEntity
 	
 		if ( shield )
 		{
+			if ( shield._finite ) return; // Refreshing a native ability must not refill equipment.
 			shield.type = shield_type;
 			shield.hea = shield.GetShieldHealth( shield_type ); // Override shield value
 			shield._time_left = shield.GetShieldDuration( shield_type ); // Override duration
@@ -231,7 +258,18 @@ class sdBubbleShield extends sdEntity
 			else
 			this.remove(); // Nothing to protect? Why exist?
 		
-			if ( this.type === sdBubbleShield.TYPE_STAR_DEFENDER_SHIELD )
+			if ( this._finite )
+			{
+				if ( !this.for_ent || this.for_ent.hea <= 0 || this.for_ent._is_being_removed )
+				{ this.hea=0; this.remove(); return; }
+				const elapsed=Math.min(GSPEED,Math.max(0,this._regen_timeout));
+				this._regen_timeout=Math.max(0,this._regen_timeout-GSPEED);
+				const f=this._finite, available=Number.isFinite(this.for_ent.matter)?Math.max(0,this.for_ent.matter):0;
+				const restored=Math.min(Math.max(0,this._hmax-this.hea), f.rechargePerSecond*(GSPEED-elapsed)/30, available/f.matterPerPoint);
+				this.hea+=restored;
+				this.for_ent.matter=Math.max(0,available-restored*f.matterPerPoint);
+			}
+			else if ( this.type === sdBubbleShield.TYPE_STAR_DEFENDER_SHIELD )
 			{
 				if ( this._regen_timeout <= 0 )
 				{
@@ -259,7 +297,7 @@ class sdBubbleShield extends sdEntity
 		
 		ctx.filter = this.GetFilterColor();
 		
-		ctx.globalAlpha = Math.max( 0, this.hea / this.GetShieldHealth( this.type ) );
+		ctx.globalAlpha = Math.max( 0, this.hea / ( this._finite ? this._hmax : this.GetShieldHealth( this.type ) ) );
 		
 		let cur_img = sdWorld.time % 3200;
 		cur_img = Math.round( 15 * cur_img / 3200 );

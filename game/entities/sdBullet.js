@@ -814,7 +814,7 @@ class sdBullet extends sdEntity
 		if ( from_entity.is( sdRift ) ) // Ignore portals
 		return false;
 
-		if ( from_entity.is( sdBubbleShield ) && ( this._owner === from_entity.for_ent || from_entity.hea <= 0 ) ) // Ignore shields from owner, or if they are depleted
+		if ( from_entity.is( sdBubbleShield ) && ( this._owner === from_entity.for_ent || from_entity.hea <= 0 || this._physical_shield_hits?.has(from_entity.for_ent) ) ) // Ignore shields from owner, or if they are depleted
 		return false;
 
 		if ( from_entity.is( sdWater ) ) // Ignore water
@@ -1222,6 +1222,23 @@ class sdBullet extends sdEntity
 		if ( !this.RegularCollisionFiltering( from_entity ) )
 		return;
 	
+		// Only finite opt-in NPC bubbles alter overflow behavior. The original
+		// sweep continues; a bubble graze never directly damages its owner.
+		if(from_entity.is(sdBubbleShield)&&from_entity._finite&&this._damage>0&&!this._hook&&!this._admin_picker)
+		{
+			const owner=from_entity.for_ent;
+			if(!owner||owner.hea<=0||!owner.IsTargetable(this)||owner.IsInSafeArea()||
+			 (owner._god&&owner._socket)||
+			 (sdWorld.server_config.GetHitAllowed&&!sdWorld.server_config.GetHitAllowed(this,owner)))return;
+			const energy=this._damage*this.GetCriticalHitMult();
+			const remaining=from_entity.AbsorbFiniteDamage(energy,this._owner);
+			if(!this._physical_shield_hits)this._physical_shield_hits=new WeakSet();
+			this._physical_shield_hits.add(owner);
+			this._damage*=remaining/energy;
+			if(this._damage<=0){this._damage=0;this.RemoveBullet();}
+			return;
+		}
+
 		if ( this._custom_post_bounce_reaction )
 		this._custom_post_bounce_reaction( this, 0, from_entity );
 

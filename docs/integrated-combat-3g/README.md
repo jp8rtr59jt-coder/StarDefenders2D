@@ -1,4 +1,4 @@
-# 3G recovery checkpoint — movement complete, combat integration pending
+# 3G development checkpoints — movement and personal shields
 
 Base: `d03c900219e14ea11ee55b2587e92194826d9766` (`playtest`).
 Development branch: `integrated-combat-3g`. **Not ready for promotion.**
@@ -7,7 +7,9 @@ Recovery found one worktree, no new agent commits, a completed Astra architectur
 report, a native crouch patch, a focused movement test, and unfinished integration
 and CI drafts. Prior agents stopped at a usage limit. Continuation used one Sol
 implementation agent; no further agents or duplicate architecture reviews ran.
-No protection implementation or faction module existed to integrate.
+No protection implementation or faction module existed to integrate at recovery.
+Phase C1 now implements opt-in native NPC shields; see [C1 details and tests](c1/README.md).
+The complete 3G milestone remains unfinished and is not promoted.
 
 ## Working change
 
@@ -56,8 +58,8 @@ this partial checkpoint. No CI gate or complete 3G acceptance pass is claimed.
 
 ## Exact remaining work
 
-1. Extend native shields for NPC capacity, depletion/overflow, regeneration and
-   damage interception without double charges; keep internal bleeding finite.
+1. Personal shield integration is implemented in C1; equipment UI/loadouts and
+   broader faction acceptance remain for later phases. See its focused validation.
 2. Add region-aware helmet integrity before biological head amplification and
    integrate existing native body armor/penetration with the physical policy.
 3. Implement six independent faction/equipment/training loadouts, their minimal
@@ -72,7 +74,7 @@ this partial checkpoint. No CI gate or complete 3G acceptance pass is claimed.
 The CI workflow draft is preserved locally in that directory but excluded from
 this commit: automatic approval review rejected its upload, citing the earlier
 human-approval policy despite the newer user authorization. It has not been
-activated or executed. These drafts They reference missing game APIs and missing gate scripts. The workflow
+activated or executed. These drafts reference missing game APIs and missing gate scripts. The workflow
 is stored as `.draft` outside `.github/workflows` so pushing this checkpoint does
 not run broken automation or promote partial work. No draft is counted as tested.
 `AGENTS.md` records the standing automatic-promotion authorization and safety gates.

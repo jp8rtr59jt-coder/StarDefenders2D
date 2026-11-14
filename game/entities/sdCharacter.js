@@ -2920,7 +2920,7 @@ class sdCharacter extends sdEntity
 				this.AIWarnTeammates();
 			}
 	}
-	Damage( dmg, initiator=null, headshot=false, affects_armor=true )
+	Damage( dmg, initiator=null, headshot=false, affects_armor=true, internal_injury=false )
 	{
 		if ( !sdWorld.is_server )
 		return;
@@ -2939,7 +2939,14 @@ class sdCharacter extends sdEntity
 			shielded_by.Damage( dmg, initiator );
 			return;
 		}*/
-		if ( sdBubbleShield.DidShieldProtectFromDamage( this, dmg, initiator ) )
+		const physical_shield_policy=sdWorld.server_config.physical_combat;
+		if ( physical_shield_policy?.has(this) && (internal_injury || physical_shield_policy.shieldBypassed(this)) )
+		{ /* Scoped projectile transaction or internal biological bleeding. */ }
+		else if ( physical_shield_policy?.has(this) && this._shield_ent?._finite )
+		{
+			if(dmg>0){dmg=this._shield_ent.AbsorbFiniteDamage(dmg,initiator);if(dmg<=0)return;}
+		}
+		else if ( sdBubbleShield.DidShieldProtectFromDamage( this, dmg, initiator ) )
 		return;
 		
 		// No healing for frozen players - prevent cube & freezing turret traps
@@ -5019,7 +5026,7 @@ class sdCharacter extends sdEntity
 			if ( this._dying )
 			{
 				//this.DamageWithEffect( GSPEED * 0.1, null, false, false );
-				this.Damage( GSPEED * 0.1, null, false, false );
+				this.Damage( GSPEED * 0.1, null, false, false, true );
 				
 				if ( this._ai_enabled )
 				{

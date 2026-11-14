@@ -7,6 +7,7 @@ import sdGun from '../entities/sdGun.js';
 import sdEffect from '../entities/sdEffect.js';
 import sdBloodDecal from '../entities/sdBloodDecal.js';
 import sdBG from '../entities/sdBG.js';
+import sdBubbleShield from '../entities/sdBubbleShield.js';
 import sdSound from '../sdSound.js';
 import {humanoidAI} from './humanoid-ai.js';
 
@@ -37,6 +38,19 @@ const lab={
  tuning,armorProfiles,ammunition,enabled:true,tier:'intermediate',profile:'unarmored',
  targets:[],particles:[],marks:[],history:[],
  has:e=>lab.enabled&&states.has(e),state:e=>states.get(e),
+ equipShield(e,options){
+  if(!this.has(e)||e===sdWorld.my_entity||e.hea<=0)throw Error('Finite shields require a living opt-in NPC');
+  if(e._shield_ent)throw Error('Wait for existing shield removal before equipping');
+  const shield=new sdBubbleShield({x:e.x,y:e.y,for_ent:e,type:sdBubbleShield.TYPE_STAR_DEFENDER_SHIELD});
+  try{shield.ConfigureFinite(options);}catch(error){shield.for_ent=null;shield.remove();shield.onRemoveAsFakeEntity();throw error;}
+  e._shield_ent=shield;
+  // NPC equipment has no hidden sandbox resource regeneration.
+  e._matter_regeneration=0;e._matter_regeneration_multiplier=0;
+  sdEntity.AddEntityToEntitiesArray(shield);shield.onThink(0);shield.UpdateHitbox();sdWorld.UpdateHashPosition(shield,false);
+  return shield;
+ },
+ shieldBypassed(e){return (states.get(e)?.shieldBypass||0)>0;},
+ withoutShield(e,fn){const s=states.get(e);s.shieldBypass=(s.shieldBypass||0)+1;try{return fn();}finally{s.shieldBypass--; }},
  random(s,visual=false){const key=visual?'fxSeed':'seed';s[key]=(Math.imul(1664525,s[key])+1013904223)>>>0;return s[key]/4294967296;},
  attach(e,profile='unarmored'){
   const a=armorProfiles[profile];if(!a)throw Error('Unknown armor profile');
@@ -76,11 +90,22 @@ const lab={
   // Native DamageWithEffect/Character.Damage owns health, damage text, armor
   // depletion/break, head feedback, death, drops and stability. Restore handling
   // after this one hit; there is no persistent projectile-stat mutation.
+  const shield=e._shield_ent;
+  let shieldAbsorbed=0;
+  const finite=shield?._finite&&!shield._is_being_removed;
+  if(finite&&!b._physical_shield_hits?.has(e)&&!e.IsInSafeArea()&&!(e._god&&e._socket)){
+   const energy=b._damage*b.GetCriticalHitMult(),remaining=shield.AbsorbFiniteDamage(energy,b._owner);
+   shieldAbsorbed=energy-remaining;hit.damage*=remaining/energy;
+   // Body-origin/penetrating shots can encounter the bubble later in the sweep.
+   if(!b._physical_shield_hits)b._physical_shield_hits=new WeakSet();
+   b._physical_shield_hits.add(e);
+  }
   e._armor_absorb_perc=hit.absorb;
-  try{result=e.DamageWithEffect(hit.damage,b._owner,hit.mult>1,hit.covered&&hit.absorb>0);}
+  try{const apply=()=>e.DamageWithEffect(hit.damage,b._owner,hit.mult>1,hit.covered&&hit.absorb>0);
+   result=finite?this.withoutShield(e,apply):apply();}
   finally{e._armor_absorb_perc=perc;}
   const loss=Math.max(0,Math.max(0,hp)-Math.max(0,e.hea)),absorbed=Math.max(0,armor-e.armor);
-  s.last={region,ammo:hit.ammo,x:b.x,y:b.y,damage:hit.damage,loss,absorbed,penetration:hit.penetration,health:e.hea,armor:e.armor,time:s.time};
+  s.last={shieldAbsorbed,region,ammo:hit.ammo,x:b.x,y:b.y,damage:hit.damage,loss,absorbed,penetration:hit.penetration,health:e.hea,armor:e.armor,time:s.time};
   if(loss>0){
    s.totalLoss+=loss;s.initiator=b._owner;e._regen_timeout=tuning.regenDelayTicks;
    // Biological HP can change without weakening the established leg/arm response.
@@ -118,7 +143,7 @@ const lab={
    e._dying=true;e.stability=-100;
    // Native _dying already loses 3 HP/s and bleeds every ~0.5 simulated second.
    // A small extra loss plus a hard game-time endpoint guarantee termination.
-   e.Damage(s.time>=s.deadline?e.hea+1:s.bleedRate*gspeed/30,s.initiator,false,false);
+   e.Damage(s.time>=s.deadline?e.hea+1:s.bleedRate*gspeed/30,s.initiator,false,false,true);
    if(e.hea<=0){s.phase='dead';e._dying=false;return;}
    if(s.time>=s.nextBlood){
     s.nextBlood=s.time+tuning.criticalBloodIntervalMs;

@@ -1,0 +1,454 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Native pistol completely absorbed once without biological injury",
+      "data": {
+        "hp": 90,
+        "armor": 0,
+        "shield": 82,
+        "matter": 20,
+        "phase": "ready",
+        "sx": 0,
+        "removed": false,
+        "bullets": 1,
+        "hit": null
+      }
+    },
+    {
+      "name": "1-capacity shield versus native 85-damage rail: 84 reaches body, impulse retained",
+      "data": {
+        "hp": 6,
+        "armor": 0,
+        "shield": 0,
+        "matter": 20,
+        "phase": "wounded",
+        "sx": 1.0059797439116105,
+        "removed": false,
+        "bullets": 1,
+        "hit": {
+          "shieldAbsorbed": 0,
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.67662108367102,
+          "damage": 84,
+          "loss": 84,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": 6,
+          "armor": 0,
+          "time": 0
+        }
+      }
+    },
+    {
+      "name": "Non-penetrating overflow continues original sweep into body exactly once",
+      "data": {
+        "hp": 77,
+        "armor": 0,
+        "shield": 0,
+        "matter": 20,
+        "phase": "wounded",
+        "sx": 0.14400083458038512,
+        "removed": false,
+        "bullets": 1,
+        "hit": {
+          "shieldAbsorbed": 0,
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.8999914199957,
+          "y": 146.67108434579885,
+          "damage": 13,
+          "loss": 13,
+          "absorbed": 0,
+          "penetration": 0.1,
+          "health": 77,
+          "armor": 0,
+          "time": 0
+        }
+      }
+    },
+    {
+      "name": "Exact depletion followed by exposed biological damage",
+      "data": {
+        "first": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 0,
+          "matter": 20,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false,
+          "bullets": 1,
+          "hit": null
+        },
+        "second": {
+          "hp": 72,
+          "armor": 0,
+          "shield": 0,
+          "matter": 20,
+          "phase": "wounded",
+          "sx": 0.1993278977081561,
+          "removed": false,
+          "bullets": 1,
+          "hit": {
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "pistol",
+            "x": 650.89999,
+            "y": 146.6487817796255,
+            "damage": 18,
+            "loss": 18,
+            "absorbed": 0,
+            "penetration": 0.1,
+            "health": 72,
+            "armor": 0,
+            "time": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Five native shotgun pellets deplete capacity without double charging",
+      "data": {
+        "hp": 90,
+        "armor": 0,
+        "shield": 0,
+        "matter": 20,
+        "phase": "ready",
+        "sx": 0,
+        "removed": false,
+        "bullets": 5,
+        "hit": null
+      }
+    },
+    {
+      "name": "Residual damage enters native body armor ledger once",
+      "data": {
+        "hp": 87.8970588235294,
+        "armor": 89.1029411764706,
+        "shield": 0,
+        "matter": 20,
+        "phase": "wounded",
+        "sx": 0.1440019193017398,
+        "removed": false,
+        "bullets": 1,
+        "hit": {
+          "shieldAbsorbed": 0,
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.8999914204273,
+          "y": 146.6716830380529,
+          "damage": 13,
+          "loss": 2.102941176470594,
+          "absorbed": 10.897058823529406,
+          "penetration": 0.1,
+          "health": 87.8970588235294,
+          "armor": 89.1029411764706,
+          "time": 0
+        }
+      }
+    },
+    {
+      "name": "Biological head amplification does not multiply shield energy",
+      "data": {
+        "hp": 90,
+        "armor": 0,
+        "shield": 82,
+        "matter": 20,
+        "phase": "ready",
+        "sx": 0,
+        "removed": false,
+        "bullets": 1,
+        "hit": null
+      }
+    },
+    {
+      "name": "Bubble-edge graze drains finite charge without damaging owner",
+      "data": {
+        "hp": 90,
+        "armor": 0,
+        "shield": 0,
+        "matter": 20,
+        "phase": "ready",
+        "sx": 0,
+        "removed": false,
+        "remaining": 84,
+        "hit": null
+      }
+    },
+    {
+      "name": "Exterior and interior explosion-wave projectiles use single residual transaction",
+      "data": {
+        "outside": {
+          "hp": 75,
+          "armor": 0,
+          "shield": 0,
+          "matter": 20,
+          "phase": "wounded",
+          "sx": 0.3,
+          "removed": false,
+          "remaining": 0,
+          "hit": {
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "other",
+            "x": 650.89999,
+            "y": 147,
+            "damage": 15,
+            "loss": 15,
+            "absorbed": 0,
+            "penetration": 0.53,
+            "health": 75,
+            "armor": 0,
+            "time": 0
+          }
+        },
+        "inside": {
+          "hp": 75,
+          "armor": 0,
+          "shield": 0,
+          "matter": 20,
+          "phase": "wounded",
+          "sx": 0.3,
+          "removed": false,
+          "remaining": 0,
+          "hit": {
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "other",
+            "x": 650.89999,
+            "y": 147,
+            "damage": 15,
+            "loss": 15,
+            "absorbed": 0,
+            "penetration": 0.53,
+            "health": 75,
+            "armor": 0,
+            "time": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Direct damage overflow; native NPC healing restriction preserved",
+      "data": {
+        "loss": {
+          "hp": 65,
+          "armor": 0,
+          "shield": 0,
+          "matter": 20,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        },
+        "healed": {
+          "hp": 65,
+          "armor": 0,
+          "shield": 0,
+          "matter": 20,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        }
+      }
+    },
+    {
+      "name": "DamageWithEffect, outgoing shots, penetrating projectiles, body-origin waves and scoped bypass cleanup",
+      "data": {
+        "effect": {
+          "hp": 75,
+          "armor": 0,
+          "shield": 0,
+          "matter": 20,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        },
+        "outgoing": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 100,
+          "matter": 20,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        },
+        "penetrating": {
+          "hp": 75,
+          "armor": 0,
+          "shield": 0,
+          "matter": 20,
+          "phase": "wounded",
+          "sx": 0.3,
+          "removed": false,
+          "remaining": 0,
+          "hit": {
+            "shieldAbsorbed": 0,
+            "region": "torso",
+            "ammo": "railgun",
+            "x": 650.9,
+            "y": 147,
+            "damage": 15,
+            "loss": 15,
+            "absorbed": 0,
+            "penetration": 1,
+            "health": 75,
+            "armor": 0,
+            "time": 0
+          }
+        },
+        "insideBody": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 80,
+          "matter": 20,
+          "phase": "ready",
+          "sx": 0.4,
+          "removed": false,
+          "remaining": 0,
+          "hit": {
+            "shieldAbsorbed": 20,
+            "region": "torso",
+            "ammo": "other",
+            "x": 656,
+            "y": 147,
+            "damage": 0,
+            "loss": 0,
+            "absorbed": 0,
+            "penetration": 0.53,
+            "health": 90,
+            "armor": 0,
+            "time": 0
+          }
+        },
+        "bodyPenetrating": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 80,
+          "matter": 20,
+          "phase": "ready",
+          "sx": 0.4,
+          "removed": false,
+          "remaining": 0,
+          "hit": {
+            "shieldAbsorbed": 20,
+            "region": "torso",
+            "ammo": "railgun",
+            "x": 656,
+            "y": 147,
+            "damage": 0,
+            "loss": 0,
+            "absorbed": 0,
+            "penetration": 1,
+            "health": 90,
+            "armor": 0,
+            "time": 0
+          }
+        },
+        "restored": true
+      }
+    },
+    {
+      "name": "Delayed recharge spends finite matter and stops when empty",
+      "data": {
+        "waiting": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 0,
+          "matter": 5,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        },
+        "recovered": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 2.5,
+          "matter": 0,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        },
+        "empty": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 2.5,
+          "matter": 0,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        },
+        "refilled": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 20,
+          "matter": 65,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        },
+        "regen": 0
+      }
+    },
+    {
+      "name": "Native ability refresh and duplicate equip cannot grant free capacity",
+      "data": {
+        "value": {
+          "hp": 90,
+          "armor": 0,
+          "shield": 80,
+          "matter": 20,
+          "phase": "ready",
+          "sx": 0,
+          "removed": false
+        },
+        "rejected": true
+      }
+    },
+    {
+      "name": "Internal critical bleeding reaches finite death endpoint through a charged shield",
+      "data": {
+        "hp": -1,
+        "armor": 0,
+        "shield": 0,
+        "matter": 5,
+        "phase": "dead",
+        "sx": 0,
+        "removed": true,
+        "finite": true
+      }
+    },
+    {
+      "name": "Unattached native shields retain original full-block and free-regeneration behavior",
+      "data": {
+        "before": {
+          "hp": 250,
+          "shield": -84,
+          "finite": false
+        },
+        "after": -78
+      }
+    },
+    {
+      "name": "Native player shield behavior preserved",
+      "data": {
+        "hp": 250,
+        "before": 250,
+        "shield": -84,
+        "finite": false
+      }
+    },
+    {
+      "name": "Original and ordinary combat startup omit finite equipment policy"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "badResponses": [
+    "http://127.0.0.1:8000/audio/rocket_loop.wav",
+    "http://127.0.0.1:8000/audio/rocket_loop.wav",
+    "http://127.0.0.1:8000/audio/rocket_loop.wav"
+  ]
+}
