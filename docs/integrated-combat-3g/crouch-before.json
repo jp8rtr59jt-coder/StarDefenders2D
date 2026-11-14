@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "baseline": true,
+  "checks": [
+    {
+      "name": "Reproduced: release under ceiling doubles acceleration despite crouched collision box",
+      "data": {
+        "standing": {
+          "x": -744.2963125582235,
+          "y": -80,
+          "sx": 6.074078139555841,
+          "sy": 0,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        },
+        "held": {
+          "x": -619.111117209334,
+          "y": -80,
+          "sx": 3.0590293023334407,
+          "sy": 0,
+          "crouch": 1,
+          "clear": false,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -6,
+            16
+          ]
+        },
+        "released": {
+          "x": -584.2963125582235,
+          "y": -80,
+          "sx": 6.074078139555841,
+          "sy": 0,
+          "crouch": 1,
+          "clear": false,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -6,
+            16
+          ]
+        },
+        "openRelease": {
+          "x": -744.2963125582235,
+          "y": -80,
+          "sx": 6.074078139555841,
+          "sy": 0,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "external": []
+}

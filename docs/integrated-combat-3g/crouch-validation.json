@@ -1,0 +1,452 @@
+{
+  "passed": true,
+  "baseline": false,
+  "checks": [
+    {
+      "name": "Effective constrained posture retains native crouch acceleration",
+      "data": {
+        "standing": {
+          "x": -744.2963125582235,
+          "y": -80,
+          "sx": 6.074078139555841,
+          "sy": 0,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        },
+        "held": {
+          "x": -622.1481562791117,
+          "y": -80,
+          "sx": 3.0370390697779204,
+          "sy": 0,
+          "crouch": 1,
+          "clear": false,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -6,
+            16
+          ]
+        },
+        "released": {
+          "x": -622.1481562791117,
+          "y": -80,
+          "sx": 3.0370390697779204,
+          "sy": 0,
+          "crouch": 1,
+          "clear": false,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -6,
+            16
+          ]
+        },
+        "openRelease": {
+          "x": -744.2963125582235,
+          "y": -80,
+          "sx": 6.074078139555841,
+          "sy": 0,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "name": "Corridor exit, slide input independence, collision interruption, jump/jetpack, native actors and rapid transitions",
+      "data": {
+        "exit": {
+          "x": -538.1241492940828,
+          "y": -80,
+          "sx": 3.124787323520675,
+          "sy": 0,
+          "crouch": 1,
+          "clear": true,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -6,
+            16
+          ]
+        },
+        "frames": 43,
+        "open": {
+          "x": -768.2820130816001,
+          "y": -80,
+          "sx": 5.820503270400001,
+          "sy": 0,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        },
+        "slideHeld": {
+          "a": {
+            "x": -689.18,
+            "y": -80,
+            "sx": 5.82,
+            "sy": 0,
+            "crouch": 1,
+            "clear": true,
+            "overlap": false,
+            "ground": true,
+            "slide": true,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -6,
+              16
+            ]
+          },
+          "b": {
+            "x": -649.1,
+            "y": -80,
+            "sx": 4.380000000000003,
+            "sy": 0,
+            "crouch": 1,
+            "clear": false,
+            "overlap": false,
+            "ground": true,
+            "slide": true,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -6,
+              16
+            ]
+          }
+        },
+        "slideReleased": {
+          "a": {
+            "x": -689.18,
+            "y": -80,
+            "sx": 5.82,
+            "sy": 0,
+            "crouch": 1,
+            "clear": true,
+            "overlap": false,
+            "ground": true,
+            "slide": true,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -6,
+              16
+            ]
+          },
+          "b": {
+            "x": -649.1,
+            "y": -80,
+            "sx": 4.380000000000003,
+            "sy": 0,
+            "crouch": 1,
+            "clear": false,
+            "overlap": false,
+            "ground": true,
+            "slide": true,
+            "flying": false,
+            "health": 250,
+            "box": [
+              -6,
+              16
+            ]
+          }
+        },
+        "obstacle": {
+          "x": -533.00001,
+          "y": -80,
+          "sx": 0,
+          "sy": 0,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        },
+        "jump": {
+          "x": -820,
+          "y": -84,
+          "sx": 0,
+          "sy": -4,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": true,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        },
+        "flight": {
+          "x": -820,
+          "y": -107.66348800000002,
+          "sx": 0,
+          "sy": -2.982648000000001,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": false,
+          "slide": false,
+          "flying": true,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        },
+        "release": {
+          "x": -820,
+          "y": -110.28648304000002,
+          "sx": 0,
+          "sy": -2.622995040000001,
+          "crouch": 0,
+          "clear": true,
+          "overlap": false,
+          "ground": false,
+          "slide": false,
+          "flying": false,
+          "health": 250,
+          "box": [
+            -12,
+            16
+          ]
+        },
+        "rapidTransitionsStable": true,
+        "original": {
+          "speed": 2.9941581162946567,
+          "crouch": 1,
+          "clear": false,
+          "attached": false
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "transitions": {
+    "exit": {
+      "x": -538.1241492940828,
+      "y": -80,
+      "sx": 3.124787323520675,
+      "sy": 0,
+      "crouch": 1,
+      "clear": true,
+      "overlap": false,
+      "ground": true,
+      "slide": false,
+      "flying": false,
+      "health": 250,
+      "box": [
+        -6,
+        16
+      ]
+    },
+    "frames": 43,
+    "open": {
+      "x": -768.2820130816001,
+      "y": -80,
+      "sx": 5.820503270400001,
+      "sy": 0,
+      "crouch": 0,
+      "clear": true,
+      "overlap": false,
+      "ground": true,
+      "slide": false,
+      "flying": false,
+      "health": 250,
+      "box": [
+        -12,
+        16
+      ]
+    },
+    "slideHeld": {
+      "a": {
+        "x": -689.18,
+        "y": -80,
+        "sx": 5.82,
+        "sy": 0,
+        "crouch": 1,
+        "clear": true,
+        "overlap": false,
+        "ground": true,
+        "slide": true,
+        "flying": false,
+        "health": 250,
+        "box": [
+          -6,
+          16
+        ]
+      },
+      "b": {
+        "x": -649.1,
+        "y": -80,
+        "sx": 4.380000000000003,
+        "sy": 0,
+        "crouch": 1,
+        "clear": false,
+        "overlap": false,
+        "ground": true,
+        "slide": true,
+        "flying": false,
+        "health": 250,
+        "box": [
+          -6,
+          16
+        ]
+      }
+    },
+    "slideReleased": {
+      "a": {
+        "x": -689.18,
+        "y": -80,
+        "sx": 5.82,
+        "sy": 0,
+        "crouch": 1,
+        "clear": true,
+        "overlap": false,
+        "ground": true,
+        "slide": true,
+        "flying": false,
+        "health": 250,
+        "box": [
+          -6,
+          16
+        ]
+      },
+      "b": {
+        "x": -649.1,
+        "y": -80,
+        "sx": 4.380000000000003,
+        "sy": 0,
+        "crouch": 1,
+        "clear": false,
+        "overlap": false,
+        "ground": true,
+        "slide": true,
+        "flying": false,
+        "health": 250,
+        "box": [
+          -6,
+          16
+        ]
+      }
+    },
+    "obstacle": {
+      "x": -533.00001,
+      "y": -80,
+      "sx": 0,
+      "sy": 0,
+      "crouch": 0,
+      "clear": true,
+      "overlap": false,
+      "ground": true,
+      "slide": false,
+      "flying": false,
+      "health": 250,
+      "box": [
+        -12,
+        16
+      ]
+    },
+    "jump": {
+      "x": -820,
+      "y": -84,
+      "sx": 0,
+      "sy": -4,
+      "crouch": 0,
+      "clear": true,
+      "overlap": false,
+      "ground": true,
+      "slide": false,
+      "flying": false,
+      "health": 250,
+      "box": [
+        -12,
+        16
+      ]
+    },
+    "flight": {
+      "x": -820,
+      "y": -107.66348800000002,
+      "sx": 0,
+      "sy": -2.982648000000001,
+      "crouch": 0,
+      "clear": true,
+      "overlap": false,
+      "ground": false,
+      "slide": false,
+      "flying": true,
+      "health": 250,
+      "box": [
+        -12,
+        16
+      ]
+    },
+    "release": {
+      "x": -820,
+      "y": -110.28648304000002,
+      "sx": 0,
+      "sy": -2.622995040000001,
+      "crouch": 0,
+      "clear": true,
+      "overlap": false,
+      "ground": false,
+      "slide": false,
+      "flying": false,
+      "health": 250,
+      "box": [
+        -12,
+        16
+      ]
+    },
+    "rapidTransitionsStable": true,
+    "original": {
+      "speed": 2.9941581162946567,
+      "crouch": 1,
+      "clear": false,
+      "attached": false
+    }
+  }
+}

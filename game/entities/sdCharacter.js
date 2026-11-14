@@ -5208,9 +5208,6 @@ class sdCharacter extends sdEntity
 		let walk_speed_scale = speed_scale;
 		walk_speed_scale *= ( this.mobility / 100 );
 		
-		if ( act_y_or_unstable )
-		walk_speed_scale *= 0.5;
-	
 		let can_uncrouch = -1;
 		
 		//let target_crouch = ( this.stability < 50 ) ? 3 : Math.max( 0, act_y_or_unstable );
@@ -5248,6 +5245,13 @@ class sdCharacter extends sdEntity
 				}
 			}
 		}
+		// Walking follows the effective posture when native clearance prevents
+		// standing. Releasing S under a ceiling must not restore run acceleration.
+		// An active slide retains its separate momentum/friction ground branch.
+		if ( act_y_or_unstable ||
+			 ( can_uncrouch === false && this._crouch_intens > 0 && !movement?.sliding(this) ) )
+		walk_speed_scale *= 0.5;
+
 		// Keep the optional movement actor's expanded posture authoritative for
 		// this tick's collision sweep, including recovery at a corridor entrance.
 		if(movement) movement.refresh(this);
