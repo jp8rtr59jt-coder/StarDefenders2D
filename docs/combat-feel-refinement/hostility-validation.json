@@ -1,0 +1,605 @@
+{
+  "passed": true,
+  "errors": [],
+  "external": [],
+  "checks": [
+    {
+      "name": "new passive spawn faces relative idle direction and sleeps",
+      "data": {
+        "dx": 160,
+        "dy": -3,
+        "hiber": 1,
+        "native": null,
+        "passive": true,
+        "target": null,
+        "fire": 0,
+        "pose": {
+          "x": 85.48593627352967,
+          "y": 132.68694882541277,
+          "angle": 0.053749373918982844,
+          "fireAngle": 1.5170469528759136,
+          "arm": -1.9965040729615557,
+          "scale": 1,
+          "side": 1,
+          "muzzleX": 92.4758272244424,
+          "muzzleY": 133.06301330704906
+        }
+      }
+    },
+    {
+      "name": "proximity changes do not track, flip or fire",
+      "data": [
+        {
+          "playerOffset": -80,
+          "dx": 160,
+          "dy": -3,
+          "hiber": 1,
+          "native": null,
+          "passive": true,
+          "target": null,
+          "fire": 0,
+          "pose": {
+            "x": 85.48593627352967,
+            "y": 132.68694882541277,
+            "angle": 0.053749373918982844,
+            "fireAngle": 1.5170469528759136,
+            "arm": -1.9965040729615557,
+            "scale": 1,
+            "side": 1,
+            "muzzleX": 92.4758272244424,
+            "muzzleY": 133.06301330704906
+          }
+        },
+        {
+          "playerOffset": -18,
+          "dx": 160,
+          "dy": -3,
+          "hiber": 1,
+          "native": null,
+          "passive": true,
+          "target": null,
+          "fire": 0,
+          "pose": {
+            "x": 85.48593627352967,
+            "y": 132.68694882541277,
+            "angle": 0.053749373918982844,
+            "fireAngle": 1.5170469528759136,
+            "arm": -1.9965040729615557,
+            "scale": 1,
+            "side": 1,
+            "muzzleX": 92.4758272244424,
+            "muzzleY": 133.06301330704906
+          }
+        },
+        {
+          "playerOffset": 18,
+          "dx": 160,
+          "dy": -3,
+          "hiber": 1,
+          "native": null,
+          "passive": true,
+          "target": null,
+          "fire": 0,
+          "pose": {
+            "x": 85.48593627352967,
+            "y": 132.68694882541277,
+            "angle": 0.053749373918982844,
+            "fireAngle": 1.5170469528759136,
+            "arm": -1.9965040729615557,
+            "scale": 1,
+            "side": 1,
+            "muzzleX": 92.4758272244424,
+            "muzzleY": 133.06301330704906
+          }
+        },
+        {
+          "playerOffset": 80,
+          "dx": 160,
+          "dy": -3,
+          "hiber": 1,
+          "native": null,
+          "passive": true,
+          "target": null,
+          "fire": 0,
+          "pose": {
+            "x": 85.48593627352967,
+            "y": 132.68694882541277,
+            "angle": 0.053749373918982844,
+            "fireAngle": 1.5170469528759136,
+            "arm": -1.9965040729615557,
+            "scale": 1,
+            "side": 1,
+            "muzzleX": 92.4758272244424,
+            "muzzleY": 133.06301330704906
+          }
+        }
+      ]
+    },
+    {
+      "name": "reactivation reacquires through fresh awareness and reaction",
+      "data": [
+        {
+          "angle": -0.15255637918397627,
+          "phase": "aware",
+          "time": 33.333333333333336,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 0,
+          "raw": [
+            156.59492890241344,
+            -24.268816612932454
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -1.223024987073832,
+          "phase": "aware",
+          "time": 300,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 0,
+          "raw": [
+            50.99577894330288,
+            -149.92004266898445
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -2.293493594963687,
+          "phase": "engaged",
+          "time": 566.6666666666666,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 1,
+          "raw": [
+            -116.5604543779946,
+            -123.55441105127439
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -2.584214973961655,
+          "phase": "engaged",
+          "time": 833.3333333333336,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 1,
+          "raw": [
+            -164.24198044401913,
+            -95.33207599413484
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -2.820495204181859,
+          "phase": "engaged",
+          "time": 1100.0000000000002,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 1,
+          "raw": [
+            -196.44218075887414,
+            -61.139900545777785
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -3.111853206307194,
+          "phase": "engaged",
+          "time": 1366.6666666666663,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 1,
+          "raw": [
+            -200.22376576561683,
+            -2.5552407600854394
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -3.130679119353064,
+          "phase": "engaged",
+          "time": 1633.3333333333323,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 0,
+          "raw": [
+            -199.06652553859232,
+            -1.5176646369174827
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -3.0811277230251033,
+          "phase": "engaged",
+          "time": 1899.9999999999984,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 1,
+          "raw": [
+            -198.8292009235065,
+            -13.746565962017035
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -2.9431004041070548,
+          "phase": "engaged",
+          "time": 2166.666666666665,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 1,
+          "raw": [
+            -195.24498655923665,
+            -42.49023263898441
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -2.9256542856231706,
+          "phase": "engaged",
+          "time": 2433.333333333333,
+          "ready": 442.703910030735,
+          "visible": true,
+          "target": 647,
+          "nativeTarget": 647,
+          "fire": 1,
+          "raw": [
+            -192.74450218954811,
+            -46.063648583063994
+          ],
+          "hiber": 0
+        }
+      ]
+    },
+    {
+      "name": "active aim settles at bounded rate without passive shooting",
+      "data": [
+        {
+          "angle": -2.889953645457679,
+          "phase": "passive",
+          "time": 33.333333333333336,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -154.96089973976717,
+            -46.1050063836102
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 200.00000000000003,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -7.3936982913265865
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -3.1415926535897936,
+          "phase": "passive",
+          "time": 366.66666666666663,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -8.41274330839478
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 533.3333333333333,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -3.1415926535897936,
+          "phase": "passive",
+          "time": 700.0000000000001,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.999999999999943
+          ],
+          "hiber": 0
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 866.666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.1415926535897936,
+          "phase": "passive",
+          "time": 1033.3333333333337,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.999999999999943
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1200,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        }
+      ]
+    },
+    {
+      "name": "twelve on/off transitions clear policy/native/trigger state",
+      "data": [
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        },
+        {
+          "angle": -3.141592653589794,
+          "phase": "passive",
+          "time": 1166.6666666666667,
+          "ready": null,
+          "visible": false,
+          "target": null,
+          "nativeTarget": null,
+          "fire": 0,
+          "raw": [
+            -160,
+            -2.9999999999998863
+          ],
+          "hiber": 1
+        }
+      ]
+    },
+    {
+      "name": "critical actors remain down, finite and unable to fire across toggles",
+      "data": {
+        "phase": "critical",
+        "deadline": 14245.111633092165,
+        "health": 63.44804479337935,
+        "bullets": 0,
+        "nativeKey": 0
+      }
+    },
+    {
+      "name": "dead actors stay dead; recovered actors restart fresh perception",
+      "data": {
+        "health": 70,
+        "offPhase": "passive",
+        "activePhase": "idle",
+        "time": 0,
+        "target": null,
+        "ready": null
+      }
+    }
+  ]
+}

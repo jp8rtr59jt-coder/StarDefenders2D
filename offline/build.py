@@ -33,6 +33,9 @@ def build():
     # Supply the same existing art at that URL, without changing sdGunClass.
     shutil.copy2(OUTPUT / 'assets/guns/buildtool_upgrade2.png',
                  OUTPUT / 'assets/buildtool_upgrade2.png')
+    # The retained native menu preview still uses this pre-relocation URL.
+    shutil.copy2(OUTPUT / 'assets/guns/grenade_launcher.png',
+                 OUTPUT / 'assets/grenade_launcher.png')
 
     html = (ROOT / 'game' / 'index.html').read_text(encoding='utf-8')
     html = re.sub(r'<\?\s*print\( discord_url \)\s*\?>',

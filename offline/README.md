@@ -1,5 +1,7 @@
 # Standalone offline engine — milestone 1
 
+Latest optional tuning on this branch: [Milestone 3E combat feel refinement](../docs/combat-feel-refinement/README.md).
+
 For the optional experimental arena, see [Milestone 2 combat sandbox](COMBAT_SANDBOX.md).
 It is separate from the original world and opens at `/?mode=combat`.
 For the opt-in slide and traversal prototype, see [Milestone 3B](ADVANCED_MOVEMENT.md)

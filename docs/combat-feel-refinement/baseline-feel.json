@@ -1,0 +1,481 @@
+{
+  "baseline": true,
+  "date": "2026-11-14T09:52:49.559Z",
+  "browser": "156.0.8078.79",
+  "passed": true,
+  "checks": [
+    {
+      "name": "provisional default",
+      "data": 60
+    },
+    {
+      "name": "80/90/100 HP: real torso and unprotected head shot counts",
+      "data": [
+        {
+          "hp": 80,
+          "tier": "basic",
+          "torso": 5,
+          "head": 2
+        },
+        {
+          "hp": 80,
+          "tier": "intermediate",
+          "torso": 5,
+          "head": 2
+        },
+        {
+          "hp": 80,
+          "tier": "advanced",
+          "torso": 5,
+          "head": 2
+        },
+        {
+          "hp": 90,
+          "tier": "basic",
+          "torso": 5,
+          "head": 2
+        },
+        {
+          "hp": 90,
+          "tier": "intermediate",
+          "torso": 5,
+          "head": 2
+        },
+        {
+          "hp": 90,
+          "tier": "advanced",
+          "torso": 5,
+          "head": 2
+        },
+        {
+          "hp": 100,
+          "tier": "basic",
+          "torso": 6,
+          "head": 2
+        },
+        {
+          "hp": 100,
+          "tier": "intermediate",
+          "torso": 6,
+          "head": 2
+        },
+        {
+          "hp": 100,
+          "tier": "advanced",
+          "torso": 6,
+          "head": 2
+        }
+      ]
+    },
+    {
+      "name": "armor damage remains independent of biological health",
+      "data": [
+        {
+          "profile": "unarmored",
+          "gun": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.6454691562189,
+          "damage": 18,
+          "loss": 18,
+          "absorbed": 0,
+          "penetration": 0.1,
+          "health": 72,
+          "armor": 0,
+          "time": 0
+        },
+        {
+          "profile": "unarmored",
+          "gun": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.6640691518286,
+          "damage": 20,
+          "loss": 20,
+          "absorbed": 0,
+          "penetration": 0.6,
+          "health": 70,
+          "armor": 0,
+          "time": 0
+        },
+        {
+          "profile": "unarmored",
+          "gun": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.65876390745464,
+          "damage": 85,
+          "loss": 85,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": 5,
+          "armor": 0,
+          "time": 0
+        },
+        {
+          "profile": "light",
+          "gun": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.65355974046807,
+          "damage": 18,
+          "loss": 8.549999999999997,
+          "absorbed": 9.450000000000003,
+          "penetration": 0.1,
+          "health": 81.45,
+          "armor": 50.55,
+          "time": 0
+        },
+        {
+          "profile": "light",
+          "gun": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.6650229565241,
+          "damage": 20,
+          "loss": 20,
+          "absorbed": 0,
+          "penetration": 0.6,
+          "health": 70,
+          "armor": 60,
+          "time": 0
+        },
+        {
+          "profile": "light",
+          "gun": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.66150114738784,
+          "damage": 85,
+          "loss": 85,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": 5,
+          "armor": 60,
+          "time": 0
+        },
+        {
+          "profile": "heavy",
+          "gun": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.64607448869586,
+          "damage": 18,
+          "loss": 2.911764705882348,
+          "absorbed": 15.088235294117652,
+          "penetration": 0.1,
+          "health": 87.08823529411765,
+          "armor": 84.91176470588235,
+          "time": 0
+        },
+        {
+          "profile": "heavy",
+          "gun": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.66562065740882,
+          "damage": 20,
+          "loss": 14.411764705882348,
+          "absorbed": 5.588235294117652,
+          "penetration": 0.6,
+          "health": 75.58823529411765,
+          "armor": 94.41176470588235,
+          "time": 0
+        },
+        {
+          "profile": "heavy",
+          "gun": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.65851516979882,
+          "damage": 85,
+          "loss": 85,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": 5,
+          "armor": 100,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "name": "critical presentation, supported blood marks and finite death",
+      "data": {
+        "samples": [
+          {
+            "health": 36.7489394919248,
+            "time": 1000.0000000000005,
+            "phase": "critical",
+            "motion": 0,
+            "maxDistance": 18.841048471366662,
+            "maxSpeed": 2.7606687071933935
+          },
+          {
+            "health": 30.246818475774404,
+            "time": 3000.0000000000023,
+            "phase": "critical",
+            "motion": 0,
+            "maxDistance": 19.117050611250594,
+            "maxSpeed": 1.1585847315754083
+          },
+          {
+            "health": 20.493636951548808,
+            "time": 5999.99999999999,
+            "phase": "critical",
+            "motion": 0,
+            "maxDistance": 19.297249023898463,
+            "maxSpeed": 1.8534223899984217
+          }
+        ],
+        "end": {
+          "atDeath": 10966.666666666688,
+          "health": -1,
+          "phase": "dead",
+          "motion": 0,
+          "events": [],
+          "maxDistance": 19.248308320145554,
+          "maxSpeed": 2.182762314537176,
+          "emitted": 60,
+          "marks": 0,
+          "afterDeathMotion": 0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "critical frequency sample without converting fatal hits",
+      "data": {
+        "critical": 49,
+        "wounded": 79
+      }
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "badResponses": [
+    "http://127.0.0.1:8002/audio/rocket_loop.wav"
+  ],
+  "durability": [
+    {
+      "hp": 80,
+      "tier": "basic",
+      "torso": 5,
+      "head": 2
+    },
+    {
+      "hp": 80,
+      "tier": "intermediate",
+      "torso": 5,
+      "head": 2
+    },
+    {
+      "hp": 80,
+      "tier": "advanced",
+      "torso": 5,
+      "head": 2
+    },
+    {
+      "hp": 90,
+      "tier": "basic",
+      "torso": 5,
+      "head": 2
+    },
+    {
+      "hp": 90,
+      "tier": "intermediate",
+      "torso": 5,
+      "head": 2
+    },
+    {
+      "hp": 90,
+      "tier": "advanced",
+      "torso": 5,
+      "head": 2
+    },
+    {
+      "hp": 100,
+      "tier": "basic",
+      "torso": 6,
+      "head": 2
+    },
+    {
+      "hp": 100,
+      "tier": "intermediate",
+      "torso": 6,
+      "head": 2
+    },
+    {
+      "hp": 100,
+      "tier": "advanced",
+      "torso": 6,
+      "head": 2
+    }
+  ],
+  "armor": [
+    {
+      "profile": "unarmored",
+      "gun": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.6454691562189,
+      "damage": 18,
+      "loss": 18,
+      "absorbed": 0,
+      "penetration": 0.1,
+      "health": 72,
+      "armor": 0,
+      "time": 0
+    },
+    {
+      "profile": "unarmored",
+      "gun": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.6640691518286,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 70,
+      "armor": 0,
+      "time": 0
+    },
+    {
+      "profile": "unarmored",
+      "gun": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.65876390745464,
+      "damage": 85,
+      "loss": 85,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": 5,
+      "armor": 0,
+      "time": 0
+    },
+    {
+      "profile": "light",
+      "gun": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.65355974046807,
+      "damage": 18,
+      "loss": 8.549999999999997,
+      "absorbed": 9.450000000000003,
+      "penetration": 0.1,
+      "health": 81.45,
+      "armor": 50.55,
+      "time": 0
+    },
+    {
+      "profile": "light",
+      "gun": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.6650229565241,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 70,
+      "armor": 60,
+      "time": 0
+    },
+    {
+      "profile": "light",
+      "gun": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.66150114738784,
+      "damage": 85,
+      "loss": 85,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": 5,
+      "armor": 60,
+      "time": 0
+    },
+    {
+      "profile": "heavy",
+      "gun": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.64607448869586,
+      "damage": 18,
+      "loss": 2.911764705882348,
+      "absorbed": 15.088235294117652,
+      "penetration": 0.1,
+      "health": 87.08823529411765,
+      "armor": 84.91176470588235,
+      "time": 0
+    },
+    {
+      "profile": "heavy",
+      "gun": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.66562065740882,
+      "damage": 20,
+      "loss": 14.411764705882348,
+      "absorbed": 5.588235294117652,
+      "penetration": 0.6,
+      "health": 75.58823529411765,
+      "armor": 94.41176470588235,
+      "time": 0
+    },
+    {
+      "profile": "heavy",
+      "gun": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.65851516979882,
+      "damage": 85,
+      "loss": 85,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": 5,
+      "armor": 100,
+      "time": 0
+    }
+  ],
+  "critical": {
+    "hit": {
+      "region": "legs",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 155.1882127908593,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 40,
+      "armor": 0,
+      "time": 0
+    },
+    "deadline": 10954.165389761329,
+    "health": 40
+  },
+  "outcomes": {
+    "critical": 49,
+    "wounded": 79
+  }
+}

@@ -78,6 +78,7 @@ const arena = {
   const e=this.add(new sdCharacter({x:80+(this.enemies.filter(e=>!e._is_being_removed&&e.hea>0).length%3)*64,y:128,_ai_enabled:this.hostile?model:sdCharacter.AI_MODEL_NONE,_ai_level:level}));
   e.title=kind+' test soldier';e._ai_team=1;e.hmax=health;e.hea=health;e.matter_max=10000;e.matter=10000;
   e._combatModel=model;e._init_ai_model=model;
+  e.look_x=e.x+160;e.look_y=e.y-3;
   humanoidAI.attach(e,kind);
   const gun=this.equip(e,weapon);e._ai_gun_slot=gun.GetSlot();
   this.enemies.push(e);
@@ -86,12 +87,7 @@ const arena = {
  toggleHostility() {
   this.hostile=!this.hostile;
   for(const e of this.enemies) if(!e._is_being_removed) {
-   e._ai_enabled=this.hostile?e._combatModel:sdCharacter.AI_MODEL_NONE;
-   e._ai=null;e._key_states.Reset();e.sx=0;
-   humanoidAI.reset(e);
-   // Passive test actors may already be asleep. Enabling their native model
-   // must schedule them again; otherwise the existing AI never gets a tick.
-   if(this.hostile&&e.hea>0)e.SetHiberState(sdEntity.HIBERSTATE_ACTIVE);
+   humanoidAI.setHostile(e,this.hostile);
   }
   document.getElementById('combat-hostility').textContent='Hostility: '+(this.hostile?'on':'off');
  },

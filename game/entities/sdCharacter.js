@@ -4861,6 +4861,7 @@ class sdCharacter extends sdEntity
 		return;
 		const physical=sdWorld.server_config.physical_combat;
 		if(physical?.has(this))physical.tick(this,GSPEED);
+		sdWorld.server_config.humanoid_ai?.passive(this,GSPEED);
 		
 		if ( sdWorld.is_server )
 		this.lst = sdLost.entities_and_affection.get( this ) || 0;

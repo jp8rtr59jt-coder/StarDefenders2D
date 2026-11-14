@@ -1,6 +1,7 @@
 // Optional tuning policy around sdCharacter.AILogic, not a replacement AI.
 import sdWorld from '../sdWorld.js';
 import sdCharacter from '../entities/sdCharacter.js';
+import sdEntity from '../entities/sdEntity.js';
 import sdCom from '../entities/sdCom.js';
 
 export const skills = {
@@ -15,8 +16,31 @@ export const humanoidAI={
  skills,
  has:e=>states.has(e),
  state:e=>states.get(e),
- attach(e,tier) {states.set(e,{tier,cfg:skills[tier],seed:(e._net_id+1)>>>0,time:0,scan:0,target:null,visible:false,phase:'idle',lastSeen:-Infinity,x:e.x+100,y:e.y,track:0,heat:0,error:0,readyAt:Infinity,reaction:0,angle:Math.atan2(e.look_y-e.y,e.look_x-e.x),previousFire:false,moveAt:0,lastMoveX:e.x,targetSpeed:0});},
- reset(e) {const s=states.get(e);if(s)this.attach(e,s.tier);},
+ attach(e,tier) {states.set(e,{tier,cfg:skills[tier],seed:(e._net_id+1)>>>0,time:0,scan:0,target:null,visible:false,phase:'idle',lastSeen:-Infinity,x:e.x+100,y:e.y,track:0,heat:0,error:0,readyAt:Infinity,reaction:0,angle:Math.atan2(e.look_y-e.y,e.look_x-e.x),previousFire:false,moveAt:0,lastMoveX:e.x,targetSpeed:0,passive:e._ai_enabled===sdCharacter.AI_MODEL_NONE,idleSide:e.look_x<e.x?-1:1});},
+ reset(e) {const s=states.get(e);if(s){this.attach(e,s.tier);if(s.passive)states.get(e).idleSide=s.idleSide;}},
+ setHostile(e,hostile){
+  e._ai_enabled=hostile?e._combatModel:sdCharacter.AI_MODEL_NONE;
+  e._init_ai_model=e._ai_enabled;e._ai=null;e._key_states.Reset();e.act_x=e.act_y=0;
+  e._ai_attack_time=0;e._ai_force_fire=false;e.auto_shoot_in=0;
+  this.reset(e);
+  const s=states.get(e);s.passive=!hostile;s.phase=hostile?'idle':'passive';
+  if(e.hea>0){
+   if(!sdWorld.server_config.physical_combat?.blocked(e))e.sx=0;
+   e.SetHiberState(sdEntity.HIBERSTATE_ACTIVE);
+  }
+ },
+ passiveTurn:180, // Degrees / simulated second; independent of active skill tiers.
+ passive(e,gspeed){
+  const s=states.get(e);if(!s?.passive||e.hea<=0)return;
+  e._ai=null;e._key_states.Reset();e.act_x=e.act_y=0;e.auto_shoot_in=0;e._ai_force_fire=false;
+  s.target=null;s.visible=false;s.readyAt=Infinity;s.previousFire=false;s.phase='passive';
+  if(sdWorld.server_config.physical_combat?.blocked(e))return; // Never pose a critical body upright.
+  s.time+=gspeed*1000/30;
+  const delta=wrap((s.idleSide<0?Math.PI:0)-s.angle),step=this.passiveTurn*Math.PI/180*gspeed/30;
+  s.angle+=clamp(delta,-step,step);
+  e.look_x=e.x+Math.cos(s.angle)*160;e.look_y=e.y-3+Math.sin(s.angle)*160;
+  if(Math.abs(delta)>0.001)e.PhysWakeUp(); // Finish settling before native sleep.
+ },
  random(s) {s.seed=(Math.imul(1664525,s.seed)+1013904223)>>>0;return s.seed/4294967296;},
  before(e,gspeed) {
   const s=states.get(e),c=s.cfg,dt=gspeed*1000/30;

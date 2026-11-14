@@ -10,11 +10,13 @@ import sdBG from '../entities/sdBG.js';
 import sdSound from '../sdSound.js';
 import {humanoidAI} from './humanoid-ai.js';
 
-export const tuning={health:60,headVulnerability:2.6,criticalChance:.35,
- severeFraction:.45,legSevereFraction:.30,criticalRemaining:.45,knockdownMs:1400,armStunMs:500,
+export const tuning={health:90,headVulnerability:3.4,criticalChance:.45,injuryReferenceHealth:60,
+ severeFraction:.45,legSevereFraction:.30,criticalRemaining:.55,knockdownMs:1400,armStunMs:500,
  legSlowMs:2200,legMobility:.55,bleedMinMs:8000,bleedMaxMs:16000,
  extraBleedPerSecond:.25,regenDelayTicks:18000,bloodIntensity:1,
- maxParticles:96,maxMarks:24,maxTargets:6};
+ maxParticles:96,maxMarks:24,maxTargets:6,
+ criticalBloodIntervalMs:320,criticalBloodScale:1.7,dropletScale:1.35,markIntensity:45,
+ motionIntensity:1,motionMaxEvents:5,motionMinMs:1100,motionMaxMs:2400,motionSpeed:.85};
 export const armorProfiles={
  unarmored:{integrity:0,absorb:0,resistance:0,coverage:['torso']},
  light:{integrity:60,absorb:.70,resistance:.40,coverage:['torso']},
@@ -44,7 +46,8 @@ const lab={
   if(this.enabled)e._regen_timeout=tuning.regenDelayTicks;
   states.set(e,{profile,time:0,phase:this.enabled?'ready':'original',seed:Math.imul(e._net_id+17,0x9e3779b1)>>>0,fxSeed:Math.imul(e._net_id+101,0x85ebca6b)>>>0,
    downUntil:0,armUntil:0,legUntil:0,deadline:0,bleedRate:0,baseMobility:e._ai_team!==0?33:e.mobility,
-   totalLoss:0,last:null,initiator:null,wasBlocked:false,lastBlood:-Infinity,lastMark:-Infinity});
+   totalLoss:0,last:null,initiator:null,wasBlocked:false,lastBlood:-Infinity,lastMark:-Infinity,
+   criticalAt:0,nextBlood:0,motionAt:Infinity,motionCount:0,lastMotion:null,motionSeed:Math.imul(e._net_id+201,0xc2b2ae35)>>>0});
   return e;
  },
  region(e,x,y,mult){
@@ -80,20 +83,23 @@ const lab={
   s.last={region,ammo:hit.ammo,x:b.x,y:b.y,damage:hit.damage,loss,absorbed,penetration:hit.penetration,health:e.hea,armor:e.armor,time:s.time};
   if(loss>0){
    s.totalLoss+=loss;s.initiator=b._owner;e._regen_timeout=tuning.regenDelayTicks;
-   const severity=loss/e.hmax;
+   // Biological HP can change without weakening the established leg/arm response.
+   const severity=loss/tuning.injuryReferenceHealth;
    if(e.hea<=0){s.phase='dead';e._dying=false;}
    else if(s.phase!=='critical'){
     s.phase='wounded';
     if(region==='arms'&&severity>=.12){s.armUntil=s.time+tuning.armStunMs;e._recoil=Math.max(e._recoil,.35);}
     if(region==='legs')s.legUntil=s.time+tuning.legSlowMs;
-    const severe=severity>=tuning.severeFraction||s.totalLoss/e.hmax>=.5||(region==='legs'&&severity>=tuning.legSevereFraction);
+    const severe=severity>=tuning.severeFraction||s.totalLoss/tuning.injuryReferenceHealth>=.5||(region==='legs'&&severity>=tuning.legSevereFraction);
     if(severe){
      s.downUntil=s.time+tuning.knockdownMs;e.stability=Math.min(e.stability,-60);
      if(region==='legs'||region==='head'||e.hea/e.hmax<=tuning.criticalRemaining){
       if(this.random(s)<clamp(tuning.criticalChance,0,1)){
        s.phase='critical';e._dying=true;e._dying_bleed_tim=0;
        s.deadline=s.time+tuning.bleedMinMs+(tuning.bleedMaxMs-tuning.bleedMinMs)*this.random(s);
-       s.bleedRate=tuning.extraBleedPerSecond*(.5+this.random(s));
+       s.bleedRate=Math.max(tuning.extraBleedPerSecond*(.5+this.random(s)),e.hea/((s.deadline-s.time)/1000)-3);
+       s.criticalAt=s.time;s.nextBlood=s.time+tuning.criticalBloodIntervalMs;
+       s.motionAt=s.time+700+this.motionRandom(s)*700;
       }
      }
     }
@@ -114,6 +120,13 @@ const lab={
    // A small extra loss plus a hard game-time endpoint guarantee termination.
    e.Damage(s.time>=s.deadline?e.hea+1:s.bleedRate*gspeed/30,s.initiator,false,false);
    if(e.hea<=0){s.phase='dead';e._dying=false;return;}
+   if(s.time>=s.nextBlood){
+    s.nextBlood=s.time+tuning.criticalBloodIntervalMs;
+    const r=e._ragdoll,body=r?.torso;
+    const x=body&&Math.hypot(body.x-e.x,body.y-e.y)<48?body.x:e.x,y=body&&Math.hypot(body.x-e.x,body.y-e.y)<48?body.y:e.y;
+    this.blood(e,x,y,tuning.criticalBloodScale);
+   }
+   this.criticalMotion(e,s);
   }
   const blocked=this.blocked(e);
   if(blocked){
@@ -127,23 +140,45 @@ const lab={
   // Keep passive timed reactions scheduled until their temporary state expires.
   if(blocked||s.time<s.armUntil||s.time<s.legUntil)e.pain_anim=Math.max(e.pain_anim,2);
  },
+ motionRandom(s){s.motionSeed=(Math.imul(1664525,s.motionSeed)+1013904223)>>>0;return s.motionSeed/4294967296;},
+ criticalMotion(e,s){
+  if(tuning.motionIntensity<=0||s.motionCount>=tuning.motionMaxEvents||s.time<s.motionAt)return;
+  s.motionAt=s.time+tuning.motionMinMs+(tuning.motionMaxMs-tuning.motionMinMs)*this.motionRandom(s);
+  const r=e._ragdoll;if(!r||e.driver_of||e._frozen>0)return;
+  const remaining=clamp((s.deadline-s.time)/(s.deadline-s.criticalAt),0,1);
+  if(remaining<.18)return;
+  const names=['hand1','hand2','ankle1','ankle2'],name=names[Math.floor(this.motionRandom(s)*names.length)],bone=r[name];
+  // A single bounded velocity impulse, solved by the unchanged native constraints.
+  // No teleports, pose sequence, collider changes or impulses on a dead body.
+  if(!bone||Math.hypot(bone.x-e.x,bone.y-e.y)>48||Math.hypot(bone.sx,bone.sy)>2)return;
+  const ceiling=tuning.motionSpeed*clamp(tuning.motionIntensity,0,2)*remaining*remaining;
+  const dx=(this.motionRandom(s)-.5)*ceiling,dy=-ceiling;
+  bone.sx+=dx;bone.sy+=dy;bone.PhysWakeUp();
+  s.motionCount++;s.lastMotion={time:s.time,bone:name,dx,dy,ceiling};
+ },
  effect(params){compact(this.particles);if(this.particles.length>=tuning.maxParticles)return;
   const e=new sdEffect(params);sdEntity.AddEntityToEntitiesArray(e);this.particles.push(e);return e;},
  trimEffects(){for(const [items,limit] of [[this.particles,tuning.maxParticles],[this.marks,tuning.maxMarks]]){compact(items);while(items.length>limit)items.shift().remove();}},
  blood(e,x,y,severity=1,sx=0,sy=0){
   const s=states.get(e);if(!s||tuning.bloodIntensity<=0||s.time-s.lastBlood<80)return;
+  if(s.phase==='critical'&&sx===0&&sy===0){
+   const r=e._ragdoll,anchor=s.last?.region==='legs'?r?.knee1:r?.torso;
+   if(anchor&&Math.hypot(anchor.x-e.x,anchor.y-e.y)<48){x=anchor.x;y=anchor.y;}
+  }
   s.lastBlood=s.time;
   const n=Math.min(12,Math.ceil(3*clamp(severity,.25,2)*clamp(tuning.bloodIntensity,0,2))),speed=Math.max(1,Math.hypot(sx,sy));
   const green=e.GetBleedEffect(false)===sdEffect.TYPE_BLOOD_GREEN,type=green?sdEffect.TYPE_BLOOD_DROP_GREEN:sdEffect.TYPE_BLOOD_DROP;
   for(let i=0;i<n;i++){const spread=(this.random(s,true)-.5)*1.6;
-   this.effect({x,y,type,sx:sx/speed*.9+spread,sy:sy/speed*.9-.8-this.random(s,true),hue:e.GetBleedEffectHue(),filter:e.GetBleedEffectFilter()});}
+   this.effect({x,y,type,scale:tuning.dropletScale,sx:sx/speed*.9+spread,sy:sy/speed*.9-.8-this.random(s,true),hue:e.GetBleedEffectHue(),filter:e.GetBleedEffectFilter()});}
   // Native decals require real background geometry; droplets alone do not
   // create floor stains. Never invent an invisible colliding surface for this.
   compact(this.marks);
   if(s.time-s.lastMark>=400&&this.marks.length<tuning.maxMarks&&sdWorld.CheckWallExists(x,y,null,null,sdBG.as_class_list)){
    s.lastMark=s.time;const bg=sdWorld.last_hit_entity;
-   const mark=new sdBloodDecal({x:clamp(Math.floor(x/16)*16,bg.x,bg.x+bg.width-16),y:clamp(Math.floor(y/16)*16,bg.y,bg.y+bg.height-16),effect_type:green?sdEffect.TYPE_BLOOD_GREEN:sdEffect.TYPE_BLOOD,intensity:30});
-   sdEntity.AddEntityToEntitiesArray(mark);sdWorld.UpdateHashPosition(mark,false);this.marks.push(mark);
+   const mark=new sdBloodDecal({x:clamp(Math.floor(x/16)*16,bg.x,bg.x+bg.width-16),y:clamp(Math.floor(y/16)*16,bg.y,bg.y+bg.height-16),effect_type:green?sdEffect.TYPE_BLOOD_GREEN:sdEffect.TYPE_BLOOD,intensity:tuning.markIntensity});
+   // Like native SendEffect, let the world index a decal AFTER its first Think.
+   // Early indexing makes native decal merging find itself and remove itself.
+   sdEntity.AddEntityToEntitiesArray(mark);this.marks.push(mark);
   }
  },
  clear(){for(const e of [...this.particles,...this.marks])if(!e._is_being_removed)e.remove();this.particles=[];this.marks=[];this.targets=[];this.history=[];},
@@ -155,6 +190,7 @@ const lab={
   e.title=profile+' · '+this.tier+' · '+e.hmax+' HP';
   e.x=656+this.targets.length*36;e.y=144;e.sx=e.sy=0;e.look_x=560;e.look_y=140;
   e._hitbox_last_update=-Infinity;e.UpdateHitbox();sdWorld.UpdateHashPosition(e,false);this.targets.push(e);
+  humanoidAI.reset(e); // Native spawn coordinates/aim preceded the range relocation.
   // Only the laboratory's discarded records are pruned; native actors remain.
   sdCombatSandbox.enemies=sdCombatSandbox.enemies.filter(v=>!v._is_being_removed);
   return e;
@@ -185,6 +221,8 @@ const wait=setInterval(()=>{
  const blood=document.createElement('label');blood.textContent='Blood ';blood.append(intensity);row.append(blood);intensity.oninput=()=>{tuning.bloodIntensity=+intensity.value;};
  const number=(text,id,key,min,max,changed)=>{const label=document.createElement('label');label.textContent=text+' ';const input=document.createElement('input');input.id=id;input.type='number';input.min=min;input.max=max;input.value=tuning[key];input.style.width='52px';input.setAttribute('aria-label',text);input.onchange=()=>{const value=Number(input.value);if(Number.isFinite(value))tuning[key]=clamp(Math.round(value),min,max);input.value=tuning[key];changed();input.blur();};label.append(input);row.append(label);};
  number('HP','physical-health','health',20,200,()=>lab.encounter());
+ for(const hp of [80,90,100])button('physical-hp-'+hp,hp+' HP',()=>{tuning.health=hp;document.getElementById('physical-health').value=hp;lab.encounter();});
+ number('Critical motion','physical-motion','motionIntensity',0,2,()=>{});
  number('Particles','physical-particles','maxParticles',0,256,()=>lab.trimEffects());
  number('Marks','physical-marks','maxMarks',0,64,()=>lab.trimEffects());
  const out=document.createElement('pre');out.id='physical-diagnostics';out.hidden=true;out.style.cssText='position:fixed;top:65px;left:8px;background:#111e;color:white;font:12px monospace;pointer-events:none;z-index:10003';document.body.append(out);

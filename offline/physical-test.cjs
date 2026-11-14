@@ -1,7 +1,7 @@
 /* Native projectile/character integration fixtures; no damage or ragdoll mocks. */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs');
-const dir='docs/physical-combat/stage2';fs.mkdirSync(dir,{recursive:true});
+const dir=process.env.PHYSICAL_TEST_OUTPUT||'docs/physical-combat/stage2';fs.mkdirSync(dir,{recursive:true});
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,headless:true,args:['--no-sandbox','--enable-unsafe-swiftshader','--disable-dev-shm-usage']});
  const context=await browser.newContext({viewport:{width:1200,height:800}}),page=await context.newPage();
@@ -42,13 +42,14 @@ const dir='docs/physical-combat/stage2';fs.mkdirSync(dir,{recursive:true});
     step(n){const e=this.target;for(let i=0;i<n;i++){sdWorld.time+=1000/30;sdWorld.frame++;e.onThink(1);sdWorld.UpdateHashPosition(e,false);for(const fx of lab.particles)if(!fx._is_being_removed)fx.onThink(1);for(const m of lab.marks)if(!m._is_being_removed)m.onThink(1);}return {health:e.hea,phase:lab.state(e).phase,time:lab.state(e).time,stability:e.stability,mobility:e.mobility,dying:e._dying,death:e.death_anim};}
    };
   });
+  const defaultHP=await page.evaluate(()=>sdPhysicalCombat.tuning.health);
   r.health=await page.evaluate(()=>{const f=physicalFixture,lab=sdPhysicalCombat,old=lab.tuning.criticalChance;lab.tuning.criticalChance=0;
    try{const result=[];for(const tier of ['basic','intermediate','advanced']){const e=f.fresh('unarmored',tier);let shots=0;while(e.hea>0&&shots<10){f.fire();shots++;}result.push({tier,health:e.hmax,shots,remaining:e.hea});}return result;}finally{lab.tuning.criticalChance=old;}});
-  assert(r.health.every(x=>x.health===60&&x.shots===4));check('all training tiers: four native pistol torso shots instead of fourteen',r.health);
+  assert(r.health.every(x=>x.health===defaultHP&&x.shots===Math.ceil(defaultHP/18)));check('all training tiers use configured biological health and native pistol damage',r.health);
   r.armor=await page.evaluate(()=>{const rows=[];for(const profile of ['unarmored','light','heavy'])for(const weapon of ['pistol','rifle','railgun']){physicalFixture.fresh(profile);rows.push({profile,weapon,...physicalFixture.fire(weapon)});}return rows;});
   const find=(p,w)=>r.armor.find(x=>x.profile===p&&x.weapon===w);
   assert(find('heavy','pistol').loss<find('light','pistol').loss&&find('light','pistol').loss<find('unarmored','pistol').loss);
-  assert.equal(find('light','rifle').loss,find('unarmored','rifle').loss);assert(find('heavy','railgun').health<=0);check('native armor absorption and ammunition penetration measured',r.armor);
+  assert.equal(find('light','rifle').loss,find('unarmored','rifle').loss);assert.equal(find('heavy','railgun').loss,Math.min(defaultHP,85));check('native armor absorption and ammunition penetration measured',r.armor);
   assert.equal(find('unarmored','pistol').stability,100);check('ordinary first torso hit does not force collapse');
   const shotgun=await page.evaluate(()=>{physicalFixture.fresh();return physicalFixture.fire('shotgun');});assert.equal(shotgun.bullets,5);check('shotgun retains five native pellets',shotgun);
   const arm=await page.evaluate(()=>{const f=physicalFixture,l=sdPhysicalCombat,attempts=[];
@@ -82,17 +83,19 @@ const dir='docs/physical-combat/stage2';fs.mkdirSync(dir,{recursive:true});
    // effect removal so its separate per-type budget cannot mask our cap check.
    for(const fx of sdEntity.entities.slice())if(fx instanceof sdEffect&&fx._is_being_removed){fx._remove();sdEntity.RemoveEntityFromEntitiesArray(fx);}
    const seed=s.seed;for(let i=0;i<160;i++){s.time+=500;l.blood(e,650+(i%7)*16,128,2,10,0);}const result={particles:l.particles.filter(e=>!e._is_being_removed).length,marks:l.marks.filter(e=>!e._is_being_removed).length,decisionSeedUnchanged:seed===s.seed};
-   l.tuning.bloodIntensity=0;const n=l.particles.length;s.time+=1000;l.blood(e,656,128,2);result.zeroIntensityAdds=l.particles.length-n;l.tuning.bloodIntensity=1;bg.remove();return result;});
-  assert(caps.particles===96&&caps.marks===24&&caps.decisionSeedUnchanged&&caps.zeroIntensityAdds===0);check('native blood droplets / background decals are capped; cosmetic RNG isolated',caps);
+   l.tuning.bloodIntensity=0;const n=l.particles.length;s.time+=1000;l.blood(e,656,128,2);result.zeroIntensityAdds=l.particles.length-n;l.tuning.bloodIntensity=1;
+   for(const m of l.marks)if(!m._is_being_removed){m.onThink(1);if(!m._is_being_removed)sdWorld.UpdateHashPosition(m,false);}
+   result.attachedMarks=l.marks.filter(m=>!m._is_being_removed&&m._bg).length;bg.remove();return result;});
+  assert(caps.particles===96&&caps.marks===24&&caps.attachedMarks>0&&caps.decisionSeedUnchanged&&caps.zeroIntensityAdds===0);check('native blood droplets / background decals are capped; cosmetic RNG isolated',caps);
   for(const [id,value] of [['physical-particles','8'],['physical-marks','4']]){await page.locator('#'+id).fill(value);await page.locator('#'+id).press('Tab');}
   const trimmed=await page.evaluate(()=>({particles:sdPhysicalCombat.particles.length,marks:sdPhysicalCombat.marks.length}));assert(trimmed.particles<=8&&trimmed.marks<=4);check('cap controls immediately trim existing laboratory effects',trimmed);
   for(const [id,value] of [['physical-particles','96'],['physical-marks','24'],['physical-health','75']]){await page.locator('#'+id).fill(value);await page.locator('#'+id).press('Tab');}
-  assert.equal(await page.evaluate(()=>sdPhysicalCombat.targets[0].hmax),75);assert.equal(await page.evaluate(()=>sdWorld.my_entity.hmax),250);await page.locator('#physical-health').fill('60');await page.locator('#physical-health').press('Tab');check('health control recreates target without changing player health');
-  const defaults=await page.evaluate(()=>{const l=sdPhysicalCombat;const native=l.setEnabled(false);const h=physicalFixture.target=native;const hit=physicalFixture.fire();const oldHealth=h.hmax;let oldShots=1;while(h.hea>0&&oldShots<30){physicalFixture.fire();oldShots++;}const fresh=l.setEnabled(true);return {oldHealth,oldShots,hit,experimentalHealth:fresh.hmax,originalPlayer:sdWorld.my_entity.hmax};});assert.equal(defaults.oldHealth,250);assert.equal(defaults.oldShots,14);assert.equal(defaults.hit.actualLoss,18);assert.equal(defaults.hit.phase,'original');assert.equal(defaults.experimentalHealth,60);assert.equal(defaults.originalPlayer,250);check('model toggle creates fresh original / experimental encounters',defaults);
+  assert.equal(await page.evaluate(()=>sdPhysicalCombat.targets[0].hmax),75);assert.equal(await page.evaluate(()=>sdWorld.my_entity.hmax),250);await page.locator('#physical-health').fill(String(defaultHP));await page.locator('#physical-health').press('Tab');check('health control recreates target without changing player health');
+  const defaults=await page.evaluate(()=>{const l=sdPhysicalCombat;const native=l.setEnabled(false);const h=physicalFixture.target=native;const hit=physicalFixture.fire();const oldHealth=h.hmax;let oldShots=1;while(h.hea>0&&oldShots<30){physicalFixture.fire();oldShots++;}const fresh=l.setEnabled(true);return {oldHealth,oldShots,hit,experimentalHealth:fresh.hmax,originalPlayer:sdWorld.my_entity.hmax};});assert.equal(defaults.oldHealth,250);assert.equal(defaults.oldShots,14);assert.equal(defaults.hit.actualLoss,18);assert.equal(defaults.hit.phase,'original');assert.equal(defaults.experimentalHealth,defaultHP);assert.equal(defaults.originalPlayer,250);check('model toggle creates fresh original / experimental encounters',defaults);
   // Resume the real offline loop for UI/AI and reset checks.
   await page.evaluate(()=>{document.getElementById('physical-capture')?.remove();sdWorld.HandleWorldLogic=physicalResume;sdWorld.GSPEED=1;});
   for(const profile of ['unarmored','light','heavy']){await page.locator('#physical-'+profile).click();await ticks(2);assert.equal(await page.evaluate(()=>sdPhysicalCombat.targets.length),1);}
-  for(const tier of ['basic','intermediate','advanced']){await page.selectOption('#physical-training',tier);assert.equal(await page.evaluate(()=>sdPhysicalCombat.targets[0].hmax),60);}
+  for(const tier of ['basic','intermediate','advanced']){await page.selectOption('#physical-training',tier);assert.equal(await page.evaluate(()=>sdPhysicalCombat.targets[0].hmax),defaultHP);}
   await page.locator('#combat-hostility').click();await page.evaluate(()=>{const p=sdWorld.my_entity;p.hmax=p.hea=1000;});
   await page.waitForFunction(()=>sdWorld.my_entity.hea<1000,null,{timeout:120000});check('laboratory target retains native AI and inflicts meaningful damage',await page.evaluate(()=>({health:sdWorld.my_entity.hea,phase:sdWorld.server_config.humanoid_ai.state(sdPhysicalCombat.targets[0]).phase})));
   await page.locator('#combat-hostility').click();

@@ -1,5 +1,8 @@
 # Milestone 3D — physical combat laboratory
 
+Historical 3D assessment and measurements. On `combat-feel-refinement`, see the
+[3E update](../combat-feel-refinement/README.md) for current defaults and fixes.
+
 Optional, reversible combat experiment based on `art-direction-lab`
 `6e63988d7577901beabed666cf2079a625b92b63`. Source branches and main are preserved.
 Cinematic Realism A remains the preferred artistic foundation; this milestone

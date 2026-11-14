@@ -1,0 +1,786 @@
+{
+  "baseline": false,
+  "date": "2026-11-14T10:11:38.619Z",
+  "browser": "156.0.8078.79",
+  "passed": true,
+  "checks": [
+    {
+      "name": "provisional default",
+      "data": 90
+    },
+    {
+      "name": "80/90/100 HP: real torso and unprotected head shot counts",
+      "data": [
+        {
+          "hp": 80,
+          "tier": "basic",
+          "torso": 5,
+          "head": 1
+        },
+        {
+          "hp": 80,
+          "tier": "intermediate",
+          "torso": 5,
+          "head": 1
+        },
+        {
+          "hp": 80,
+          "tier": "advanced",
+          "torso": 5,
+          "head": 1
+        },
+        {
+          "hp": 90,
+          "tier": "basic",
+          "torso": 5,
+          "head": 1
+        },
+        {
+          "hp": 90,
+          "tier": "intermediate",
+          "torso": 5,
+          "head": 1
+        },
+        {
+          "hp": 90,
+          "tier": "advanced",
+          "torso": 5,
+          "head": 1
+        },
+        {
+          "hp": 100,
+          "tier": "basic",
+          "torso": 6,
+          "head": 1
+        },
+        {
+          "hp": 100,
+          "tier": "intermediate",
+          "torso": 6,
+          "head": 1
+        },
+        {
+          "hp": 100,
+          "tier": "advanced",
+          "torso": 6,
+          "head": 1
+        }
+      ]
+    },
+    {
+      "name": "armor damage remains independent of biological health",
+      "data": [
+        {
+          "profile": "unarmored",
+          "gun": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.6408283606767,
+          "damage": 18,
+          "loss": 18,
+          "absorbed": 0,
+          "penetration": 0.1,
+          "health": 72,
+          "armor": 0,
+          "time": 0
+        },
+        {
+          "profile": "unarmored",
+          "gun": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.6593915881173,
+          "damage": 20,
+          "loss": 20,
+          "absorbed": 0,
+          "penetration": 0.6,
+          "health": 70,
+          "armor": 0,
+          "time": 0
+        },
+        {
+          "profile": "unarmored",
+          "gun": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.662947117279,
+          "damage": 85,
+          "loss": 85,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": 5,
+          "armor": 0,
+          "time": 0
+        },
+        {
+          "profile": "light",
+          "gun": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.6482418996357,
+          "damage": 18,
+          "loss": 8.549999999999997,
+          "absorbed": 9.450000000000003,
+          "penetration": 0.1,
+          "health": 81.45,
+          "armor": 50.55,
+          "time": 0
+        },
+        {
+          "profile": "light",
+          "gun": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.6653142829539,
+          "damage": 20,
+          "loss": 20,
+          "absorbed": 0,
+          "penetration": 0.6,
+          "health": 70,
+          "armor": 60,
+          "time": 0
+        },
+        {
+          "profile": "light",
+          "gun": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.65845574996501,
+          "damage": 85,
+          "loss": 85,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": 5,
+          "armor": 60,
+          "time": 0
+        },
+        {
+          "profile": "heavy",
+          "gun": "pistol",
+          "region": "torso",
+          "ammo": "pistol",
+          "x": 650.89999,
+          "y": 146.6530884669996,
+          "damage": 18,
+          "loss": 2.911764705882348,
+          "absorbed": 15.088235294117652,
+          "penetration": 0.1,
+          "health": 87.08823529411765,
+          "armor": 84.91176470588235,
+          "time": 0
+        },
+        {
+          "profile": "heavy",
+          "gun": "rifle",
+          "region": "torso",
+          "ammo": "rifle",
+          "x": 650.89999,
+          "y": 146.66125995753774,
+          "damage": 20,
+          "loss": 14.411764705882348,
+          "absorbed": 5.588235294117652,
+          "penetration": 0.6,
+          "health": 75.58823529411765,
+          "armor": 94.41176470588235,
+          "time": 0
+        },
+        {
+          "profile": "heavy",
+          "gun": "railgun",
+          "region": "torso",
+          "ammo": "railgun",
+          "x": 650.9,
+          "y": 146.660749102606,
+          "damage": 85,
+          "loss": 85,
+          "absorbed": 0,
+          "penetration": 1,
+          "health": 5,
+          "armor": 100,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "name": "critical presentation, supported blood marks and finite death",
+      "data": {
+        "samples": [
+          {
+            "health": 63.609736797891955,
+            "time": 1000.0000000000005,
+            "phase": "critical",
+            "motion": 1,
+            "maxDistance": 18.82585290314761,
+            "maxSpeed": 2.7537126382090586
+          },
+          {
+            "health": 50.82921039367547,
+            "time": 3000.0000000000023,
+            "phase": "critical",
+            "motion": 1,
+            "maxDistance": 18.870106557007503,
+            "maxSpeed": 2.08509907705424
+          },
+          {
+            "health": 31.658420787350728,
+            "time": 5999.99999999999,
+            "phase": "critical",
+            "motion": 3,
+            "maxDistance": 19.09309018448081,
+            "maxSpeed": 1.8326584116781264
+          }
+        ],
+        "end": {
+          "atDeath": 10966.666666666688,
+          "health": -1,
+          "phase": "dead",
+          "motion": 5,
+          "events": [
+            {
+              "time": 6699.999999999984,
+              "bone": "ankle2",
+              "dx": 0.021170961984304588,
+              "dy": -0.12820031084630237,
+              "ceiling": 0.12820031084630237
+            },
+            {
+              "time": 8333.333333333307,
+              "bone": "hand2",
+              "dx": 0.006065242775754498,
+              "dy": -0.04865625988208759,
+              "ceiling": 0.04865625988208759
+            }
+          ],
+          "maxDistance": 19.30517160330416,
+          "maxSpeed": 2.8026711909751967,
+          "emitted": 216,
+          "marks": 2,
+          "afterDeathMotion": 0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "irregular, diminishing bounded motion; zero disables it",
+      "data": [
+        {
+          "intensity": 0,
+          "motionSeed": 41,
+          "count": 0,
+          "events": [],
+          "maxDistance": 19.586914059326272,
+          "phase": "dead"
+        },
+        {
+          "intensity": 1,
+          "motionSeed": 41,
+          "count": 5,
+          "events": [
+            {
+              "time": 900.0000000000003,
+              "bone": "ankle2",
+              "dx": -0.22517527328217904,
+              "dy": -0.7160649036479889,
+              "ceiling": 0.7160649036479889
+            },
+            {
+              "time": 3300.0000000000036,
+              "bone": "hand2",
+              "dx": -0.20076229857250658,
+              "dy": -0.41500757369892893,
+              "ceiling": 0.41500757369892893
+            },
+            {
+              "time": 5333.333333333329,
+              "bone": "hand2",
+              "dx": 0.09784251017034706,
+              "dy": -0.2238007598808251,
+              "ceiling": 0.2238007598808251
+            },
+            {
+              "time": 6699.999999999984,
+              "bone": "ankle2",
+              "dx": 0.021170961984304588,
+              "dy": -0.12820031084630237,
+              "ceiling": 0.12820031084630237
+            },
+            {
+              "time": 8333.333333333307,
+              "bone": "hand2",
+              "dx": 0.006065242775754498,
+              "dy": -0.04865625988208759,
+              "ceiling": 0.04865625988208759
+            }
+          ],
+          "maxDistance": 19.168121248304956,
+          "phase": "dead"
+        },
+        {
+          "intensity": 2,
+          "motionSeed": 41,
+          "count": 5,
+          "events": [
+            {
+              "time": 900.0000000000003,
+              "bone": "ankle2",
+              "dx": -0.4503505465643581,
+              "dy": -1.4321298072959778,
+              "ceiling": 1.4321298072959778
+            },
+            {
+              "time": 3300.0000000000036,
+              "bone": "hand2",
+              "dx": -0.40152459714501315,
+              "dy": -0.8300151473978579,
+              "ceiling": 0.8300151473978579
+            },
+            {
+              "time": 5333.333333333329,
+              "bone": "hand2",
+              "dx": 0.19568502034069413,
+              "dy": -0.4476015197616502,
+              "ceiling": 0.4476015197616502
+            },
+            {
+              "time": 6699.999999999984,
+              "bone": "ankle2",
+              "dx": 0.042341923968609176,
+              "dy": -0.25640062169260475,
+              "ceiling": 0.25640062169260475
+            },
+            {
+              "time": 8333.333333333307,
+              "bone": "hand2",
+              "dx": 0.012130485551508996,
+              "dy": -0.09731251976417518,
+              "ceiling": 0.09731251976417518
+            }
+          ],
+          "maxDistance": 19.323030914463907,
+          "phase": "dead"
+        },
+        {
+          "intensity": 1,
+          "motionSeed": 777,
+          "count": 5,
+          "events": [
+            {
+              "time": 1100.0000000000002,
+              "bone": "ankle2",
+              "dx": -0.04843689073996878,
+              "dy": -0.6878599635416986,
+              "ceiling": 0.6878599635416986
+            },
+            {
+              "time": 3200.000000000003,
+              "bone": "ankle1",
+              "dx": -0.10243432734411582,
+              "dy": -0.42592237744584466,
+              "ceiling": 0.42592237744584466
+            },
+            {
+              "time": 4600.000000000003,
+              "bone": "ankle2",
+              "dx": -0.08028886358825651,
+              "dy": -0.2860074642719955,
+              "ceiling": 0.2860074642719955
+            },
+            {
+              "time": 6366.666666666653,
+              "bone": "ankle2",
+              "dx": 0.020127066894143585,
+              "dy": -0.14907755142670845,
+              "ceiling": 0.14907755142670845
+            },
+            {
+              "time": 7933.333333333306,
+              "bone": "hand2",
+              "dx": 0.01103694143510058,
+              "dy": -0.06464180886307835,
+              "ceiling": 0.06464180886307835
+            }
+          ],
+          "maxDistance": 19.17297743209761,
+          "phase": "dead"
+        }
+      ]
+    },
+    {
+      "name": "critical frequency sample without converting fatal hits",
+      "data": {
+        "critical": 60,
+        "wounded": 68
+      }
+    },
+    {
+      "name": "HP preset controls independent of player and armor"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "badResponses": [
+    "http://127.0.0.1:8000/audio/rocket_loop.wav"
+  ],
+  "durability": [
+    {
+      "hp": 80,
+      "tier": "basic",
+      "torso": 5,
+      "head": 1
+    },
+    {
+      "hp": 80,
+      "tier": "intermediate",
+      "torso": 5,
+      "head": 1
+    },
+    {
+      "hp": 80,
+      "tier": "advanced",
+      "torso": 5,
+      "head": 1
+    },
+    {
+      "hp": 90,
+      "tier": "basic",
+      "torso": 5,
+      "head": 1
+    },
+    {
+      "hp": 90,
+      "tier": "intermediate",
+      "torso": 5,
+      "head": 1
+    },
+    {
+      "hp": 90,
+      "tier": "advanced",
+      "torso": 5,
+      "head": 1
+    },
+    {
+      "hp": 100,
+      "tier": "basic",
+      "torso": 6,
+      "head": 1
+    },
+    {
+      "hp": 100,
+      "tier": "intermediate",
+      "torso": 6,
+      "head": 1
+    },
+    {
+      "hp": 100,
+      "tier": "advanced",
+      "torso": 6,
+      "head": 1
+    }
+  ],
+  "armor": [
+    {
+      "profile": "unarmored",
+      "gun": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.6408283606767,
+      "damage": 18,
+      "loss": 18,
+      "absorbed": 0,
+      "penetration": 0.1,
+      "health": 72,
+      "armor": 0,
+      "time": 0
+    },
+    {
+      "profile": "unarmored",
+      "gun": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.6593915881173,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 70,
+      "armor": 0,
+      "time": 0
+    },
+    {
+      "profile": "unarmored",
+      "gun": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.662947117279,
+      "damage": 85,
+      "loss": 85,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": 5,
+      "armor": 0,
+      "time": 0
+    },
+    {
+      "profile": "light",
+      "gun": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.6482418996357,
+      "damage": 18,
+      "loss": 8.549999999999997,
+      "absorbed": 9.450000000000003,
+      "penetration": 0.1,
+      "health": 81.45,
+      "armor": 50.55,
+      "time": 0
+    },
+    {
+      "profile": "light",
+      "gun": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.6653142829539,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 70,
+      "armor": 60,
+      "time": 0
+    },
+    {
+      "profile": "light",
+      "gun": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.65845574996501,
+      "damage": 85,
+      "loss": 85,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": 5,
+      "armor": 60,
+      "time": 0
+    },
+    {
+      "profile": "heavy",
+      "gun": "pistol",
+      "region": "torso",
+      "ammo": "pistol",
+      "x": 650.89999,
+      "y": 146.6530884669996,
+      "damage": 18,
+      "loss": 2.911764705882348,
+      "absorbed": 15.088235294117652,
+      "penetration": 0.1,
+      "health": 87.08823529411765,
+      "armor": 84.91176470588235,
+      "time": 0
+    },
+    {
+      "profile": "heavy",
+      "gun": "rifle",
+      "region": "torso",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 146.66125995753774,
+      "damage": 20,
+      "loss": 14.411764705882348,
+      "absorbed": 5.588235294117652,
+      "penetration": 0.6,
+      "health": 75.58823529411765,
+      "armor": 94.41176470588235,
+      "time": 0
+    },
+    {
+      "profile": "heavy",
+      "gun": "railgun",
+      "region": "torso",
+      "ammo": "railgun",
+      "x": 650.9,
+      "y": 146.660749102606,
+      "damage": 85,
+      "loss": 85,
+      "absorbed": 0,
+      "penetration": 1,
+      "health": 5,
+      "armor": 100,
+      "time": 0
+    }
+  ],
+  "critical": {
+    "hit": {
+      "region": "legs",
+      "ammo": "rifle",
+      "x": 650.89999,
+      "y": 155.18756401352798,
+      "damage": 20,
+      "loss": 20,
+      "absorbed": 0,
+      "penetration": 0.6,
+      "health": 70,
+      "armor": 0,
+      "time": 0
+    },
+    "deadline": 10954.165389761329,
+    "health": 70
+  },
+  "motion": [
+    {
+      "intensity": 0,
+      "motionSeed": 41,
+      "count": 0,
+      "events": [],
+      "maxDistance": 19.586914059326272,
+      "phase": "dead"
+    },
+    {
+      "intensity": 1,
+      "motionSeed": 41,
+      "count": 5,
+      "events": [
+        {
+          "time": 900.0000000000003,
+          "bone": "ankle2",
+          "dx": -0.22517527328217904,
+          "dy": -0.7160649036479889,
+          "ceiling": 0.7160649036479889
+        },
+        {
+          "time": 3300.0000000000036,
+          "bone": "hand2",
+          "dx": -0.20076229857250658,
+          "dy": -0.41500757369892893,
+          "ceiling": 0.41500757369892893
+        },
+        {
+          "time": 5333.333333333329,
+          "bone": "hand2",
+          "dx": 0.09784251017034706,
+          "dy": -0.2238007598808251,
+          "ceiling": 0.2238007598808251
+        },
+        {
+          "time": 6699.999999999984,
+          "bone": "ankle2",
+          "dx": 0.021170961984304588,
+          "dy": -0.12820031084630237,
+          "ceiling": 0.12820031084630237
+        },
+        {
+          "time": 8333.333333333307,
+          "bone": "hand2",
+          "dx": 0.006065242775754498,
+          "dy": -0.04865625988208759,
+          "ceiling": 0.04865625988208759
+        }
+      ],
+      "maxDistance": 19.168121248304956,
+      "phase": "dead"
+    },
+    {
+      "intensity": 2,
+      "motionSeed": 41,
+      "count": 5,
+      "events": [
+        {
+          "time": 900.0000000000003,
+          "bone": "ankle2",
+          "dx": -0.4503505465643581,
+          "dy": -1.4321298072959778,
+          "ceiling": 1.4321298072959778
+        },
+        {
+          "time": 3300.0000000000036,
+          "bone": "hand2",
+          "dx": -0.40152459714501315,
+          "dy": -0.8300151473978579,
+          "ceiling": 0.8300151473978579
+        },
+        {
+          "time": 5333.333333333329,
+          "bone": "hand2",
+          "dx": 0.19568502034069413,
+          "dy": -0.4476015197616502,
+          "ceiling": 0.4476015197616502
+        },
+        {
+          "time": 6699.999999999984,
+          "bone": "ankle2",
+          "dx": 0.042341923968609176,
+          "dy": -0.25640062169260475,
+          "ceiling": 0.25640062169260475
+        },
+        {
+          "time": 8333.333333333307,
+          "bone": "hand2",
+          "dx": 0.012130485551508996,
+          "dy": -0.09731251976417518,
+          "ceiling": 0.09731251976417518
+        }
+      ],
+      "maxDistance": 19.323030914463907,
+      "phase": "dead"
+    },
+    {
+      "intensity": 1,
+      "motionSeed": 777,
+      "count": 5,
+      "events": [
+        {
+          "time": 1100.0000000000002,
+          "bone": "ankle2",
+          "dx": -0.04843689073996878,
+          "dy": -0.6878599635416986,
+          "ceiling": 0.6878599635416986
+        },
+        {
+          "time": 3200.000000000003,
+          "bone": "ankle1",
+          "dx": -0.10243432734411582,
+          "dy": -0.42592237744584466,
+          "ceiling": 0.42592237744584466
+        },
+        {
+          "time": 4600.000000000003,
+          "bone": "ankle2",
+          "dx": -0.08028886358825651,
+          "dy": -0.2860074642719955,
+          "ceiling": 0.2860074642719955
+        },
+        {
+          "time": 6366.666666666653,
+          "bone": "ankle2",
+          "dx": 0.020127066894143585,
+          "dy": -0.14907755142670845,
+          "ceiling": 0.14907755142670845
+        },
+        {
+          "time": 7933.333333333306,
+          "bone": "hand2",
+          "dx": 0.01103694143510058,
+          "dy": -0.06464180886307835,
+          "ceiling": 0.06464180886307835
+        }
+      ],
+      "maxDistance": 19.17297743209761,
+      "phase": "dead"
+    }
+  ],
+  "outcomes": {
+    "critical": 60,
+    "wounded": 68
+  }
+}
